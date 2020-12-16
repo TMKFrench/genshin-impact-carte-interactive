@@ -921,7 +921,7 @@
 
 
   // Création de la carte
-  L.tileLayer('map.php/{z}/{x}/{y}', {
+  L.tileLayer('assets/img/tiles/{z}/{x}/{y}.jpg', {
       attribution: '<a href="https://gaming.lebusmagique.fr">Le Bus Magique Gaming</a>',
       maxZoom: 5,
       minZoom: 3,

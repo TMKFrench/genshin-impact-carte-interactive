@@ -62,11 +62,11 @@ var markers = [
 
 ### Scripts / Styles
 
+* [Google Maps Tile Cutter](https://github.com/bramus/photoshop-google-maps-tile-cutter/)
 * [jQuery 3.5.1](https://jquery.com/)
 * [Leaflet 1.7.1](https://leafletjs.com/)
 * [Leaflet.EasyButton 2.4.0](https://github.com/CliffCloud/Leaflet.EasyButton)
 * [Lity 2.4.1](https://sorgalla.com/lity/)
-* [Stupid Simple Tile Maker](https://github.com/stuporglue/sstiles)
 * [Tailwind 2.0.2](https://tailwindcss.com/)
 
 ### Images
