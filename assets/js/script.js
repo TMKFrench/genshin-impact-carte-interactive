@@ -84,6 +84,20 @@
   var seelieIcon = L.icon({ iconUrl: 'assets/img/seelie.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0, -32] });
   var itswarmIcon = L.icon({ iconUrl: 'assets/img/itswarm.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0, -32] });
   var debugIcon = L.icon({ iconUrl: 'assets/img/debug.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0, -32] });
+  var achievementIcon = L.icon({ iconUrl: 'assets/img/achievement.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0, -32] });
+  var achievement01Icon = L.icon({ iconUrl: 'assets/img/achievement01.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0, -32] });
+  var achievement02Icon = L.icon({ iconUrl: 'assets/img/achievement02.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0, -32] });
+  var achievement03Icon = L.icon({ iconUrl: 'assets/img/achievement03.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0, -32] });
+  var achievement04Icon = L.icon({ iconUrl: 'assets/img/achievement04.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0, -32] });
+  var achievement05Icon = L.icon({ iconUrl: 'assets/img/achievement05.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0, -32] });
+  var achievement06Icon = L.icon({ iconUrl: 'assets/img/achievement06.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0, -32] });
+  var achievement07Icon = L.icon({ iconUrl: 'assets/img/achievement07.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0, -32] });
+  var achievement08Icon = L.icon({ iconUrl: 'assets/img/achievement08.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0, -32] });
+  var achievement09Icon = L.icon({ iconUrl: 'assets/img/achievement09.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0, -32] });
+  var circleIcon = L.icon({ iconUrl: 'assets/img/circle.png', iconSize: [32,32], iconAnchor: [16,16], popupAnchor: [0, -16] });
+  var oneIcon = L.icon({ iconUrl: 'assets/img/one.png', iconSize: [24,24], iconAnchor: [12,12], popupAnchor: [0, -12] });
+  var twoIcon = L.icon({ iconUrl: 'assets/img/two.png', iconSize: [24,24], iconAnchor: [12,12], popupAnchor: [0, -12] });
+  var threeIcon = L.icon({ iconUrl: 'assets/img/three.png', iconSize: [24,24], iconAnchor: [12,12], popupAnchor: [0, -12] });
 
 
 
@@ -97,7 +111,7 @@
 
 
   // Générer les layers
-  var groups = ['statue', 'teleporter', 'anemoculus', 'geoculus', 'panorama', 'mondstadtshrine', 'liyueshrine', 'seelie', 'jueyunchili', 'valberry', 'itswarm'];
+  var groups = ['statue', 'teleporter', 'anemoculus', 'geoculus', 'panorama', 'mondstadtshrine', 'liyueshrine', 'seelie', 'jueyunchili', 'valberry', 'itswarm', 'overlookingview'];
   groups.forEach(function(e) {
     window[e+'Group'] = L.layerGroup();
   });
@@ -917,6 +931,40 @@
     //     },
     //   ]
     // },
+    {
+      id: 'overlookingview',
+      group: overlookingviewGroup,
+      format: 'image',
+      checkbox: true,
+      guide: '/genshin-impact/guides/splendide-vue/',
+      title: 'Succès - Splendide vue',
+      markers: [
+        {
+          id: '01',
+          coords: [2666, 4283],
+          text: 'Point de départ du succès.',
+          icon: circleIcon,
+        },
+        {
+          id: '02',
+          coords: [2650, 4401],
+          text: 'Oiseau numéro 1.',
+          icon: oneIcon,
+        },
+        {
+          id: '03',
+          coords: [2301, 4340],
+          text: 'Oiseau numéro 2.',
+          icon: twoIcon,
+        },
+        {
+          id: '04',
+          coords: [2496, 4055],
+          text: 'Oiseau numéro 3.',
+          icon: threeIcon,
+        },
+      ]
+    }
   ];
 
 
@@ -967,7 +1015,7 @@
       var checkbox = '', icon, format, title = '', text = '', guide = '';
 
       if((typeof m.checkbox !== 'undefined' && m.checkbox) || (typeof g.checkbox !== 'undefined' && g.checkbox))
-        checkbox = '<label><input type="checkbox" id="user-marker" data-id="'+g.id+m.id+'" /><span>Trouvé</span></label>';
+        checkbox = '<label><input type="checkbox" id="user-marker" data-id="'+g.id+m.id+'" /><span>Terminé</span></label>';
 
       if(typeof g.text !== 'undefined')
         text = '<p>'+g.text+'</p>';
