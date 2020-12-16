@@ -1,4 +1,4 @@
 !assets/img/medias/
-!assets/js/*.min.js
-!assets/css/*.css
-!assets/css/*.css.map
+!assets/js/script.min.js
+!assets/css/style.css
+!assets/css/style.css.map
