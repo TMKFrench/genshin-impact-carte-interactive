@@ -1,0 +1,6 @@
+assets/css/*.scss
+assets/js/*.js
+.gitignore
+.git-ftp-ignore
+.git-ftp-include
+readme.md

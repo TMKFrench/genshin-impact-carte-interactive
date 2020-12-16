@@ -1,0 +1,8 @@
+.idea
+cache/*
+!cache/.gitkeep
+assets/img/medias/*
+!assets/img/medias/.gitkeep
+assets/css/*.css
+assets/css/*.css.map
+assets/js/*.min.js

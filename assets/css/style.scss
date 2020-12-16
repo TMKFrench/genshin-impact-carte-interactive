@@ -1,0 +1,257 @@
+html, body, #map {
+  width: 100%;
+  height: 100%;
+}
+
+#map {
+  cursor: crosshair !important;
+  background: black;
+  outline: 0;
+}
+
+#menu {
+  height: 100%;
+  overflow: auto;
+
+  #header {
+    position: sticky;
+    top: 0;
+  }
+
+  li.marker {
+    a {
+      display: flex;
+      padding: .5rem;
+      align-items: center;
+      border-radius: .25rem;
+      border: 1px solid rgb(156,163,175);
+
+      img {
+        margin-right: .5rem;
+        height: 1.5rem;
+      }
+    }
+  }
+
+  li.title {
+    grid-column: span 2/span 2;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: bold;
+  }
+
+  a {
+    &.active {
+      background: white !important;
+    }
+
+    span {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+}
+
+.leaflet-popup {
+  min-width: 300px;
+
+  .leaflet-popup-content-wrapper {
+    border-radius: 4px;
+  }
+
+  .leaflet-popup-content {
+    width: calc(100% - 40px) !important;
+    margin: 20px;
+
+    a.video {
+      display: block;
+      width: 100%;
+      position: relative;
+      padding-top: 100%;
+      border-radius: 4px;
+      overflow: hidden;
+
+      &:before {
+        background: url('../img/play.png') no-repeat center;
+        width: 100%;
+        height: 100%;
+        z-index: 99;
+        position: absolute;
+        top: 0;
+        display: block;
+        content: '';
+        background-size: 33%;
+      }
+
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        object-fit: none;
+        width: 100%;
+        height: 100%;
+        z-index:9;
+      }
+    }
+
+    a.image {
+      border-radius: 4px;
+      overflow: hidden;
+      display: block;
+      position: relative;
+
+      &:before {
+        background: url('../img/zoom.png') no-repeat center;
+        width: 100%;
+        height: 100%;
+        z-index: 99;
+        position: absolute;
+        top: 0;
+        display: block;
+        content: '';
+        background-size: 33%;
+      }
+    }
+
+    a.guide {
+      display: inline-block;
+      padding: .5em .75em .5em calc(20px + 1.5em);
+      border-radius: 4px;
+      font-size: 1.2em;
+      cursor: pointer;
+      color: #fff;
+      letter-spacing: .025em;
+      font-weight: bold;
+      margin-top: 1em;
+      margin-right: .5em;
+      background:url('../img/guide.png') no-repeat 1em center rgb(55, 65, 81);
+    }
+
+    label {
+      display: inline-block;
+
+      input#user-marker {
+        position: absolute;
+        left: -999em;
+      }
+
+      span {
+        padding: .5em .75em .5em calc(20px + 1.25em);
+        border-radius: 4px;
+        font-size: 1.2em;
+        cursor: pointer;
+        color: #fff;
+        letter-spacing: .025em;
+        font-weight: bold;
+        margin-top: 1em;
+        display: inline-block;
+      }
+
+      input + span {
+        background:url('../img/uncheck.png') no-repeat 1em center rgb(59, 130, 246);
+        background-size: 15px;
+      }
+
+      input:checked + span {
+        background:url('../img/check.png') no-repeat 1em center rgb(16, 185, 129);
+        background-size: 15px;
+      }
+
+    }
+
+    h4 {
+      font-weight: bold;
+      font-size: 1.2em;
+      margin-top: -10px;
+      margin-bottom: -10px;
+
+      + a {
+        margin-top: 20px;
+      }
+    }
+
+    p {
+      margin: 10px 0;
+      font-size: 1.2em;
+
+      &:last-of-type {
+        margin-bottom: -10px;
+      }
+
+      + label {
+        margin-top: 5px;
+      }
+    }
+  }
+}
+
+$menu: 320px;
+
+body {
+  #menu {
+    display: none;
+    width: $menu;
+  }
+
+  #map-wrap {
+    width: 100%;
+  }
+
+  &.show-menu {
+    #menu {
+      display: block;
+
+
+      //position:absolute;
+
+      @media screen and (max-width: 500px) {
+        position: absolute;
+        width: 100%;
+        z-index: 999;
+
+        #header {
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          text-align: right;
+
+          > div {
+            margin-top: -8px;
+          }
+        }
+      }
+    }
+
+    #map-wrap {
+      width: calc(100% - #{$menu});
+    }
+
+    @media screen and (max-width: 500px) {
+      .leaflet-control-attribution {
+        display: none;
+      }
+
+      #map-wrap {
+        width: 100%;
+      }
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    .leaflet-control-container {
+      > div {
+        display: flex;
+        align-items: flex-start;
+      }
+    }
+  }
+}
+
+.lity {
+  .lity-error {
+    color:red;
+  }
+}
