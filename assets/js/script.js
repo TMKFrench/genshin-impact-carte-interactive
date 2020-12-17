@@ -432,10 +432,44 @@
           coords: [5369, 3046],
         },
         {
-          id: '15',
-          coords: [6387, 2486],
+          id: '02',
+          coords: [5368, 3156],
+        },
+        {
+          id: '03',
+          coords: [4515, 2771],
           format: 'video',
-          video: 'l7hTqD1sKec'
+          video: '6_6zJaa7QBs',
+        },
+        {
+          id: '04',
+          coords: [4421, 2728],
+          format: 'video',
+          video: 'x5FvBXcp3DQ',
+        },
+        {
+          id: '05',
+          coords: [5520, 3491]
+        },
+        {
+          id: '06',
+          coords: [5214, 3388]
+        },
+        {
+          id: '07',
+          coords: [4639, 3122],
+          format: 'video',
+          video: 'ZAL2fY71RxM'
+        },
+        {
+          id: '08',
+          coords: [4500, 3343],
+        },
+        {
+          id: '09',
+          coords: [5222, 3432],
+          format: 'video',
+          video: 'JFUIB4B-p0M'
         },
         {
           id: '10',
@@ -454,6 +488,18 @@
           coords: [5359, 2815]
         },
         {
+          id: '14',
+          coords: [4600, 3496],
+          format: 'video',
+          video: 'Xzp2unJgKhk'
+        },
+        {
+          id: '15',
+          coords: [6387, 2486],
+          format: 'video',
+          video: 'l7hTqD1sKec'
+        },
+        {
           id: '16',
           coords: [5207, 2233]
         },
@@ -470,6 +516,49 @@
         {
           id: '19',
           coords: [5893, 2160]
+        },
+        {
+          id: '20',
+          coords: [4776, 2466],
+          format: 'video',
+          video: 'OhOu0m-Ts9s'
+        },
+        {
+          id: '21',
+          coords: [5279, 3559],
+        },
+        {
+          id: '22',
+          coords: [5200, 3181],
+        },
+        {
+          id: '23',
+          coords: [5326, 3289],
+          format: 'video',
+          video: 'vLAplVUXMIA',
+        },
+        {
+          id: '24',
+          coords: [5357, 3231],
+          format: 'video',
+          video: 'HVdPVfN3r-8',
+        },
+        {
+          id: '25',
+          coords: [4452, 2590]
+        },
+        {
+          id: '26',
+          coords: [4527, 2639]
+        },
+        {
+          id: '27',
+          text: 'Détruisez l\'amas de pierre pour accéder à l\'Anémoculus.',
+          coords: [4540, 2580]
+        },
+        {
+          id: '28',
+          coords: [5449, 3258]
         },
         {
           id: '29',
@@ -508,6 +597,134 @@
           coords: [6764, 3480],
           format: 'video',
           video: 'qxncclUsFt0'
+        },
+        {
+          id: '37',
+          coords: [4843, 3025],
+          format: 'video',
+          video: 'hEA_A5KRYTU'
+        },
+        {
+          id: '38',
+          coords: [5128, 3356],
+        },
+        {
+          id: '39',
+          coords: [5046, 3191],
+        },
+        {
+          id: '40',
+          coords: [4937, 3198],
+          format: 'video',
+          video: 'EpnPeTBGwFs'
+        },
+        {
+          id: '41',
+          coords: [4791, 3270],
+          format: 'video',
+          video: 'PWqxlUhudc4'
+        },
+        {
+          id: '42',
+          coords: [4825, 2521],
+          format: 'video',
+          video: 'RCrg2TOUxhI'
+        },
+        {
+          id: '43',
+          coords: [5465, 3391],
+          format: 'video',
+          video: 'h2xHNcGpJe4'
+        },
+        {
+          id: '44',
+          coords: [4377, 3435],
+          format: 'video',
+          video: 'D2OlfK1CMRo'
+        },
+        {
+          id: '45',
+          coords: [4519, 2932],
+        },
+        {
+          id: '46',
+          text: 'Détruisez les ronces avec une attaque Pyro et grimpez sur le pilier.',
+          coords: [4560, 3036],
+        },
+        {
+          id: '47',
+          coords: [4590, 2479],
+        },
+        {
+          id: '48',
+          coords: [4481, 2489],
+        },
+        {
+          id: '49',
+          text: 'Détruisez l\'amas de pierre pour accéder à l\'Anémoculus.',
+          coords: [4476, 2428],
+        },
+        {
+          id: '50',
+          coords: [4155, 2806],
+        },
+        {
+          id: '51',
+          coords: [4072, 2936],
+        },
+        {
+          id: '52',
+          coords: [3970, 2462],
+        },
+        {
+          id: '53',
+          coords: [4117, 2297],
+        },
+        {
+          id: '54',
+          coords: [4005, 2262],
+        },
+        {
+          id: '55',
+          coords: [3800, 2244],
+        },
+        {
+          id: '56',
+          coords: [3705, 2556],
+        },
+        {
+          id: '57',
+          coords: [3827, 2646],
+        },
+        {
+          id: '58',
+          coords: [3767, 2522],
+          format: 'video',
+          video: 'eZTB79akfAc',
+        },
+        {
+          id: '59',
+          coords: [3927, 2370],
+        },
+        {
+          id: '60',
+          coords: [3863, 2415],
+        },
+        {
+          id: '61',
+          coords: [3914, 2436],
+        },
+        {
+          id: '62',
+          coords: [4131, 2187],
+          format: 'video',
+          video: 'SZ0-4fZBFx8'
+        },
+        {
+          id: '63',
+          coords: [4285, 2464],
+          format: 'video',
+          video: 'lrokJSPyY2o'
         },
       ]
     },
