@@ -974,6 +974,8 @@
       maxZoom: 5,
       minZoom: 3,
       continuousWorld: true,
+      maxBoundsViscosity: 0.8,
+      noWrap: true
   }).addTo(map);
 
   var toolbarZoom = L.easyBar([
