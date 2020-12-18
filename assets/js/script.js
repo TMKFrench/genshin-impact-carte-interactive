@@ -98,6 +98,9 @@
   var oneIcon = L.icon({ iconUrl: 'assets/img/one.png', iconSize: [24,24], iconAnchor: [12,12], popupAnchor: [0, -12] });
   var twoIcon = L.icon({ iconUrl: 'assets/img/two.png', iconSize: [24,24], iconAnchor: [12,12], popupAnchor: [0, -12] });
   var threeIcon = L.icon({ iconUrl: 'assets/img/three.png', iconSize: [24,24], iconAnchor: [12,12], popupAnchor: [0, -12] });
+  var spiralabyssIcon = L.icon({ iconUrl: 'assets/img/spiralabyss.png', iconSize: [32,32], iconAnchor: [16,16], popupAnchor: [0, -16] });
+  var domainIcon = L.icon({ iconUrl: 'assets/img/domain.png', iconSize: [32,32], iconAnchor: [16,16], popupAnchor: [0, -16] });
+  var trouncedomainIcon = L.icon({ iconUrl: 'assets/img/trouncedomain.png', iconSize: [32,32], iconAnchor: [16,16], popupAnchor: [0, -16] });
 
 
 
@@ -111,7 +114,10 @@
 
 
   // Générer les layers
-  var groups = ['statue', 'teleporter', 'anemoculus', 'geoculus', 'panorama', 'mondstadtshrine', 'liyueshrine', 'seelie', 'jueyunchili', 'valberry', 'itswarm', 'overlookingview'];
+  var groups = [
+    'statue', 'teleporter', 'anemoculus', 'geoculus', 'panorama', 'mondstadtshrine', 'liyueshrine', 'seelie',
+    'jueyunchili', 'valberry', 'itswarm', 'overlookingview', 'dungeon'
+  ];
   groups.forEach(function(e) {
     window[e+'Group'] = L.layerGroup();
   });
@@ -1180,6 +1186,144 @@
           text: 'Oiseau numéro 3.',
           icon: threeIcon,
         },
+      ],
+    },
+    {
+      id: 'dungeon',
+      group: dungeonGroup,
+      guide: '/genshin-impact/fonctionnalites/donjons/',
+      icon: domainIcon,
+      format: 'banner',
+      markers: [
+        {
+          id: 'spiralabyss',
+          title: 'Profondeurs spiralées',
+          text: 'Selon la légende, ceux qui mènent à l\'Île du ciel, aux yeux de Dieu en vision, voient l\'échelle sous une telle forme de spirale. Nous nous dirigeons vers l\'univers, ou ver l\'abîme. Cela ne fait aucune différence, car tout est inconnnu.',
+          guide: '/genshin-impact/fonctionnalites/profondeurs-spiralees/',
+          coords: [6764, 3480],
+          icon: spiralabyssIcon,
+        },
+        {
+          id: 'midsummercourtyard',
+          title: 'Jardin estival',
+          text: 'Suivant la chute d\'une antique civilisation, le domaine autrefois luxuriant du palais d\'été qui occupait ces lieux s\'enfonça dans le sol, pour finir par y disparaître à son tour, ne laissant comme témoins de son ancienne gloire que les arbres et les pierres centenaires.<br /><strong>Sets d\'artéfacts 5★&nbsp;: Colère de tonnerre, Dompteur de tonnerre.</strong>',
+          coords: [5654, 2626],
+        },
+        {
+          id: 'forsakenrift',
+          title: 'Gorge de l\'oubli',
+          text: 'Dans les temps anciens, des personnes s\'aventuraient dans la vallée à la recherche de l\'arbre ancien de l\'autel. Ils chuchotaient leurs secrets en son creux, se délestant de leur fardeau. La Gorge de l\'oubli regorge de ces confidences.',
+          coords: [4986, 3451],
+          format: 'image'
+        },
+        {
+          id: 'valleyofremembrance',
+          title: 'Vallée de la réminiscence',
+          text: 'Le temps passa&nbsp;; le peuple du continent oublia les histoires du passé. Les hommes voulurent creuser la terre, pour retrouver les souvenirs qu\'ils avaient perdus. De l\'autre côté de l\'arbre ancien, les secrets d\'hier sont devenus les trésors d\'aujourd\'hui.<br /><strong>Sets d\'artéfacts 5★&nbsp;: Ombre de la Verte chasseuse, Amour chéri.</strong>',
+          coords: [4759, 3422],
+        },
+        {
+          id: 'ceciliagarden',
+          title: 'Pépinière de cécilias',
+          text: 'Les cécilias qui d\'habitude fleurissent sur les hautes falaises poussaient autrefois ici dans la chaleur des serres. La civilisation qui aimait tant ces fleurs disparut, et avec elle leur doux parfum.',
+          coords: [4330, 2862],
+          format: 'image'
+        },
+        {
+          id: 'hiddenpalaceofzhouformula',
+          title: 'Palais secret de la Formule Zhou',
+          text: 'Le rituel qui scelle une des huit portes permet d\'endiguer les forces du mal. Il a été exécuté autrefois pour sceller dans ce dédale un dragon sans cornes.<br /><strong>Sets d\'artéfacts 5★&nbsp;: Sorcière des flammes ardentes, Sage de la traverse de feu.</strong>',
+          coords: [3698, 3428],
+        },
+        {
+          id: 'hiddenpalaceoflianshanformula',
+          title: 'Palais secret de Lianshan',
+          text: 'On raconte que les montages, de par leur regroupement, sont la demeure d\'incessantes tempêtes, et que les sourds grondements que l\'on peut parfois entendre à l\'entrée du domaine attirent les âmes curieuses.',
+          coords: [4513, 4386],
+          format: 'image'
+        },
+        {
+          id: 'domainofguyun',
+          title: 'Au-dessus des nuages',
+          text: 'Les illusions et les lamentations de ceux qui souhaitaient autrefois guider l\'humanité convergent ici. Bien qu\'ils hantent la Forêt de pierre de Guyun et que leur ambition soit toujours démesurée, ils ne peuvent que déverser leur rancune dans des cavernes souterraines désormais.',
+          coords: [5053, 5410],
+        },
+        {
+          id: 'taishanmansion',
+          title: 'Manoir Taishan',
+          text: 'Autrefois, les personnes désireuses d\'obtenir une audience avec les Adeptes devaient passer les épreuves du Ciel et de la Terre. Cette dernière se déroulait au Manoir Taishan qui est devenu un repaire de trésors depuis le départ de ses maîtres.',
+          coords: [2924, 4462],
+          format: 'image'
+        },
+        {
+          id: 'clearpoolandmounntaincavern',
+          title: 'Lagunes et montagnes',
+          text: 'Le Mont Aozang est une montagne qui cache trésors et secrets. Son lac semble ordinaire à première vue, mais à proximité se trouve une grotte qui connecte la terre au ciel, et dont des nuages émergent. Cet ensemble forme un paysage très particulier.<br /><strong>Sets d\'artéfacts 5★&nbsp;: Chevalerie ensanglantée, Ancien rituel royal.</strong>',
+          coords: [2670, 3835],
+        },
+        {
+          id: 'eaglesgate',
+          title: 'Porte du Faucon',
+          text: 'Les âmes nobles aspirent à la quiétude au-dessus du monde ordinaire, semblables au faucon volant dans les cieux. Ceux qui, tel le faucon méprisaient les mortels et leurs querelles inutiles pouvaient trouver la paix à la Porte du Faucon.',
+          coords: [5966, 3796],
+          icon: trouncedomainIcon
+        },
+        {
+          id: 'templeofthewolf',
+          title: 'Temple du Loup',
+          text: 'Un temple qui fut autrefois dédié au Loup du Nord. On raconte que son esprit veille toujours sur Mondstadt dans un lieu lointain. Des monstres l\'occupent depuis son abandon.',
+          coords: [5737, 2954],
+          icon: trouncedomainIcon
+        },
+        {
+          id: 'templeofthelion',
+          title: 'Temple du Lion',
+          text: 'Un temple qui fut autrefois dédié au Lion du Sud. Abandonné depuis longtemps, les pissenlits transportés par les vents de Mondstadt sont le signe de sa bénédiction.',
+          coords: [5532, 3453],
+          icon: trouncedomainIcon
+        },
+        {
+          id: 'templeofthefalcon',
+          title: 'Temple du Faucon',
+          text: 'Un temple qui fut autrefois dédié au Faucon de l\'Ouest qui veilla sur Mondstadt pendant des millénaires. Ses courants d\'airs traversent encore les couleurs du bâtiment.',
+          coords: [5269, 2975],
+          icon: trouncedomainIcon
+        },
+        {
+          id: 'confrontstormterror',
+          title: 'Pénétrez dans l\'Antre de Stormterror',
+          text: 'Les tours brisées qui se dressent encore fièrement en disent long sur l\'histoire de ce lieu. Ses salles parcourues par des bourrasques sont toujours pleins de souvenirs et de songes.<br /><strong>Sets d\'artéfacts 5★&nbsp;: Rideau du gladiateur, Bande vagabonde.</strong>',
+          coords: [3964, 2464],
+          icon: trouncedomainIcon
+        },
+        {
+          id: 'enterthegoldenhouse',
+          title: 'Entrer dans la Chambre d\'Or',
+          text: 'Les sombres nuages couvant sur Liyue se sont enfin dispersés. Le complot qui s\'était emparé de ces terres a été exposé au grand jour, grâce aux efforts combinés des Sept Étoiles, des Adeptes et de vous-même. Le souvenir de votre combat contre Tartaglia le Fatui est encore frais dans votre mémoire. Revivez vos souvenirs et plongez-vous à nouveau dans la bataille. Peut-être apprendrez-vous quelque chose de nouveau, qui sait&nbsp;?<br /><strong>Sets d\'artéfacts 5★&nbsp;: Rideau du gladiateur, Bande vagabonde.</strong>',
+          coords: [3836, 6023],
+          icon: trouncedomainIcon
+        },
+        {
+          id: 'domainofthewaywardpath',
+          title: 'Chemin sinueux',
+          text: 'Bien que les Pilleurs de trésors aient eu vent des richesses cachées ici, la localisation de ce lieu leur échappe encore. La convoitise excessive n\'apporte jamais rien de bon dans ce monde. Ce n\'est qu\'en lâchant prise qu\'un chemin se dessinera.',
+          coords: [3206, 5702],
+          icon: trouncedomainIcon
+        },
+        {
+          id: 'hiddenpalaceofguizangformula',
+          title: 'Palais secret de Guizang',
+          text: 'Le lac parait limpide, mais cache en réalité des trésors si nombreux qui feraient perdre la raison à certains. Malheureusement, peu sont capables de révéler ses secrets.',
+          coords: [3568, 5020],
+          icon: trouncedomainIcon
+        },
+        {
+          id: 'domainofforsakenruins',
+          title: 'Ruines abandonnées',
+          text: 'La plupart des personnes qui venaient ici convoitaient seulement des trésors qui se trouvaient à proximité. Aujourd\'hui, cet endroit, autrefois prospère, est abandonné.',
+          coords: [3918, 4738],
+          icon: trouncedomainIcon
+        },
       ]
     }
   ];
@@ -1265,6 +1409,8 @@
         marker.bindPopup(title+'<a class="video" href="//www.youtube.com/watch?v='+m.video+'" data-lity><img src="https://i.ytimg.com/vi/'+m.video+'/hqdefault.jpg" /></a>'+text+guide+checkbox);
       else if(format === 'image')
         marker.bindPopup(title+'<a href="assets/img/medias/'+g.id+m.id+'.jpg" class="image" data-lity><img src="assets/img/medias/'+g.id+m.id+'-thumb.jpg" onerror="this.src=\'assets/img/medias/default.jpg\'" /></a>'+text+guide+checkbox);
+      else if(format === 'banner')
+        marker.bindPopup(title+'<img src="assets/img/medias/'+g.id+m.id+'.jpg" onerror="this.src=\'assets/img/medias/default.jpg\'" />'+text+guide+checkbox);
 
       if(checkbox)
         marker.on('click', updateCurrentMarker);
