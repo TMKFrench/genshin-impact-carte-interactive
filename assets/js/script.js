@@ -101,6 +101,7 @@
   var spiralabyssIcon = L.icon({ iconUrl: 'assets/img/spiralabyss.png', iconSize: [32,32], iconAnchor: [16,16], popupAnchor: [0, -16] });
   var domainIcon = L.icon({ iconUrl: 'assets/img/domain.png', iconSize: [32,32], iconAnchor: [16,16], popupAnchor: [0, -16] });
   var trouncedomainIcon = L.icon({ iconUrl: 'assets/img/trouncedomain.png', iconSize: [32,32], iconAnchor: [16,16], popupAnchor: [0, -16] });
+  var blankIcon = L.icon({ iconUrl: 'assets/img/blank.png', iconSize: [2,2], iconAnchor: [1,1], popupAnchor: [1, 1] });
 
 
 
@@ -116,7 +117,7 @@
   // Générer les layers
   var groups = [
     'statue', 'teleporter', 'anemoculus', 'geoculus', 'panorama', 'mondstadtshrine', 'liyueshrine', 'seelie',
-    'jueyunchili', 'valberry', 'itswarm', 'overlookingview', 'dungeon'
+    'jueyunchili', 'valberry', 'itswarm', 'overlookingview', 'dungeon', 'region'
   ];
   groups.forEach(function(e) {
     window[e+'Group'] = L.layerGroup();
@@ -1325,6 +1326,186 @@
           icon: trouncedomainIcon
         },
       ]
+    },
+    {
+      id: 'region',
+      group: regionGroup,
+      format: 'region',
+      icon: blankIcon,
+      markers: [
+        {
+          title: 'Lac Luhua',
+          coords: [3469, 4916]
+        },
+        {
+          title: 'Pente Cuijue',
+          coords: [3273, 4693]
+        },
+        {
+          title: 'Vallée Tianqiu',
+          coords: [2854, 4967]
+        },
+        {
+          title: 'Mont Nantianmen',
+          coords: [2405, 4741]
+        },
+        {
+          title: 'Mont Hulao',
+          coords: [2199, 4405]
+        },
+        {
+          title: 'Forêt de pierre<br>Huaguang',
+          coords: [2338, 4199]
+        },
+        {
+          title: 'Pic Qingyun',
+          coords: [2564, 4287]
+        },
+        {
+          title: 'Mont Aozang',
+          coords: [2514, 3981]
+        },
+        {
+          title: 'Karst Jueyun',
+          coords: [2911, 4391]
+        },
+        {
+          title: 'Tombeau Dunyu',
+          coords: [3164, 5334]
+        },
+        {
+          title: 'Passe de Lingju',
+          coords: [2922, 5609]
+        },
+        {
+          title: 'Mont Tianheng',
+          coords: [3476, 5608]
+        },
+        {
+          title: 'Ravine Qingxu',
+          coords: [2794, 5977]
+        },
+        {
+          title: 'Port de Liyue',
+          coords: [3899, 5554]
+        },
+        {
+          title: 'Plaines Guili',
+          coords: [3845, 4600]
+        },
+        {
+          title: 'Bancs de Yaoguang',
+          coords: [4288, 4666]
+        },
+        {
+          title: 'Village Mingyun',
+          coords: [4348, 4362]
+        },
+        {
+          title: 'Auberge Wangshu',
+          coords: [3744, 4337]
+        },
+        {
+          title: 'Forêt de pierre<br>de Guyun',
+          coords: [4808, 5336]
+        },
+        {
+          title: 'Marais Dihua',
+          coords: [3723, 3926]
+        },
+        {
+          title: 'Sal Terrae',
+          coords: [4240, 3824]
+        },
+        {
+          title: 'Porte de pierre',
+          coords: [3848, 3642]
+        },
+        {
+          title: 'Pente Wuwang',
+          coords: [3650, 3539]
+        },
+        {
+          title: 'Village de Qingce',
+          coords: [3435, 3357]
+        },
+        {
+          title: 'Domaine de l\'Aurore',
+          coords: [4492, 3314]
+        },
+        {
+          title: 'Monts Dosdragon',
+          coords: [4845, 3849]
+        },
+        {
+          title: 'Deauclaire',
+          coords: [4930, 3218]
+        },
+        {
+          title: 'Territoire des Loups',
+          coords: [4513, 2973]
+        },
+        {
+          title: 'Canyon de<br>Brillecouronne',
+          coords: [4496, 2382]
+        },
+        {
+          title: 'Antre de Stormterror',
+          coords: [3951, 2368]
+        },
+        {
+          title: 'Lac de Cidre',
+          coords: [4928, 2455]
+        },
+        {
+          title: 'Cité de Mondstadt',
+          coords: [4901, 2701]
+        },
+        {
+          title: 'Bois des Murmures',
+          coords: [5272, 2658]
+        },
+        {
+          title: 'Lac Tombétoile',
+          coords: [5431, 2514]
+        },
+        {
+          title: 'Montagnes du Guet',
+          coords: [5362, 2314]
+        },
+        {
+          title: 'Coin du Guet',
+          coords: [5865, 2197]
+        },
+        {
+          title: 'Falaise Arrachétoile',
+          coords: [5818, 2561]
+        },
+        {
+          title: 'Temple des Mille Vents',
+          coords: [5806, 2802]
+        },
+        {
+          title: 'Ventlevé',
+          coords: [5361, 3135]
+        },
+        {
+          title: 'Vallée Dadaupa',
+          coords: [5673, 3737]
+        },
+        {
+          title: 'Cap de la Promesse',
+          coords: [6124, 3623]
+        },
+        {
+          title: 'Récif de Musk',
+          coords: [6713, 3567]
+        },
+        {
+          title: 'Côte du Faucon',
+          coords: [5771, 3336]
+        },
+      ]
     }
   ];
 
@@ -1340,19 +1521,29 @@
   }).addTo(map);
 
   var toolbarZoom = L.easyBar([
-    L.easyButton( '<img src="assets/img/plus.png">',  function(control, map){map.setZoom(map.getZoom()+1);}),
-    L.easyButton( '<img src="assets/img/minus.png">',  function(control, map){map.setZoom(map.getZoom()-1);}),
+    L.easyButton( '<img src="assets/img/plus.png" alt="Zoom+" title="Zoomer sur la carte">',  function(control, map){map.setZoom(map.getZoom()+1);}),
+    L.easyButton( '<img src="assets/img/minus.png" alt="Zoom-" title="Dézoomer sur la carte">',  function(control, map){map.setZoom(map.getZoom()-1);}),
   ]);
 
   var toolbarMenu = L.easyBar([
-    L.easyButton( '<img src="assets/img/menu.png">',  function(control, map){
+    L.easyButton( '<img src="assets/img/menu.png" alt="Menu" title="Afficher/Masquer le menu">',  function(control, map){
       $('body').toggleClass('show-menu');
       map.invalidateSize();
     }),
   ]);
 
+  var toolbarRegion = L.easyBar([
+    L.easyButton( '<img src="assets/img/region.png" alt="Region" title="Afficher/Masquer le nom des régions">',  function(control, map){
+      if(map.hasLayer(regionGroup)) {
+        map.removeLayer(regionGroup);
+      } else {
+        map.addLayer(regionGroup);
+      }
+    }),
+  ]);
+
   var toolbarResetMarkers = L.easyBar([
-    L.easyButton( '<img src="assets/img/reset.png">',  function(control, map){
+    L.easyButton( '<img src="assets/img/reset.png" alt="Réinitialiser" title="Réinitialiser le suivi de vos marqueurs">',  function(control, map){
       if(confirm('Êtes-vous sûr de vouloir supprimer le suivi de vos marqueurs ?')) {
         localStorage.removeItem('userMarkers');
         window.location.reload();
@@ -1366,6 +1557,7 @@
 
   toolbarZoom.addTo(map);
   toolbarMenu.addTo(map);
+  toolbarRegion.addTo(map);
   toolbarResetMarkers.addTo(map);
   toolbarInfo.addTo(map);
 
@@ -1411,6 +1603,8 @@
         marker.bindPopup(title+'<a href="assets/img/medias/'+g.id+m.id+'.jpg" class="image" data-lity><img src="assets/img/medias/'+g.id+m.id+'-thumb.jpg" onerror="this.src=\'assets/img/medias/default.jpg\'" /></a>'+text+guide+checkbox);
       else if(format === 'banner')
         marker.bindPopup(title+'<img src="assets/img/medias/'+g.id+m.id+'.jpg" onerror="this.src=\'assets/img/medias/default.jpg\'" />'+text+guide+checkbox);
+      else if(format === 'region')
+        marker.bindTooltip(m.title, {permanent: true, className: 'region', offset: [0, 13], direction: 'top'}).openTooltip();
 
       if(checkbox)
         marker.on('click', updateCurrentMarker);

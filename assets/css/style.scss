@@ -1,3 +1,18 @@
+@font-face {
+  font-family: 'Genshin';
+  src: url('../fonts/genshin.eot');
+  src: url('../fonts/genshin.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/genshin.woff2') format('woff2'),
+  url('../fonts/genshin.woff') format('woff'),
+  url('../fonts/genshin.ttf') format('truetype'),
+  url('../fonts/genshin.svg#Genshin') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+
 html, body, #map {
   width: 100%;
   height: 100%;
@@ -12,6 +27,10 @@ html, body, #map {
 #menu {
   height: 100%;
   overflow: auto;
+
+  h1 {
+    font-family: 'Genshin', serif;
+  }
 
   #header {
     position: sticky;
@@ -37,7 +56,7 @@ html, body, #map {
     grid-column: span 2/span 2;
     font-size: 1rem;
     line-height: 1.5rem;
-    font-weight: bold;
+    font-family: 'Genshin', serif;
   }
 
   a {
@@ -217,6 +236,10 @@ body {
         width: 100%;
         z-index: 999;
 
+        h1 {
+          letter-spacing: -.25em;
+        }
+
         #header {
           display: flex;
           align-items: center;
@@ -224,7 +247,7 @@ body {
           text-align: right;
 
           > div {
-            margin-top: -8px;
+            margin-top: -3px;
           }
         }
       }
@@ -258,5 +281,22 @@ body {
 .lity {
   .lity-error {
     color:red;
+  }
+}
+
+.leaflet-tooltip.region {
+  padding: 0;
+  background: none;
+  border: 0;
+  box-shadow: none;
+  color: white;
+  text-shadow: 0 0 5px rgba(0, 0, 0, .75);
+  font-size: 1.4rem;
+  font-family: 'Genshin', serif;
+  text-align: center;
+  line-height: 1.2;
+
+  &:before {
+    display: none;
   }
 }
