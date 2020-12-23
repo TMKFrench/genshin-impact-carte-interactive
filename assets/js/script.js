@@ -17,7 +17,7 @@
       if(markers.indexOf(uid) < 0) {
         markers.push(uid);
       }
-      currentMarker.setOpacity(.5);
+      currentMarker.setOpacity(.66);
     } else {
       if(markers.indexOf(uid) >= 0) {
         markers.splice(markers.indexOf(uid), 1);
@@ -102,6 +102,8 @@
   var domainIcon = L.icon({ iconUrl: 'assets/img/domain.png', iconSize: [32,32], iconAnchor: [16,16], popupAnchor: [0, -16] });
   var trouncedomainIcon = L.icon({ iconUrl: 'assets/img/trouncedomain.png', iconSize: [32,32], iconAnchor: [16,16], popupAnchor: [0, -16] });
   var blankIcon = L.icon({ iconUrl: 'assets/img/blank.png', iconSize: [2,2], iconAnchor: [1,1], popupAnchor: [1, 1] });
+  var questIcon = L.icon({ iconUrl: 'assets/img/quest.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0,-32] });
+  var crimsonagateIcon = L.icon({ iconUrl: 'assets/img/crimsonagate.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0,-32] });
 
 
 
@@ -117,7 +119,7 @@
   // Générer les layers
   var groups = [
     'statue', 'teleporter', 'anemoculus', 'geoculus', 'panorama', 'mondstadtshrine', 'liyueshrine', 'seelie',
-    'jueyunchili', 'valberry', 'itswarm', 'overlookingview', 'dungeon', 'region'
+    'jueyunchili', 'valberry', 'itswarm', 'overlookingview', 'dungeon', 'region', 'quest', 'crimsonagate'
   ];
   groups.forEach(function(e) {
     window[e+'Group'] = L.layerGroup();
@@ -133,6 +135,7 @@
       icon: statueIcon,
       format: 'image',
       title: 'Statue des Sept',
+      checkbox: true,
       markers: [
         {
           id: 'mondstadt01',
@@ -170,6 +173,10 @@
           id: 'liyue05',
           coords: [4353, 4493]
         },
+        {
+          id: 'dragonspine01',
+          coords: [5120, 3943]
+        }
       ]
 
     },
@@ -178,6 +185,7 @@
       group: teleporterGroup,
       icon: teleporterIcon,
       format: 'image',
+      checkbox: true,
       markers: [
         {
           id: 'mondstadt01',
@@ -424,6 +432,56 @@
         {
           id: 'liyue40',
           coords: [3486, 5400],
+        },
+        {
+          id: 'dragonspine01',
+          coords: [5224, 3533]
+        },
+        {
+          id: 'dragonspine02',
+          coords: [4672, 3667]
+        },
+        {
+          id: 'dragonspine03',
+          coords: [5107, 3790]
+        },
+        {
+          id: 'dragonspine04',
+          coords: [4943, 3856]
+        },
+        {
+          id: 'dragonspine05',
+          coords: [4652, 3891]
+        },
+        {
+          id: 'dragonspine06',
+          coords: [4503, 3969]
+        },
+        {
+          id: 'dragonspine07',
+          title: 'dragonspine07',
+          coords: [4889, 4090]
+        },
+        {
+          id: 'dragonspine08',
+          title: 'dragonspine08',
+          coords: [5109, 4100]
+        },
+        {
+          id: 'dragonspine09',
+          coords: [4800, 4203]
+        },
+        {
+          id: 'dragonspine10',
+          coords: [4584, 4268]
+        },
+        {
+          id: 'dragonspine11',
+          coords: [5103, 4270]
+        },
+        {
+          id: 'dragonspine12',
+          coords: [5430, 4291]
         },
       ]
     },
@@ -1325,6 +1383,13 @@
           coords: [3918, 4738],
           icon: trouncedomainIcon
         },
+        {
+          id: 'peakofvindagnyr',
+          title: 'Pic de Vindagnyr',
+          text: 'Cette cité enterrée sous la glace répondait autrefois à quelque nom fier et romantique, tout comme la montagne était autrefois luxuriante. Mais suite à la chute de la gigantesque pointe gelée tombée du ciel appelée &laquo;&nbsp;Mandrin céleste&nbsp;&raquo;, la voix des cieux s\'est tue, et ce lieu où les prêtres s\'assemblaient autrefois lors de leurs célébrations est aujourd\'hui vide de leur présence.<br /><strong>Sets d\'artéfacts 5★&nbsp;: Briseur de glace, Âme du naufragé.</strong>',
+          coords: [4916, 4078],
+
+        }
       ]
     },
     {
@@ -1434,10 +1499,6 @@
           coords: [4492, 3314]
         },
         {
-          title: 'Monts Dosdragon',
-          coords: [4845, 3849]
-        },
-        {
           title: 'Deauclaire',
           coords: [4930, 3218]
         },
@@ -1504,6 +1565,415 @@
         {
           title: 'Côte du Faucon',
           coords: [5771, 3336]
+        },
+        {
+          title: 'Périphérie<br>de la Cité enfouie',
+          coords: [4508, 4099]
+        },
+        {
+          title: 'Vallée Ronfledragon',
+          coords: [4769, 3794]
+        },
+        {
+          title: 'Route enneigée',
+          coords: [5089, 3701]
+        },
+        {
+          title: 'Palais antique<br>de la Cité enfouie',
+          coords: [5084, 4004]
+        },
+        {
+          title: 'Mandrin céleste',
+          coords: [5007, 4138]
+        },
+        {
+          title: 'Grotte Luminétoile',
+          coords: [4911, 4262]
+        },
+      ]
+    },
+    {
+      id: 'quest',
+      group: questGroup,
+      icon: questIcon,
+      format: 'image',
+      checkbox: true,
+      markers: [
+        {
+          id: 'dragonspine01',
+          title: 'La créature des montagnes',
+          coords: [5197, 3525]
+        },
+        {
+          id: 'dragonspine02',
+          title: 'Richesses de Dosdragon',
+          coords: [5181, 3539]
+        },
+        {
+          id: 'dragonspine03',
+          title: 'Enquête alpestre',
+          coords: [4693, 3625]
+        },
+      ]
+    },
+    {
+      id: 'crimsonagate',
+      group: crimsonagateGroup,
+      icon: crimsonagateIcon,
+      checkbox: true,
+      format: 'image',
+      markers: [
+        {
+          id: '01',
+          coords: [4730, 3607]
+        },
+        {
+          id: '02',
+          title: 'Agate pourpre 02',
+          coords: [4629, 3713]
+        },
+        {
+          id: '03',
+          title: 'Agate pourpre 03',
+          coords: [4581, 3732]
+        },
+        {
+          id: '04',
+          title: 'Agate pourpre 04',
+          coords: [4475, 3890]
+        },
+        {
+          id: '05',
+          title: 'Agate pourpre 05',
+          coords: [4587, 3867]
+        },
+        {
+          id: '06',
+          title: 'Agate pourpre 06',
+          coords: [4651, 3912]
+        },
+        {
+          id: '07',
+          title: 'Agate pourpre 07',
+          coords: [4651, 3948]
+        },
+        {
+          id: '08',
+          title: 'Agate pourpre 08',
+          coords: [4619, 4023]
+        },
+        {
+          id: '09',
+          title: 'Agate pourpre 09',
+          coords: [4530, 4042]
+        },
+        {
+          id: '10',
+          title: 'Agate pourpre 10',
+          coords: [4467, 4043]
+        },
+        {
+          id: '11',
+          title: 'Agate pourpre 11',
+          coords: [4451, 4041]
+        },
+        {
+          id: '12',
+          title: 'Agate pourpre 12',
+          coords: [4489, 4134]
+        },
+        {
+          id: '13',
+          title: 'Agate pourpre 13',
+          coords: [4637, 4201]
+        },
+        {
+          id: '14',
+          title: 'Agate pourpre 14',
+          coords: [4654, 4216]
+        },
+        {
+          id: '15',
+          title: 'Agate pourpre 15',
+          coords: [4668, 4178]
+        },
+        {
+          id: '16',
+          title: 'Agate pourpre 16',
+          coords: [4682, 4157]
+        },
+        {
+          id: '17',
+          title: 'Agate pourpre 17',
+          coords: [4705, 4388]
+        },
+        {
+          id: '18',
+          title: 'Agate pourpre 18',
+          coords: [4755, 4298]
+        },
+        {
+          id: '19',
+          coords: [4841, 4224]
+        },
+        {
+          id: '20',
+          title: 'Agate pourpre 20',
+          coords: [4841, 4189]
+        },
+        {
+          id: '21',
+          title: 'Agate pourpre 21',
+          coords: [4885, 4249]
+        },
+        {
+          id: '22',
+          title: 'Agate pourpre 22',
+          coords: [4786, 3978]
+        },
+        {
+          id: '23',
+          title: 'Agate pourpre 23',
+          coords: [4820, 3987]
+        },
+        {
+          id: '24',
+          title: 'Agate pourpre 24',
+          coords: [4803, 4029]
+        },
+        {
+          id: '25',
+          title: 'Agate pourpre 25',
+          coords: [4818, 3753]
+        },
+        {
+          id: '26',
+          title: 'Agate pourpre 26',
+          coords: [4926, 3706]
+        },
+        {
+          id: '27',
+          title: 'Agate pourpre 27',
+          coords: [4912, 3802]
+        },
+        {
+          id: '28',
+          title: 'Agate pourpre 28',
+          coords: [5059, 3814]
+        },
+        {
+          id: '29',
+          title: 'Agate pourpre 29',
+          coords: [5034, 3761]
+        },
+        {
+          id: '30',
+          coords: [5139, 3841]
+        },
+        {
+          id: '31',
+          title: 'Agate pourpre 31',
+          coords: [5155, 3909]
+        },
+        {
+          id: '32',
+          title: 'Agate pourpre 32',
+          coords: [5196, 3883]
+        },
+        {
+          id: '33',
+          title: 'Agate pourpre 33',
+          coords: [5327, 3832]
+        },
+        {
+          id: '34',
+          title: 'Agate pourpre 34',
+          coords: [5232, 3930]
+        },
+        {
+          id: '35',
+          title: 'Agate pourpre 35',
+          coords: [5057, 3940]
+        },
+        {
+          id: '36',
+          title: 'Agate pourpre 36',
+          coords: [5091, 3971]
+        },
+        {
+          id: '37',
+          title: 'Agate pourpre 37',
+          coords: [4980, 3961]
+        },
+        {
+          id: '38',
+          title: 'Agate pourpre 38',
+          coords: [4941, 3983]
+        },
+        {
+          id: '39',
+          title: 'Agate pourpre 39',
+          coords: [4895, 4013]
+        },
+        {
+          id: '40',
+          title: 'Agate pourpre 40',
+          coords: [4880, 4071]
+        },
+        {
+          id: '41',
+          title: 'Agate pourpre 41',
+          coords: [4929, 4084]
+        },
+        {
+          id: '42',
+          title: 'Agate pourpre 42',
+          coords: [4946, 4153]
+        },
+        {
+          id: '43',
+          title: 'Agate pourpre 43',
+          coords: [4967, 4136]
+        },
+        {
+          id: '44',
+          title: 'Agate pourpre 44',
+          coords: [4979, 4088]
+        },
+        {
+          id: '45',
+          title: 'Agate pourpre 45',
+          coords: [4976, 4058]
+        },
+        {
+          id: '46',
+          title: 'Agate pourpre 46',
+          coords: [4987, 4057]
+        },
+        {
+          id: '47',
+          title: 'Agate pourpre 47',
+          coords: [4992, 4220]
+        },
+        {
+          id: '48',
+          title: 'Agate pourpre 48',
+          coords: [5007, 4185]
+        },
+        {
+          id: '49',
+          title: 'Agate pourpre 49',
+          coords: [5043, 4186]
+        },
+        {
+          id: '50',
+          title: 'Agate pourpre 50',
+          coords: [5048, 4182]
+        },
+        {
+          id: '51',
+          title: 'Agate pourpre 51',
+          coords: [5011, 4147]
+        },
+        {
+          id: '52',
+          title: 'Agate pourpre 52',
+          coords: [4995, 4122]
+        },
+        {
+          id: '53',
+          title: 'Agate pourpre 53',
+          coords: [5010, 4112]
+        },
+        {
+          id: '54',
+          title: 'Agate pourpre 54',
+          coords: [5032, 4133]
+        },
+        {
+          id: '55',
+          title: 'Agate pourpre 55',
+          coords: [5006, 4296]
+        },
+        {
+          id: '56',
+          title: 'Agate pourpre 56',
+          coords: [4980, 4461]
+        },
+        {
+          id: '57',
+          title: 'Agate pourpre 57',
+          coords: [5258, 4500]
+        },
+        {
+          id: '58',
+          title: 'Agate pourpre 58',
+          coords: [5203, 4401]
+        },
+        {
+          id: '59',
+          title: 'Agate pourpre 59',
+          coords: [5282, 4221]
+        },
+        {
+          id: '60',
+          title: 'Agate pourpre 60',
+          coords: [5399, 4215]
+        },
+        {
+          id: '61',
+          title: 'Agate pourpre 61',
+          coords: [5470, 4271]
+        },
+        {
+          id: '62',
+          title: 'Agate pourpre 62',
+          coords: [5549, 4113]
+        },
+        {
+          id: '63',
+          title: 'Agate pourpre 63',
+          coords: [5369, 4028]
+        },
+        {
+          id: '64',
+          title: 'Agate pourpre 64',
+          coords: [5316, 4051]
+        },
+        {
+          id: '65',
+          title: 'Agate pourpre 65',
+          coords: [5284, 4019]
+        },
+        {
+          id: '66',
+          title: 'Agate pourpre 66',
+          coords: [5262, 4077]
+        },
+        {
+          id: '67',
+          title: 'Agate pourpre 67',
+          coords: [5215, 4120]
+        },
+        {
+          id: '68',
+          title: 'Agate pourpre 68',
+          coords: [5173, 4072]
+        },
+        {
+          id: '69',
+          title: 'Agate pourpre 69',
+          coords: [5070, 4028]
+        },
+        {
+          id: '70',
+          title: 'Agate pourpre 70',
+          coords: [5120, 4132]
+        },
+        {
+          id: '71',
+          title: 'Agate pourpre 71',
+          coords: [5141, 4193]
         },
       ]
     }
@@ -1613,7 +2083,7 @@
       total++;
 
       if(userMarkers.indexOf(g.id+m.id) >= 0)
-        marker.setOpacity(.5);
+        marker.setOpacity(.66);
 
     });
 
