@@ -2112,9 +2112,12 @@
       map.invalidateSize();
     }
 
+    var zoom = (params.z && ['3', '4', '5'].indexOf(params.z) >= 0) ? params.z : 4;
+
     if(params.x && params.y) {
-      var zoom = (params.z && ['4', '5'].indexOf(params.z) >= 0) ? params.z : 4;
       map.setView(unproject([params.x, params.y]), zoom);
+    } else if(params.z) {
+      map.setZoom(zoom);
     }
 
     if(params.markers) {
