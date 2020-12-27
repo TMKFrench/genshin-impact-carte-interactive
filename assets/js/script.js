@@ -1629,7 +1629,7 @@
         },
         {
           id: '02',
-          title: 'Agate pourpre 02',
+          text: 'Dans l\'eau se trouvent 3 esprits de vent. <b>Faites celui sur la plaque de glace en dernier&nbsp;!</b> Une fois que la plaque a disparu, elle met du temps à revenir...',
           coords: [4629, 3713]
         },
         {
@@ -1728,12 +1728,10 @@
         },
         {
           id: '22',
-          title: 'Agate pourpre 22',
           coords: [4786, 3978]
         },
         {
           id: '23',
-          title: 'Agate pourpre 23',
           coords: [4820, 3987]
         },
         {
@@ -1743,22 +1741,18 @@
         },
         {
           id: '25',
-          title: 'Agate pourpre 25',
           coords: [4818, 3753]
         },
         {
           id: '26',
-          title: 'Agate pourpre 26',
           coords: [4926, 3706]
         },
         {
           id: '27',
-          title: 'Agate pourpre 27',
           coords: [4912, 3802]
         },
         {
           id: '28',
-          title: 'Agate pourpre 28',
           coords: [5059, 3814]
         },
         {
@@ -1772,12 +1766,10 @@
         },
         {
           id: '31',
-          title: 'Agate pourpre 31',
           coords: [5155, 3909]
         },
         {
           id: '32',
-          title: 'Agate pourpre 32',
           coords: [5196, 3883]
         },
         {
@@ -1787,7 +1779,6 @@
         },
         {
           id: '34',
-          title: 'Agate pourpre 34',
           coords: [5232, 3930]
         },
         {
@@ -1797,7 +1788,6 @@
         },
         {
           id: '36',
-          title: 'Agate pourpre 36',
           coords: [5091, 3971]
         },
         {
@@ -1897,7 +1887,6 @@
         },
         {
           id: '56',
-          title: 'Agate pourpre 56',
           coords: [4980, 4461]
         },
         {
