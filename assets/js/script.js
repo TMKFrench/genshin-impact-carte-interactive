@@ -82,6 +82,7 @@
   var mondstadtshrineIcon = L.icon({ iconUrl: 'assets/img/mondstadt-shrine.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0, -32] });
   var liyueshrineIcon = L.icon({ iconUrl: 'assets/img/liyue-shrine.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0, -32] });
   var seelieIcon = L.icon({ iconUrl: 'assets/img/seelie.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0, -32] });
+  var fireseelieIcon = L.icon({ iconUrl: 'assets/img/fireseelie.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0, -32] });
   var itswarmIcon = L.icon({ iconUrl: 'assets/img/itswarm.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0, -32] });
   var debugIcon = L.icon({ iconUrl: 'assets/img/debug.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0, -32] });
   var achievementIcon = L.icon({ iconUrl: 'assets/img/achievement.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0, -32] });
@@ -118,7 +119,7 @@
 
   // Générer les layers
   var groups = [
-    'statue', 'teleporter', 'anemoculus', 'geoculus', 'panorama', 'mondstadtshrine', 'liyueshrine', 'seelie',
+    'statue', 'teleporter', 'anemoculus', 'geoculus', 'panorama', 'mondstadtshrine', 'liyueshrine', 'seelie', 'fireseelie',
     'jueyunchili', 'valberry', 'itswarm', 'overlookingview', 'dungeon', 'region', 'quest', 'crimsonagate'
   ];
   groups.forEach(function(e) {
@@ -794,124 +795,6 @@
       ]
     },
     // {
-    //   id: 'itswarm',
-    //   group: itswarmGroup,
-    //   icon: itswarmIcon,
-    //   checkbox: true,
-    //   format: 'video',
-    //   guide: '/devenez-livreur-dans-levenement-servir-chaud/',
-    //   markers: [
-    //     {
-    //       id: '01',
-    //       title: 'Servir chaud - Jour 1 - Le&nbsp;Bon&nbsp;Chasseur',
-    //       coords: [5983, 2280],
-    //       video: '-8Q4nWG5rk8'
-    //     },
-    //     {
-    //       id: '02',
-    //       title: 'Servir chaud - Jour 1 - Auberge&nbsp;Wanqshu',
-    //       coords: [3696, 3897],
-    //       video: 'vfmWK8CEgq8'
-    //     },
-    //     {
-    //       id: '03',
-    //       title: 'Servir chaud - Jour 1 - Restaurant&nbsp;Wanmin',
-    //       coords: [3129, 5239],
-    //       video: 'e0ZRpUkaWbk'
-    //     },
-    //     {
-    //       id: '04',
-    //       title: 'Servir chaud - Jour 2 - Le&nbsp;Bon&nbsp;Chasseur',
-    //       coords: [4167, 3326],
-    //       video: 'bXZCnJPL8L4'
-    //     },
-    //     {
-    //       id: '05',
-    //       title: 'Servir chaud - Jour 2 - Auberge&nbsp;Wanqshu',
-    //       coords: [3171, 4061],
-    //       video: 'S115ZH4jsiA'
-    //     },
-    //     {
-    //       id: '06',
-    //       title: 'Servir chaud - Jour 2 - Restaurant&nbsp;Wanmin',
-    //       coords: [4713, 5424],
-    //       video: 'FoKqrl1gFP0'
-    //     },
-    //     {
-    //       id: '07',
-    //       title: 'Servir chaud - Jour 3 - Le&nbsp;Bon&nbsp;Chasseur',
-    //       coords: [4604, 2423],
-    //       video: 'ctwHOlgqliM'
-    //     },
-    //     {
-    //       id: '08',
-    //       title: 'Servir chaud - Jour 3 - Auberge&nbsp;Wanqshu',
-    //       coords: [4256, 3724],
-    //       video: 'TAM9eDxuwlY'
-    //     },
-    //     {
-    //       id: '09',
-    //       title: 'Servir chaud - Jour 3 - Restaurant&nbsp;Wanmin',
-    //       coords: [3500, 4844],
-    //       video: 'v24-FD5dwns'
-    //     },
-    //     {
-    //       id: '10',
-    //       title: 'Servir chaud - Jour 4 - Le&nbsp;Bon&nbsp;Chasseur',
-    //       coords: [4414, 2636],
-    //       video: '19e5NybJ9dc'
-    //     },
-    //     {
-    //       id: '11',
-    //       title: 'Servir chaud - Jour 4 - Auberge&nbsp;Wanqshu',
-    //       coords: [3248, 4371],
-    //       video: 'RgY_Vt838Po'
-    //     },
-    //     {
-    //       id: '12',
-    //       title: 'Servir chaud - Jour 4 - Restaurant&nbsp;Wanmin',
-    //       coords: [3559, 5032],
-    //       video: 'rRcYZvb0HuA'
-    //     },
-    //     {
-    //       id: '13',
-    //       title: 'Servir chaud - Jour 5 - Le&nbsp;Bon&nbsp;Chasseur',
-    //       coords: [4272, 3468],
-    //       video: 'TiVH8oOKe5s'
-    //     },
-    //     {
-    //       id: '14',
-    //       title: 'Servir chaud - Jour 5 - Auberge&nbsp;Wanqshu',
-    //       coords: [3422, 3183],
-    //       video: '37T4NusBUG0'
-    //     },
-    //     {
-    //       id: '15',
-    //       title: 'Servir chaud - Jour 5 - Restaurant&nbsp;Wanmin',
-    //       coords: [2723, 4398],
-    //       video: '0fWejB8k7MY'
-    //     },
-    //     {
-    //       id: '16',
-    //       title: 'Servir chaud - Jour 6 - Le&nbsp;Bon&nbsp;Chasseur',
-    //       coords: [4008, 2243],
-    //       video: 'O3Nis0fSX0E'
-    //     },
-    //     {
-    //       id: '17',
-    //       title: 'Servir chaud - Jour 6 - Auberge&nbsp;Wanqshu',
-    //       coords: [2659, 3598],
-    //       video: 'Wl2u9FrL6i0'
-    //     },
-    //     {
-    //       id: '18',
-    //       title: 'Servir chaud - Jour 6 - Restaurant&nbsp;Wanmin',
-    //       coords: [4948, 5118],
-    //       video: 'eBwUGaFIElU'
-    //     },
-    //   ]
-    // },
-    // {
     //   id: 'geoculus',
     //   group: geoculusGroup,
     //   icon: geoculusIcon,
@@ -1190,6 +1073,63 @@
     //     },
     //   ]
     // },
+    {
+      id: 'fireseelie',
+      group: fireseelieGroup,
+      icon: fireseelieIcon,
+      format: 'image',
+      checkbox: true,
+      markers: [
+        {
+          id: '01',
+          coords: [4716, 4212],
+        },
+        {
+          id: '02',
+          coords: [4868, 3644],
+        },
+        {
+          id: '03',
+          coords: [4655, 3801],
+        },
+        {
+          id: '04',
+          coords: [5092, 3957],
+        },
+        {
+          id: '05',
+          coords: [4776, 4171],
+        },
+        {
+          id: '0',
+          coords: [0,0],
+        },
+        {
+          id: '0',
+          coords: [0,0],
+        },
+        {
+          id: '0',
+          coords: [0,0],
+        },
+        {
+          id: '0',
+          coords: [0,0],
+        },
+        {
+          id: '0',
+          coords: [0,0],
+        },
+        {
+          id: '0',
+          coords: [0,0],
+        },
+        {
+          id: '0',
+          coords: [0,0],
+        },
+      ]
+    },
     // {
     //   id: 'jueyunchili',
     //   group: jueyunchiliGroup,
