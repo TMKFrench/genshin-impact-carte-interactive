@@ -1100,34 +1100,6 @@
           id: '05',
           coords: [4776, 4171],
         },
-        {
-          id: '0',
-          coords: [0,0],
-        },
-        {
-          id: '0',
-          coords: [0,0],
-        },
-        {
-          id: '0',
-          coords: [0,0],
-        },
-        {
-          id: '0',
-          coords: [0,0],
-        },
-        {
-          id: '0',
-          coords: [0,0],
-        },
-        {
-          id: '0',
-          coords: [0,0],
-        },
-        {
-          id: '0',
-          coords: [0,0],
-        },
       ]
     },
     // {
@@ -1574,12 +1546,12 @@
         },
         {
           id: '03',
-          title: 'Agate pourpre 03',
+          text: 'Tuez les Fatui aux alentours du coffre pour le déverrouiller. Interagissez avec pour obtenir l\'agate pourpre.',
           coords: [4581, 3732]
         },
         {
           id: '04',
-          title: 'Agate pourpre 04',
+          text: 'D\'abord, dégagez la plaque sous la glace (5) en récupérant l\'effet d\'un cristal de sang, puis marchez sur les plaques dans l\'ordre indiqué sur l\'image. Un coffre apparaît lorsque vous avez résolu l\'énigme. L\'agate pourpre se trouve à l\'intérieur.',
           coords: [4475, 3890]
         },
         {
@@ -1609,17 +1581,16 @@
         },
         {
           id: '10',
-          title: 'Agate pourpre 10',
           coords: [4467, 4043]
         },
         {
           id: '11',
-          title: 'Agate pourpre 11',
+          text: 'Tuez les Brutocollinus devant la cabane pour déverrouiller le coffre. L\'agate pourpre se trouve à l\'intérieur.',
           coords: [4451, 4041]
         },
         {
           id: '12',
-          title: 'Agate pourpre 12',
+          text: 'Tuez le Chef Brutogivré pour faire appraitre le coffre. L\'agate pourpre se trouve à l\'intérieur.',
           coords: [4489, 4134]
         },
         {
@@ -1649,7 +1620,7 @@
         },
         {
           id: '18',
-          title: 'Agate pourpre 18',
+          text: 'Après avoir résolu la petite énigme avec les fées ardentes et tué le gardien, une grille s\'ouvre sur 3 coffres. Le coffre de droite donne l\'agate pourpre.',
           coords: [4755, 4298]
         },
         {
@@ -1822,7 +1793,6 @@
         },
         {
           id: '55',
-          title: 'Agate pourpre 55',
           coords: [5006, 4296]
         },
         {
@@ -1831,12 +1801,12 @@
         },
         {
           id: '57',
-          title: 'Agate pourpre 57',
+          text: 'Tuez le gardien pour ouvrir le coffre. L\'agate pourpre se trouve à l\'intérieur.',
           coords: [5258, 4500]
         },
         {
           id: '58',
-          title: 'Agate pourpre 58',
+          text: 'Utilisez les esprits du vent sur le côté est du pic, pour le gravir plus rapidement. Vous en trouverez plusieurs le long de votre ascension.',
           coords: [5203, 4401]
         },
         {
@@ -1886,7 +1856,6 @@
         },
         {
           id: '68',
-          title: 'Agate pourpre 68',
           coords: [5173, 4072]
         },
         {
@@ -1903,6 +1872,11 @@
           id: '71',
           title: 'Agate pourpre 71',
           coords: [5141, 4193]
+        },
+        {
+          id: '72',
+          text: 'Tuez les brutocollinus des alentours pour déverouiller l\'accès à ce coffre. L\'agate pourpre se trouve à l\'intérieur.',
+          coords: [5198, 4371]
         },
       ]
     }
