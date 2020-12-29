@@ -105,6 +105,10 @@
   var blankIcon = L.icon({ iconUrl: 'assets/img/blank.png', iconSize: [2,2], iconAnchor: [1,1], popupAnchor: [1, 1] });
   var questIcon = L.icon({ iconUrl: 'assets/img/quest.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0,-32] });
   var crimsonagateIcon = L.icon({ iconUrl: 'assets/img/crimsonagate.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0,-32] });
+  var priestIcon = L.icon({ iconUrl: 'assets/img/priest.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0,-32] });
+  var princessIcon = L.icon({ iconUrl: 'assets/img/princess.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0,-32] });
+  var scribeIcon = L.icon({ iconUrl: 'assets/img/scribe.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0,-32] });
+  var doorIcon = L.icon({ iconUrl: 'assets/img/door.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0,-32] });
 
 
 
@@ -120,7 +124,8 @@
   // Générer les layers
   var groups = [
     'statue', 'teleporter', 'anemoculus', 'geoculus', 'panorama', 'mondstadtshrine', 'liyueshrine', 'seelie', 'fireseelie',
-    'jueyunchili', 'valberry', 'itswarm', 'overlookingview', 'dungeon', 'region', 'quest', 'crimsonagate'
+    'jueyunchili', 'valberry', 'itswarm', 'overlookingview', 'dungeon', 'region', 'quest', 'crimsonagate',
+    'priestprincessscribe'
   ];
   groups.forEach(function(e) {
     window[e+'Group'] = L.layerGroup();
@@ -1877,6 +1882,38 @@
           id: '72',
           text: 'Tuez les brutocollinus des alentours pour déverouiller l\'accès à ce coffre. L\'agate pourpre se trouve à l\'intérieur.',
           coords: [5198, 4371]
+        },
+      ]
+    },
+    {
+      id: 'priestprincessscribe',
+      group: priestprincessscribeGroup,
+      checkbox: true,
+      format: 'image',
+      markers: [
+        {
+          id: 'priest',
+          title: 'Coffre de prêtre',
+          icon: priestIcon,
+          coords: [4783, 3924]
+        },
+        {
+          id: 'princess',
+          title: 'Coffre de princesse',
+          icon: princessIcon,
+          coords: [5269, 3787]
+        },
+        {
+          id: 'scribe',
+          title: 'Coffre de scribe',
+          icon: scribeIcon,
+          coords: [4777, 4183]
+        },
+        {
+          id: 'door',
+          text: 'Une fois que vous avez ramassez les 3 coffres (prêtre, princesse et scribe) vous pouvez ouvrir la porte.',
+          icon: doorIcon,
+          coords: [5111, 4104]
         },
       ]
     }
