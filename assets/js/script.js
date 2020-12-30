@@ -70,6 +70,7 @@
   var total = 0;
   var params = getParamsURL();
   var userMarkers = getUserMarkers();
+  var debugMarkers = [];
 
 
 
@@ -2057,6 +2058,9 @@
       if(userMarkers.indexOf(g.id+m.id) >= 0)
         marker.setOpacity(.66);
 
+      if(params['debug'] && g.id !== 'region')
+        debugMarkers.push({name: g.id+m.id, marker: marker, coords: m.coords, icon: icon});
+
     });
 
   });
@@ -2079,6 +2083,33 @@
   groups.forEach(function(e) {
     map.removeLayer(window[e+'Group']);
   });
+
+
+  // Debug
+  if(params['debug']) {
+      $('#menu ul').html('');
+      debugMarkers.forEach(function(m, k) {
+          $('#menu ul').append('<li class="marker col-span-2"><a href="#" data-debug-marker="'+m.name+'" class="active"><img src="'+m.icon.options.iconUrl+'" /> <span>'+m.name+'</span></a></li>');
+      });
+
+      $('#menu ul li a').on('click', function(e) {
+          e.preventDefault();
+          var marker = $(this).data('debug-marker');
+
+          //jsObjects.find(x => x.b === 6)
+          debugMarkers.find(function(m) {
+              if(m.name === marker) {
+                  m.marker.openPopup();
+                  map.setView(unproject([m.coords[0], m.coords[1]]), 5);
+                  console.log(m);
+              }
+          });
+      });
+
+      groups.forEach(function(e) {
+          map.addLayer(window[e+'Group']);
+      });
+  }
 
 
 
