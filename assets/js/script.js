@@ -109,6 +109,7 @@
   var princessIcon = L.icon({ iconUrl: 'assets/img/princess.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0,-32] });
   var scribeIcon = L.icon({ iconUrl: 'assets/img/scribe.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0,-32] });
   var doorIcon = L.icon({ iconUrl: 'assets/img/door.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0,-32] });
+  var challengeIcon = L.icon({ iconUrl: 'assets/img/challenge.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0,-32] });
 
 
 
@@ -125,7 +126,7 @@
   var groups = [
     'statue', 'teleporter', 'anemoculus', 'geoculus', 'panorama', 'mondstadtshrine', 'liyueshrine', 'seelie', 'fireseelie',
     'jueyunchili', 'valberry', 'itswarm', 'overlookingview', 'dungeon', 'region', 'quest', 'crimsonagate',
-    'priestprincessscribe'
+    'priestprincessscribe', 'challenge'
   ];
   groups.forEach(function(e) {
     window[e+'Group'] = L.layerGroup();
@@ -1561,7 +1562,7 @@
         },
         {
           id: '05',
-          title: 'Agate pourpre 05',
+          text: 'Récupérez d\'abord un cristal de sang qui se trouve en bas du mont et tapez la glace.',
           coords: [4587, 3867]
         },
         {
@@ -1581,7 +1582,7 @@
         },
         {
           id: '09',
-          title: 'Agate pourpre 09',
+          text: 'Terminez le défi pour faire apparaître le coffre contenant l\'agate pourpre. Prévoyez une équipe Pyro pour vous faciliter la tâche.',
           coords: [4530, 4042]
         },
         {
@@ -1610,17 +1611,16 @@
         },
         {
           id: '15',
-          title: 'Agate pourpre 15',
           coords: [4668, 4178]
         },
         {
           id: '16',
-          title: 'Agate pourpre 16',
+          text: 'Tuez les Fatui aux alentours pour déverrouiller le coffre. L\'agate pourpre se trouve à l\'intérieur.',
           coords: [4682, 4157]
         },
         {
           id: '17',
-          title: 'Agate pourpre 17',
+          text: 'Montez sur le flanc de la montagne et utilisez votre planeur pour atteindre cette agate pourpre.',
           coords: [4705, 4388]
         },
         {
@@ -1639,7 +1639,7 @@
         },
         {
           id: '21',
-          title: 'Agate pourpre 21',
+          text: 'Ce coffre précieux qui contient une agate pourpre, se trouve derrière un mur de glace, à proximité l\'entrée de la Grotte Luminétoile. Il est également possible d\'y accéder depuis les hauteurs, grâce au planeur.',
           coords: [4885, 4249]
         },
         {
@@ -1821,17 +1821,15 @@
         },
         {
           id: '60',
-          title: 'Agate pourpre 60',
           coords: [5399, 4215]
         },
         {
           id: '61',
-          title: 'Agate pourpre 61',
           coords: [5470, 4271]
         },
         {
           id: '62',
-          title: 'Agate pourpre 62',
+          text: 'Depuis la falaise au sud de la Vallée Dadaupa, descendez vers un petit escarpement au nord de l\'île pour trouver un cristal de sang. Brisez-le puis dirigez-vous en planeur sur l\'île. Briser la glace éternelle sur place pour faire apparaître un coffre luxueux contenant l\'agate pourpre.',
           coords: [5549, 4113]
         },
         {
@@ -1865,7 +1863,8 @@
         },
         {
           id: '69',
-          title: 'Agate pourpre 69',
+          text: 'Ce coffre précieux qui contient une agate pourpre est accessible après avoir complété le succès «&nbsp;Prêtre, princesse et scribe&nbsp;».',
+          guide: '/genshin-impact/guides/pretre-princesse-et-scribe/',
           coords: [5070, 4028]
         },
         {
@@ -1914,6 +1913,39 @@
           text: 'Une fois que vous avez ramassez les 3 coffres (prêtre, princesse et scribe) vous pouvez ouvrir la porte.',
           icon: doorIcon,
           coords: [5111, 4104]
+        },
+      ]
+    },
+    {
+      id: 'challenge',
+      checkbox: true,
+      group: challengeGroup,
+      icon: challengeIcon,
+      format: 'video',
+      markers: [
+        {
+          id: 'dragonspine01',
+          text: 'Ouvrez le coffre en moins de 16&nbsp;s.',
+          video: 'GzHhQauia3g',
+          coords: [5277, 4577]
+        },
+        {
+          id: 'dragonspine02',
+          text: 'Explosez les 5 tonneaux en moins de 30&nbsp;s.',
+          video: 'fkH9RxiwsbA',
+          coords: [5351,4241]
+        },
+        {
+          id: 'dragonspine03',
+          text: 'Explosez les 3 tonneaux explosifs en moins de 30&nbsp;s.',
+          video: 'y9SkYCW8H-M',
+          coords: [4894,3600]
+        },
+        {
+          id: 'dragonspine04',
+          text: 'Ouvrez le coffre en moins de 30&nbsp;s.',
+          video: 'jkZ5FrdO1jo',
+          coords: [4717,3685]
         },
       ]
     }

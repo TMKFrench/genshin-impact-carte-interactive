@@ -4,3 +4,5 @@ assets/js/*.js
 .git-ftp-ignore
 .git-ftp-include
 readme.md
+assets/img/*.psd
+assets/img/*.ai
