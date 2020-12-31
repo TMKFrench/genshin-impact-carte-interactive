@@ -111,6 +111,7 @@
   var scribeIcon = L.icon({ iconUrl: 'assets/img/scribe.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0,-32] });
   var doorIcon = L.icon({ iconUrl: 'assets/img/door.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0,-32] });
   var challengeIcon = L.icon({ iconUrl: 'assets/img/challenge.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0,-32] });
+  var unusualhilichurlIcon = L.icon({ iconUrl: 'assets/img/unusualhilichurl.png', iconSize: [32,32], iconAnchor: [16,16], popupAnchor: [0,-32] });
 
 
 
@@ -127,7 +128,7 @@
   var groups = [
     'statue', 'teleporter', 'anemoculus', 'geoculus', 'panorama', 'mondstadtshrine', 'liyueshrine', 'seelie', 'fireseelie',
     'jueyunchili', 'valberry', 'itswarm', 'overlookingview', 'dungeon', 'region', 'quest', 'crimsonagate',
-    'priestprincessscribe', 'challenge'
+    'priestprincessscribe', 'challenge', 'unusualhilichurl'
   ];
   groups.forEach(function(e) {
     window[e+'Group'] = L.layerGroup();
@@ -1947,6 +1948,76 @@
           text: 'Ouvrez le coffre en moins de 30&nbsp;s.',
           video: 'jkZ5FrdO1jo',
           coords: [4717,3685]
+        },
+      ]
+    },
+    {
+      id: 'unusualhilichurl',
+      format: 'simple',
+      group: unusualhilichurlGroup,
+      icon: unusualhilichurlIcon,
+      title: 'Brutocollinus étranges',
+      guide: '/genshin-impact/succes/au-defi/#bruto-etrange',
+      markers: [
+        {
+          id: '01',
+          coords: [4408, 3122]
+        },
+        {
+          id: '02',
+          coords: [3892, 2540]
+        },
+        {
+          id: '03',
+          coords: [5298, 2266]
+        },
+        {
+          id: '04',
+          coords: [5360, 3216]
+        },
+        {
+          id: '05',
+          coords: [5641, 3658]
+        },
+        {
+          id: '06',
+          coords: [6221, 3487]
+        },
+        {
+          id: '07',
+          coords: [3921, 3543]
+        },
+        {
+          id: '08',
+          coords: [3474, 3212]
+        },
+        {
+          id: '09',
+          coords: [2639, 4261]
+        },
+        {
+          id: '10',
+          coords: [2918, 4469]
+        },
+        {
+          id: '11',
+          coords: [2768, 4962]
+        },
+        {
+          id: '12',
+          coords: [3227, 4704]
+        },
+        {
+          id: '13',
+          coords: [3034, 5773]
+        },
+        {
+          id: '14',
+          coords: [3957, 5285]
+        },
+        {
+          id: '15',
+          coords: [4484, 4457]
         },
       ]
     }
