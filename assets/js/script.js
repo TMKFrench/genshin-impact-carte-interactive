@@ -112,6 +112,7 @@
   var doorIcon = L.icon({ iconUrl: 'assets/img/door.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0,-32] });
   var challengeIcon = L.icon({ iconUrl: 'assets/img/challenge.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0,-32] });
   var unusualhilichurlIcon = L.icon({ iconUrl: 'assets/img/unusualhilichurl.png', iconSize: [32,32], iconAnchor: [16,16], popupAnchor: [0,-32] });
+  var glacialsteelIcon = L.icon({ iconUrl: 'assets/img/glacialsteel.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0,-32] });
 
 
 
@@ -128,7 +129,7 @@
   var groups = [
     'statue', 'teleporter', 'anemoculus', 'geoculus', 'panorama', 'mondstadtshrine', 'liyueshrine', 'seelie', 'fireseelie',
     'jueyunchili', 'valberry', 'itswarm', 'overlookingview', 'dungeon', 'region', 'quest', 'crimsonagate',
-    'priestprincessscribe', 'challenge', 'unusualhilichurl'
+    'priestprincessscribe', 'challenge', 'unusualhilichurl', 'glacialsteel'
   ];
   groups.forEach(function(e) {
     window[e+'Group'] = L.layerGroup();
@@ -468,12 +469,10 @@
         },
         {
           id: 'dragonspine07',
-          title: 'dragonspine07',
           coords: [4889, 4090]
         },
         {
           id: 'dragonspine08',
-          title: 'dragonspine08',
           coords: [5109, 4100]
         },
         {
@@ -1574,7 +1573,7 @@
         },
         {
           id: '07',
-          title: 'Agate pourpre 07',
+          text: 'Faites apparaître un coffre en solvant l\'énigme avec les pilliers Cryo. <strong>La première</strong> agate pourpre se trouve à l\'intérieur. Puis, une fois après avoir tué les 3 gardiens, vous débloquez l\'accès à une grotte où se trouve <strong>la deuxième</strong> agate pourpre.',
           coords: [4651, 3948]
         },
         {
@@ -1636,7 +1635,6 @@
         },
         {
           id: '20',
-          title: 'Agate pourpre 20',
           coords: [4841, 4189]
         },
         {
@@ -1654,7 +1652,7 @@
         },
         {
           id: '24',
-          title: 'Agate pourpre 24',
+          text: 'Après avoir tué le Chef Brutogivré. le coffre apparaît. L\'agate pourpre est à l\'intérieur.',
           coords: [4803, 4029]
         },
         {
@@ -1710,22 +1708,19 @@
         },
         {
           id: '37',
-          title: 'Agate pourpre 37',
           coords: [4980, 3961]
         },
         {
           id: '38',
-          title: 'Agate pourpre 38',
+          text: 'Après avoir tué le Chef Brutogivré, le coffre apparait. L\'agate pourpre se trouve à l\'intérieur.',
           coords: [4941, 3983]
         },
         {
           id: '39',
-          title: 'Agate pourpre 39',
           coords: [4895, 4013]
         },
         {
           id: '40',
-          title: 'Agate pourpre 40',
           coords: [4880, 4071]
         },
         {
@@ -1745,22 +1740,18 @@
         },
         {
           id: '44',
-          title: 'Agate pourpre 44',
           coords: [4979, 4088]
         },
         {
           id: '45',
-          title: 'Agate pourpre 45',
           coords: [4976, 4058]
         },
         {
           id: '46',
-          title: 'Agate pourpre 46',
           coords: [4987, 4057]
         },
         {
           id: '47',
-          title: 'Agate pourpre 47',
           coords: [4992, 4220]
         },
         {
@@ -1770,12 +1761,12 @@
         },
         {
           id: '49',
-          title: 'Agate pourpre 49',
-          coords: [5043, 4186]
+          text: 'Marchez sur la zone de glace plus clair pour la rompre et accéder à l\'agate pourpre en dessous.',
+          coords: [5046, 4189]
         },
         {
           id: '50',
-          title: 'Agate pourpre 50',
+          text: 'Terminez le défi pour obtenir le coffre de récompenses. L\'agate pourpre se trouve à l\'intérieur.',
           coords: [5048, 4182]
         },
         {
@@ -1785,7 +1776,6 @@
         },
         {
           id: '52',
-          title: 'Agate pourpre 52',
           coords: [4995, 4122]
         },
         {
@@ -1795,7 +1785,6 @@
         },
         {
           id: '54',
-          title: 'Agate pourpre 54',
           coords: [5032, 4133]
         },
         {
@@ -1884,6 +1873,10 @@
           text: 'Tuez les brutocollinus des alentours pour déverouiller l\'accès à ce coffre. L\'agate pourpre se trouve à l\'intérieur.',
           coords: [5198, 4371]
         },
+        {
+          id: '73',
+          coords: [4958, 4173]
+        },
       ]
     },
     {
@@ -1891,6 +1884,7 @@
       group: priestprincessscribeGroup,
       checkbox: true,
       format: 'image',
+      guide: '/genshin-impact/guides/pretre-princesse-et-scribe/',
       markers: [
         {
           id: 'priest',
@@ -1901,6 +1895,7 @@
         {
           id: 'princess',
           title: 'Coffre de princesse',
+          text: 'Touchez l\'épée pour lancer le défi. Une fois terminé, le coffre apparaît.',
           icon: princessIcon,
           coords: [5269, 3787]
         },
@@ -1908,6 +1903,7 @@
           id: 'scribe',
           title: 'Coffre de scribe',
           icon: scribeIcon,
+          text: 'Déposez 3&nbsp;Cécilias pour obtenir le coffre de scribe.',
           coords: [4777, 4183]
         },
         {
@@ -2020,6 +2016,59 @@
           coords: [4484, 4457]
         },
       ]
+    },
+    {
+      id: 'glacialsteel',
+      group: glacialsteelGroup,
+      icon: glacialsteelIcon,
+      format: 'image',
+      guide: '/genshin-impact/guides/froides-sapeques/',
+      checkbox: 'true',
+      markers: [
+        {
+          id: '01',
+          title: 'Stèle n°&nbsp;1',
+          coords: [5213, 3744]
+        },
+        {
+          id: '02',
+          title: 'Stèle n°&nbsp;2',
+          coords: [4806, 3897]
+        },
+        {
+          id: '03',
+          title: 'Stèle n°&nbsp;3',
+          coords: [4748, 4278]
+        },
+        {
+          id: '04',
+          title: 'Stèle n°&nbsp;4',
+          text: 'Accessible uniquement après avoir résolu l\'énigme et tué les 3 gardiens, dans la caverne sous la glace qui disparait.',
+          coords: [4620, 3974]
+        },
+        {
+          id: '05',
+          title: 'Stèle n°&nbsp;5',
+          coords: [4947, 4214]
+        },
+        {
+          id: '06',
+          title: 'Stèle n°&nbsp;6',
+          text: 'Vous devez d\'abord terminer le succès "Prêtre, Princesse et Scribe" pour accéder à cette stèle. Suivez le guide&nbsp;!',
+          guide: '/genshin-impact/guides/pretre-princesse-et-scribe/',
+          coords: [5121, 4138]
+        },
+        {
+          id: '07',
+          title: 'Stèle n°&nbsp;7',
+          coords: [4905, 4082]
+        },
+        {
+          id: '08',
+          title: 'Stèle n°&nbsp;8 et porte',
+          coords: [5084, 4004]
+        },
+      ]
     }
   ];
 
@@ -2114,7 +2163,7 @@
       else if(format === 'video')
         marker.bindPopup(title+'<a class="video" href="//www.youtube.com/watch?v='+m.video+'" data-lity><img src="https://i.ytimg.com/vi/'+m.video+'/hqdefault.jpg" /></a>'+text+guide+checkbox);
       else if(format === 'image')
-        marker.bindPopup(title+'<a href="assets/img/medias/'+g.id+m.id+'.jpg" class="image" data-lity><img src="assets/img/medias/'+g.id+m.id+'-thumb.jpg" onerror="this.src=\'assets/img/medias/default.jpg\'" /></a>'+text+guide+checkbox);
+        marker.bindPopup(title+'<a href="assets/img/medias/'+g.id+m.id+'.jpg" class="image" width="300" height="300" data-lity><img src="assets/img/medias/'+g.id+m.id+'-thumb.jpg" onerror="this.src=\'assets/img/medias/default.jpg\'" /></a>'+text+guide+checkbox);
       else if(format === 'banner')
         marker.bindPopup(title+'<img src="assets/img/medias/'+g.id+m.id+'.jpg" onerror="this.src=\'assets/img/medias/default.jpg\'" />'+text+guide+checkbox);
       else if(format === 'region')
