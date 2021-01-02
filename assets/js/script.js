@@ -1865,13 +1865,13 @@
         },
         {
           id: '69',
-          text: 'Ce coffre précieux qui contient une agate pourpre est accessible après avoir complété le succès «&nbsp;Prêtre, princesse et scribe&nbsp;».',
-          guide: '/genshin-impact/guides/pretre-princesse-et-scribe/',
+          title: 'Agate pourpre 69',
           coords: [5070, 4028]
         },
         {
           id: '70',
-          title: 'Agate pourpre 70',
+          text: 'Ce coffre précieux qui contient une agate pourpre est accessible après avoir complété le succès «&nbsp;Prêtre, princesse et scribe&nbsp;».',
+          guide: '/genshin-impact/guides/pretre-princesse-et-scribe/',
           coords: [5120, 4132]
         },
         {
