@@ -113,7 +113,7 @@
   var challengeIcon = L.icon({ iconUrl: 'assets/img/challenge.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0,-32] });
   var unusualhilichurlIcon = L.icon({ iconUrl: 'assets/img/unusualhilichurl.png', iconSize: [32,32], iconAnchor: [16,16], popupAnchor: [0,-32] });
   var glacialsteelIcon = L.icon({ iconUrl: 'assets/img/glacialsteel.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0,-32] });
-
+  var futileendeavorIcon = L.icon({ iconUrl: 'assets/img/futileendeavor.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0,-32] });
 
 
   // Initialisation de la carte
@@ -129,7 +129,7 @@
   var groups = [
     'statue', 'teleporter', 'anemoculus', 'geoculus', 'panorama', 'mondstadtshrine', 'liyueshrine', 'seelie', 'fireseelie',
     'jueyunchili', 'valberry', 'itswarm', 'overlookingview', 'dungeon', 'region', 'quest', 'crimsonagate',
-    'priestprincessscribe', 'challenge', 'unusualhilichurl', 'glacialsteel'
+    'priestprincessscribe', 'challenge', 'unusualhilichurl', 'glacialsteel', 'futileendeavor'
   ];
   groups.forEach(function(e) {
     window[e+'Group'] = L.layerGroup();
@@ -1107,6 +1107,10 @@
           id: '05',
           coords: [4776, 4171],
         },
+        {
+          id: '06',
+          coords: [5166, 3751]
+        }
       ]
     },
     // {
@@ -1568,18 +1572,17 @@
         },
         {
           id: '06',
-          title: 'Agate pourpre 06',
+          text: 'Après avoir résolu l\'énigme avec les pilliers Cryo et tué les 3 gardiens, vous débloquez l\'accès à une grotte où se trouve l\'agate pourpre.',
           coords: [4651, 3912]
         },
         {
           id: '07',
-          text: 'Faites apparaître un coffre en solvant l\'énigme avec les pilliers Cryo. <strong>La première</strong> agate pourpre se trouve à l\'intérieur. Puis, une fois après avoir tué les 3 gardiens, vous débloquez l\'accès à une grotte où se trouve <strong>la deuxième</strong> agate pourpre.',
+          text: 'Faites apparaître un coffre en résolvant l\'énigme avec les pilliers Cryo. L\'agate pourpre se trouve à l\'intérieur.',
           coords: [4651, 3948]
         },
         {
           id: '08',
-          title: 'Agate pourpre 08',
-          coords: [4619, 4023]
+          coords: [4611,4033]
         },
         {
           id: '09',
@@ -1789,11 +1792,12 @@
         },
         {
           id: '55',
+          text: 'Vous avez deux agates poupres à cette position. La première à l\'extérieur, sur le toit. La seconde dans le coffre dans la cabane, après avoir tué le Chef brutogivré.',
           coords: [5006, 4296]
         },
         {
           id: '56',
-          coords: [4980, 4461]
+          coords: [4970,4466]
         },
         {
           id: '57',
@@ -1807,7 +1811,6 @@
         },
         {
           id: '59',
-          title: 'Agate pourpre 59',
           coords: [5282, 4221]
         },
         {
@@ -1830,7 +1833,6 @@
         },
         {
           id: '64',
-          title: 'Agate pourpre 64',
           coords: [5316, 4051]
         },
         {
@@ -1854,7 +1856,8 @@
         },
         {
           id: '69',
-          title: 'Agate pourpre 69',
+          text: 'Ce coffre précieux est disponible dans la salle secrète après avoir lu les 8 stèles. Suivez le guide&nbsp;!',
+          guide: '/genshin-impact/guides/froides-sapeques/',
           coords: [5070, 4028]
         },
         {
@@ -1877,6 +1880,11 @@
           id: '73',
           coords: [4958, 4173]
         },
+        {
+          id: '74',
+          title: 'Agate pourpre 74',
+          coords: [4915, 4085]
+        }
       ]
     },
     {
@@ -1945,6 +1953,18 @@
           video: 'jkZ5FrdO1jo',
           coords: [4717,3685]
         },
+        {
+          id: 'dragonspine05',
+          text: 'Ramassez 8 particules Anemo en moins de 50s.',
+          video: 'Otq1FHm-8QY',
+          coords: [5041,4469]
+        },
+        {
+          id: 'dragonspine06',
+          text: 'Tuez tous les ennemis en 180s.',
+          video: 'LB27Cg3VVFA',
+          coords: [5046,4179]
+        }
       ]
     },
     {
@@ -2067,6 +2087,52 @@
           id: '08',
           title: 'Stèle n°&nbsp;8 et porte',
           coords: [5084, 4004]
+        },
+      ]
+    },
+    {
+      id: 'futileendeavor',
+      group: futileendeavorGroup,
+      icon: futileendeavorIcon,
+      checkbox: true,
+      guide: '/genshin-impact/guides/futile-expedition/',
+      format: 'image',
+      markers: [
+        {
+          id: '01',
+          title: 'Gardiens n°1 et 2',
+          coords: [5261,4514]
+        },
+        {
+          id: '02',
+          title: 'Gardiens n°3 et 4',
+          coords: [5031,3820]
+        },
+        {
+          id: '03',
+          title: 'Gardien n°5',
+          coords: [5013,4326]
+        },
+        {
+          id: '04',
+          title: 'Gardien n°6',
+          text: 'Vous devez avoir résolu l\'énigme qui vous donne accès au donjon du Pic de Vindagnyr pour accéder à ce gardien.',
+          coords: [4672,3941]
+        },
+        {
+          id: '05',
+          title: 'Gardien n°7',
+          coords: [5055,3938]
+        },
+        {
+          id: '06',
+          title: 'Gardien n°8',
+          coords: [5086,4114]
+        },
+        {
+          id: '07',
+          title: 'Gardien n°9',
+          coords: [4585,4082]
         },
       ]
     }
