@@ -1564,7 +1564,7 @@
         {
           id: '04',
           text: 'D\'abord, dégagez la plaque sous la glace (5) en récupérant l\'effet d\'un cristal de sang, puis marchez sur les plaques dans l\'ordre indiqué sur l\'image. Un coffre apparaît lorsque vous avez résolu l\'énigme. L\'agate pourpre se trouve à l\'intérieur.',
-          coords: [4475, 3890]
+          coords: [4465,3869]
         },
         {
           id: '05',
@@ -1574,12 +1574,12 @@
         {
           id: '06',
           text: 'Après avoir résolu l\'énigme avec les pilliers Cryo et tué les 3 gardiens, vous débloquez l\'accès à une grotte où se trouve l\'agate pourpre.',
-          coords: [4651, 3912]
+          coords: [4657,3938]
         },
         {
           id: '07',
           text: 'Faites apparaître un coffre en résolvant l\'énigme avec les pilliers Cryo. L\'agate pourpre se trouve à l\'intérieur.',
-          coords: [4651, 3948]
+          coords: [4643,3949]
         },
         {
           id: '08',
@@ -1885,7 +1885,12 @@
           id: '74',
           title: 'Agate pourpre 74',
           coords: [4915, 4085]
-        }
+        },
+        {
+          id: '75',
+          title: 'Agate pourpre 75',
+          coords: [5016, 4012]
+        },
       ]
     },
     {
