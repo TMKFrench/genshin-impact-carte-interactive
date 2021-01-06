@@ -114,6 +114,7 @@
   var unusualhilichurlIcon = L.icon({ iconUrl: 'assets/img/unusualhilichurl.png', iconSize: [32,32], iconAnchor: [16,16], popupAnchor: [0,-32] });
   var glacialsteelIcon = L.icon({ iconUrl: 'assets/img/glacialsteel.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0,-32] });
   var futileendeavorIcon = L.icon({ iconUrl: 'assets/img/futileendeavor.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0,-32] });
+  var prodigalsonreturnIcon = L.icon({ iconUrl: 'assets/img/prodigalsonreturn.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0,-32] });
 
 
   // Initialisation de la carte
@@ -129,7 +130,7 @@
   var groups = [
     'statue', 'teleporter', 'anemoculus', 'geoculus', 'panorama', 'mondstadtshrine', 'liyueshrine', 'seelie', 'fireseelie',
     'jueyunchili', 'valberry', 'itswarm', 'overlookingview', 'dungeon', 'region', 'quest', 'crimsonagate',
-    'priestprincessscribe', 'challenge', 'unusualhilichurl', 'glacialsteel', 'futileendeavor'
+    'priestprincessscribe', 'challenge', 'unusualhilichurl', 'glacialsteel', 'futileendeavor', 'prodigalsonreturn'
   ];
   groups.forEach(function(e) {
     window[e+'Group'] = L.layerGroup();
@@ -2116,7 +2117,7 @@
         {
           id: '04',
           title: 'Gardien n°6',
-          text: 'Vous devez avoir résolu l\'énigme qui vous donne accès au donjon du Pic de Vindagnyr pour accéder à ce gardien.',
+          text: 'Accessible uniquement après avoir résolu l\'énigme et tué les 3 gardiens, dans la caverne sous la glace qui disparait.',
           coords: [4672,3941]
         },
         {
@@ -2133,6 +2134,31 @@
           id: '07',
           title: 'Gardien n°9',
           coords: [4585,4082]
+        },
+      ]
+    },
+    {
+      id: 'prodigalsonreturn',
+      group: prodigalsonreturnGroup,
+      icon: prodigalsonreturnIcon,
+      format: 'image',
+      guide: '/genshin-impact/guides/le-retour-du-fils-prodigue/',
+      checkbox: true,
+      markers: [
+        {
+          id: '01',
+          title: 'Notes abîmées n°&nbsp;1',
+          coords: [4653, 4220]
+        },
+        {
+          id: '02',
+          title: 'Notes abîmées n°&nbsp;2',
+          coords: [4590, 4094]
+        },
+        {
+          id: '03',
+          title: 'Notes abîmées n°&nbsp;3',
+          coords: [5247, 4174]
         },
       ]
     }
