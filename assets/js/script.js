@@ -1606,12 +1606,14 @@
         },
         {
           id: '13',
-          title: 'Agate pourpre 13',
+          format: 'video',
+          video: 'afYxkHMwUD0',
           coords: [4637, 4201]
         },
         {
           id: '14',
-          title: 'Agate pourpre 14',
+          format: 'video',
+          video: 'jZIL9zOgcx8',
           coords: [4654, 4216]
         },
         {
@@ -1677,7 +1679,7 @@
         },
         {
           id: '29',
-          title: 'Agate pourpre 29',
+          text: 'Utilsez le cristal de sang qui se trouve au sud, pour briser la glace.',
           coords: [5034, 3761]
         },
         {
@@ -1694,7 +1696,7 @@
         },
         {
           id: '33',
-          title: 'Agate pourpre 33',
+          text: 'Tuez les ennemis pour débloquer le coffre qui contient l\'agate pourpre.',
           coords: [5327, 3832]
         },
         {
@@ -1703,7 +1705,7 @@
         },
         {
           id: '35',
-          title: 'Agate pourpre 35',
+          text: 'L\'agate pourpre se trouve dans le coffre disponible après avoir tué le gardien et vidé la salle grâce à l\'interrupteur.',
           coords: [5057, 3940]
         },
         {
@@ -1729,7 +1731,6 @@
         },
         {
           id: '41',
-          title: 'Agate pourpre 41',
           coords: [4929, 4084]
         },
         {
@@ -1739,7 +1740,6 @@
         },
         {
           id: '43',
-          title: 'Agate pourpre 43',
           coords: [4967, 4136]
         },
         {
@@ -1784,7 +1784,6 @@
         },
         {
           id: '53',
-          title: 'Agate pourpre 53',
           coords: [5010, 4112]
         },
         {
@@ -1829,7 +1828,7 @@
         },
         {
           id: '63',
-          title: 'Agate pourpre 63',
+          text: 'Utilisez les esprits du vent dans l\'ordre indiqué pour récupérer l\'agate pourpre dans les airs.',
           coords: [5369, 4028]
         },
         {
@@ -1838,17 +1837,16 @@
         },
         {
           id: '65',
-          title: 'Agate pourpre 65',
+          text: 'Tuez les ennemis pour déverrouiller le coffre. L\'agate pourpre se trouve à l\'intérieur.',
           coords: [5284, 4019]
         },
         {
           id: '66',
-          title: 'Agate pourpre 66',
           coords: [5262, 4077]
         },
         {
           id: '67',
-          title: 'Agate pourpre 67',
+          text: 'L\'agate pourpre se trouve dans le coffre accessible après avoir tué le roi des sangliers.',
           coords: [5215, 4120]
         },
         {
@@ -1869,7 +1867,6 @@
         },
         {
           id: '71',
-          title: 'Agate pourpre 71',
           coords: [5141, 4193]
         },
         {
@@ -1883,13 +1880,22 @@
         },
         {
           id: '74',
-          title: 'Agate pourpre 74',
+          text: 'Accessible uniquement après avoir débloqué le donjon du Pic de Vindagnyr.',
           coords: [4915, 4085]
         },
         {
           id: '75',
-          title: 'Agate pourpre 75',
+          text: 'Nourrissez les renards avec deux baies en les déposant dans le bol près de la tente pendant cinq (vrais) jours. Le sixième jour, un coffre précieux contenant l\'agate pourpre apparait.',
           coords: [5016, 4012]
+        },
+        {
+          id: '76',
+          text: 'À droite de la grille, il faut taper la glace éternelle en étant sous l\'effet d\'un cristal de sang et activez l\'interrupteur en dessous. L\'agate pourpre se trouve dans le coffre.',
+          coords: [4970, 4088]
+        },
+        {
+          id: '77',
+          coords: [4652,3902]
         },
       ]
     },
