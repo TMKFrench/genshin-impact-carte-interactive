@@ -115,6 +115,7 @@
   var glacialsteelIcon = L.icon({ iconUrl: 'assets/img/glacialsteel.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0,-32] });
   var futileendeavorIcon = L.icon({ iconUrl: 'assets/img/futileendeavor.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0,-32] });
   var prodigalsonreturnIcon = L.icon({ iconUrl: 'assets/img/prodigalsonreturn.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0,-32] });
+  var lostinthesnowIcon = L.icon({ iconUrl: 'assets/img/lostinthesnow.png', iconSize: [32,32], iconAnchor: [16,16], popupAnchor: [0,-32] });
 
 
   // Initialisation de la carte
@@ -130,7 +131,8 @@
   var groups = [
     'statue', 'teleporter', 'anemoculus', 'geoculus', 'panorama', 'mondstadtshrine', 'liyueshrine', 'seelie', 'fireseelie',
     'jueyunchili', 'valberry', 'itswarm', 'overlookingview', 'dungeon', 'region', 'quest', 'crimsonagate',
-    'priestprincessscribe', 'challenge', 'unusualhilichurl', 'glacialsteel', 'futileendeavor', 'prodigalsonreturn'
+    'priestprincessscribe', 'challenge', 'unusualhilichurl', 'glacialsteel', 'futileendeavor', 'prodigalsonreturn',
+    'lostinthesnow'
   ];
   groups.forEach(function(e) {
     window[e+'Group'] = L.layerGroup();
@@ -2170,6 +2172,32 @@
           id: '03',
           title: 'Notes abîmées n°&nbsp;3',
           coords: [5247, 4174]
+        },
+      ]
+    },
+    {
+      id: 'lostinthesnow',
+      group: lostinthesnowGroup,
+      icon: lostinthesnowIcon,
+      format: 'popup',
+      checkbox: true,
+      title: 'Royaumes sous les neiges',
+      text: 'Journal d’inspection ancien',
+      markers: [
+        {
+          id: '01',
+          text: 'Journal d’inspection ancien –&nbsp;<b>Partie I</b>.',
+          coords: [5081, 4007]
+        },
+        {
+          id: '02',
+          text: 'Journal d’inspection ancien –&nbsp;<b>Partie III</b>.',
+          coords: [4895, 4240]
+        },
+        {
+          id: '03',
+          text: 'Journal d’inspection ancien –&nbsp;<b>Partie II</b>.',
+          coords: [4741, 4291]
         },
       ]
     }
