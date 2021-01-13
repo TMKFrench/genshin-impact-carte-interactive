@@ -814,7 +814,7 @@
         {
           id: '001',
           text: 'Activez le moulin à vent avec la compétence Anémo de votre voyageur, pour pouvoir prendre de la hauteur de vol et récupérer ce Géoculus.',
-          coords: [2448, 4166],
+          coords: [2444, 4179],
         },
         {
           id: '002',
@@ -822,7 +822,7 @@
         },
         {
           id: '003',
-          coords: [2782, 3902],
+          coords: [2798, 3896],
         },
         {
           id: '004',
@@ -850,7 +850,7 @@
         },
         {
           id: '010',
-          coords: [3224, 4477],
+          coords: [3226, 4492],
         },
         {
           id: '011',
@@ -979,7 +979,7 @@
         },
         {
           id: '041',
-          coords: [2343, 4164],
+          coords: [2352, 4161],
         },
         {
           id: '042',
@@ -991,13 +991,13 @@
         },
         {
           id: '044',
-          coords: [2252, 4459],
+          coords: [2240, 4461],
         },
         {
           id: '045',
           format: 'video',
           video: 'THhpu38aWFw',
-          coords: [2419, 4399],
+          coords: [2407, 4399],
         },
         {
           id: '046',
@@ -1009,7 +1009,7 @@
         },
         {
           id: '048',
-          coords: [4544, 4633],
+          coords: [4547, 4633],
         },
         {
           id: '049',
@@ -1025,7 +1025,7 @@
         },
         {
           id: '052',
-          coords: [4203, 4852],
+          coords: [4199, 4855],
         },
         {
           id: '053',
@@ -1105,7 +1105,7 @@
         {
           id: '071',
           text: 'Activez le moulin à vent avec la compétence Anémo de votre voyageur, pour pouvoir prendre de la hauteur de vol et récupérer ce Géoculus.',
-          coords: [3085, 3718],
+          coords: [3066, 3705],
         },
         {
           id: '072',
@@ -1113,7 +1113,7 @@
         },
         {
           id: '073',
-          coords: [3396, 5697],
+          coords: [3399, 5707],
         },
         {
           id: '074',
@@ -1125,7 +1125,7 @@
           id: '075',
           format: 'video',
           video: 'PXfpJwdAn9U',
-          coords: [3479, 5639],
+          coords: [3466, 5641],
         },
         {
           id: '076',
@@ -1143,7 +1143,7 @@
           id: '079',
           format: 'video',
           video: '5GLMu91EMJ4',
-          coords: [2484, 4230],
+          coords: [2488, 4204],
         },
         {
           id: '080',
@@ -1168,15 +1168,15 @@
         },
         {
           id: '085',
-          coords: [4550, 4452],
+          coords: [4547, 4442],
         },
         {
           id: '086',
-          coords: [2474, 4139],
+          coords: [2480, 4143],
         },
         {
           id: '087',
-          coords: [3553, 4235],
+          coords: [3542, 4205],
         },
         {
           id: '088',
@@ -1185,6 +1185,221 @@
         {
           id: '089',
           coords: [4181, 4299],
+        },
+        {
+          id: '090',
+          title: 'Géoculus 90',
+          coords: [3337, 2988],
+        },
+        {
+          id: '091',
+          title: 'Géoculus 91',
+          coords: [3248, 3166],
+        },
+        {
+          id: '092',
+          title: 'Géoculus 92',
+          coords: [3262, 3231],
+        },
+        {
+          id: '093',
+          title: 'Géoculus 93',
+          coords: [3557, 3429],
+        },
+        {
+          id: '094',
+          title: 'Géoculus 94',
+          coords: [3722, 3683],
+        },
+        {
+          id: '095',
+          title: 'Géoculus 95',
+          coords: [3135, 3769],
+        },
+        {
+          id: '096',
+          title: 'Géoculus 96',
+          coords: [2445, 4010],
+        },
+        {
+          id: '097',
+          title: 'Géoculus 97',
+          coords: [2656, 4827],
+        },
+        {
+          id: '098',
+          title: 'Géoculus 98',
+          coords: [2662, 4963],
+        },
+        {
+          id: '099',
+          title: 'Géoculus 99',
+          coords: [2850, 5364],
+        },
+        {
+          id: '100',
+          title: 'Géoculus 100',
+          coords: [2952, 5454],
+        },
+        {
+          id: '101',
+          title: 'Géoculus 101',
+          coords: [2810, 5754],
+        },
+        {
+          id: '102',
+          title: 'Géoculus 102',
+          coords: [2822, 5986],
+        },
+        {
+          id: '103',
+          title: 'Géoculus 103',
+          coords: [3157, 5960],
+        },
+        {
+          id: '104',
+          title: 'Géoculus 104',
+          coords: [3501, 5528],
+        },
+        {
+          id: '105',
+          title: 'Géoculus 105',
+          coords: [3143, 5290],
+        },
+        {
+          id: '106',
+          title: 'Géoculus 106',
+          coords: [3202, 5276],
+        },
+        {
+          id: '107',
+          title: 'Géoculus 107',
+          coords: [2665, 4283],
+        },
+        {
+          id: '108',
+          title: 'Géoculus 108',
+          coords: [2876, 4378],
+        },
+        {
+          id: '109',
+          title: 'Géoculus 109',
+          coords: [2894, 4097],
+        },
+        {
+          id: '110',
+          title: 'Géoculus 110',
+          coords: [2932, 3515],
+        },
+        {
+          id: '111',
+          title: 'Géoculus 111',
+          coords: [3436, 4291],
+        },
+        {
+          id: '112',
+          title: 'Géoculus 112',
+          coords: [3568, 4338],
+        },
+        {
+          id: '113',
+          title: 'Géoculus 113',
+          coords: [3416, 4378],
+        },
+        {
+          id: '114',
+          title: 'Géoculus 114',
+          coords: [3147, 4340],
+        },
+        {
+          id: '115',
+          title: 'Géoculus 115',
+          coords: [3367, 4775],
+        },
+        {
+          id: '116',
+          title: 'Géoculus 116',
+          coords: [3615, 4665],
+        },
+        {
+          id: '117',
+          title: 'Géoculus 117',
+          coords: [3749, 4996],
+        },
+        {
+          id: '118',
+          title: 'Géoculus 118',
+          coords: [3883, 4846],
+        },
+        {
+          id: '119',
+          title: 'Géoculus 119',
+          coords: [3955, 4879],
+        },
+        {
+          id: '120',
+          title: 'Géoculus 120',
+          coords: [4253, 4888],
+        },
+        {
+          id: '121',
+          title: 'Géoculus 121',
+          coords: [4317, 4546],
+        },
+        {
+          id: '122',
+          title: 'Géoculus 122',
+          coords: [4332, 4274],
+        },
+        {
+          id: '123',
+          title: 'Géoculus 123',
+          coords: [4170, 4372],
+        },
+        {
+          id: '124',
+          title: 'Géoculus 124',
+          coords: [4228, 4228],
+        },
+        {
+          id: '125',
+          title: 'Géoculus 125',
+          coords: [5219, 5498],
+        },
+        {
+          id: '126',
+          title: 'Géoculus 126',
+          coords: [3588, 5877],
+        },
+        {
+          id: '127',
+          title: 'Géoculus 127',
+          coords: [3547, 5791],
+        },
+        {
+          id: '128',
+          title: 'Géoculus 128',
+          coords: [3623, 5342],
+        },
+        {
+          id: '129',
+          title: 'Géoculus 129',
+          coords: [3756, 5281],
+        },
+        {
+          id: '130',
+          title: 'Géoculus 130',
+          coords: [3845, 5248],
+        },
+        {
+          id: '131',
+          title: 'Géoculus 131',
+          coords: [3519, 3980],
+        },
+        {
+          id: '132',
+          title: 'Géoculus 132',
+          coords: [3487, 3528],
         },
       ]
     },
