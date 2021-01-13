@@ -814,7 +814,7 @@
         {
           id: '001',
           text: 'Activez le moulin à vent avec la compétence Anémo de votre voyageur, pour pouvoir prendre de la hauteur de vol et récupérer ce Géoculus.',
-          coords: [2444, 4179],
+          coords: [2448, 4166],
         },
         {
           id: '002',
@@ -822,7 +822,7 @@
         },
         {
           id: '003',
-          coords: [2798, 3896],
+          coords: [2782, 3902],
         },
         {
           id: '004',
@@ -850,7 +850,7 @@
         },
         {
           id: '010',
-          coords: [3226, 4492],
+          coords: [3224, 4477],
         },
         {
           id: '011',
@@ -979,7 +979,7 @@
         },
         {
           id: '041',
-          coords: [2352, 4161],
+          coords: [2343, 4164],
         },
         {
           id: '042',
@@ -991,13 +991,13 @@
         },
         {
           id: '044',
-          coords: [2240, 4461],
+          coords: [2252, 4459],
         },
         {
           id: '045',
           format: 'video',
           video: 'THhpu38aWFw',
-          coords: [2407, 4399],
+          coords: [2419, 4399],
         },
         {
           id: '046',
@@ -1009,7 +1009,7 @@
         },
         {
           id: '048',
-          coords: [4547, 4633],
+          coords: [4544, 4633],
         },
         {
           id: '049',
@@ -1025,7 +1025,7 @@
         },
         {
           id: '052',
-          coords: [4199, 4855],
+          coords: [4203, 4852],
         },
         {
           id: '053',
@@ -1105,7 +1105,7 @@
         {
           id: '071',
           text: 'Activez le moulin à vent avec la compétence Anémo de votre voyageur, pour pouvoir prendre de la hauteur de vol et récupérer ce Géoculus.',
-          coords: [3066, 3705],
+          coords: [3085, 3718],
         },
         {
           id: '072',
@@ -1113,7 +1113,7 @@
         },
         {
           id: '073',
-          coords: [3399, 5707],
+          coords: [3396, 5697],
         },
         {
           id: '074',
@@ -1125,7 +1125,7 @@
           id: '075',
           format: 'video',
           video: 'PXfpJwdAn9U',
-          coords: [3466, 5641],
+          coords: [3479, 5639],
         },
         {
           id: '076',
@@ -1143,7 +1143,7 @@
           id: '079',
           format: 'video',
           video: '5GLMu91EMJ4',
-          coords: [2488, 4204],
+          coords: [2484, 4230],
         },
         {
           id: '080',
@@ -1168,15 +1168,15 @@
         },
         {
           id: '085',
-          coords: [4547, 4442],
+          coords: [4550, 4452],
         },
         {
           id: '086',
-          coords: [2480, 4143],
+          coords: [2474, 4139],
         },
         {
           id: '087',
-          coords: [3542, 4205],
+          coords: [3553, 4235],
         },
         {
           id: '088',
@@ -1185,221 +1185,6 @@
         {
           id: '089',
           coords: [4181, 4299],
-        },
-        {
-          id: '090',
-          title: 'Géoculus 90',
-          coords: [3337, 2988],
-        },
-        {
-          id: '091',
-          title: 'Géoculus 91',
-          coords: [3248, 3166],
-        },
-        {
-          id: '092',
-          title: 'Géoculus 92',
-          coords: [3262, 3231],
-        },
-        {
-          id: '093',
-          title: 'Géoculus 93',
-          coords: [3557, 3429],
-        },
-        {
-          id: '094',
-          title: 'Géoculus 94',
-          coords: [3722, 3683],
-        },
-        {
-          id: '095',
-          title: 'Géoculus 95',
-          coords: [3135, 3769],
-        },
-        {
-          id: '096',
-          title: 'Géoculus 96',
-          coords: [2445, 4010],
-        },
-        {
-          id: '097',
-          title: 'Géoculus 97',
-          coords: [2656, 4827],
-        },
-        {
-          id: '098',
-          title: 'Géoculus 98',
-          coords: [2662, 4963],
-        },
-        {
-          id: '099',
-          title: 'Géoculus 99',
-          coords: [2850, 5364],
-        },
-        {
-          id: '100',
-          title: 'Géoculus 100',
-          coords: [2952, 5454],
-        },
-        {
-          id: '101',
-          title: 'Géoculus 101',
-          coords: [2810, 5754],
-        },
-        {
-          id: '102',
-          title: 'Géoculus 102',
-          coords: [2822, 5986],
-        },
-        {
-          id: '103',
-          title: 'Géoculus 103',
-          coords: [3157, 5960],
-        },
-        {
-          id: '104',
-          title: 'Géoculus 104',
-          coords: [3501, 5528],
-        },
-        {
-          id: '105',
-          title: 'Géoculus 105',
-          coords: [3143, 5290],
-        },
-        {
-          id: '106',
-          title: 'Géoculus 106',
-          coords: [3202, 5276],
-        },
-        {
-          id: '107',
-          title: 'Géoculus 107',
-          coords: [2665, 4283],
-        },
-        {
-          id: '108',
-          title: 'Géoculus 108',
-          coords: [2876, 4378],
-        },
-        {
-          id: '109',
-          title: 'Géoculus 109',
-          coords: [2894, 4097],
-        },
-        {
-          id: '110',
-          title: 'Géoculus 110',
-          coords: [2932, 3515],
-        },
-        {
-          id: '111',
-          title: 'Géoculus 111',
-          coords: [3436, 4291],
-        },
-        {
-          id: '112',
-          title: 'Géoculus 112',
-          coords: [3568, 4338],
-        },
-        {
-          id: '113',
-          title: 'Géoculus 113',
-          coords: [3416, 4378],
-        },
-        {
-          id: '114',
-          title: 'Géoculus 114',
-          coords: [3147, 4340],
-        },
-        {
-          id: '115',
-          title: 'Géoculus 115',
-          coords: [3367, 4775],
-        },
-        {
-          id: '116',
-          title: 'Géoculus 116',
-          coords: [3615, 4665],
-        },
-        {
-          id: '117',
-          title: 'Géoculus 117',
-          coords: [3749, 4996],
-        },
-        {
-          id: '118',
-          title: 'Géoculus 118',
-          coords: [3883, 4846],
-        },
-        {
-          id: '119',
-          title: 'Géoculus 119',
-          coords: [3955, 4879],
-        },
-        {
-          id: '120',
-          title: 'Géoculus 120',
-          coords: [4253, 4888],
-        },
-        {
-          id: '121',
-          title: 'Géoculus 121',
-          coords: [4317, 4546],
-        },
-        {
-          id: '122',
-          title: 'Géoculus 122',
-          coords: [4332, 4274],
-        },
-        {
-          id: '123',
-          title: 'Géoculus 123',
-          coords: [4170, 4372],
-        },
-        {
-          id: '124',
-          title: 'Géoculus 124',
-          coords: [4228, 4228],
-        },
-        {
-          id: '125',
-          title: 'Géoculus 125',
-          coords: [5219, 5498],
-        },
-        {
-          id: '126',
-          title: 'Géoculus 126',
-          coords: [3588, 5877],
-        },
-        {
-          id: '127',
-          title: 'Géoculus 127',
-          coords: [3547, 5791],
-        },
-        {
-          id: '128',
-          title: 'Géoculus 128',
-          coords: [3623, 5342],
-        },
-        {
-          id: '129',
-          title: 'Géoculus 129',
-          coords: [3756, 5281],
-        },
-        {
-          id: '130',
-          title: 'Géoculus 130',
-          coords: [3845, 5248],
-        },
-        {
-          id: '131',
-          title: 'Géoculus 131',
-          coords: [3519, 3980],
-        },
-        {
-          id: '132',
-          title: 'Géoculus 132',
-          coords: [3487, 3528],
         },
       ]
     },
@@ -2530,40 +2315,262 @@
       format: 'video',
       markers: [
         {
-          id: 'dragonspine01',
-          text: 'Ouvrez le coffre en moins de 16&nbsp;s.',
-          video: 'GzHhQauia3g',
-          coords: [5277, 4577]
+          id: 'mondstadt1',
+          text: 'Ouvrez le coffre en moins de 30s.',
+          video: 'CEgU79_TBpI',
+          coords: [4556,3159]
         },
         {
-          id: 'dragonspine02',
-          text: 'Explosez les 5 tonneaux en moins de 30&nbsp;s.',
-          video: 'fkH9RxiwsbA',
-          coords: [5351,4241]
+          id: 'mondstadt2',
+          text: 'Ouvrez le coffre en moins de 60s.',
+          video: 'M8PVB6xzTFg',
+          coords: [5788,2595]
         },
         {
-          id: 'dragonspine03',
-          text: 'Explosez les 3 tonneaux explosifs en moins de 30&nbsp;s.',
-          video: 'y9SkYCW8H-M',
-          coords: [4894,3600]
+          id: 'mondstadt3',
+          text: 'Explosez les 4 tonneaux explosifs en moins de 20s.',
+          video: 'gVJ2wFUxmLs',
+          coords: [5502,2778]
         },
         {
-          id: 'dragonspine04',
-          text: 'Ouvrez le coffre en moins de 30&nbsp;s.',
+          id: 'mondstadt4',
+          text: 'Tuez tous les ennemis en 30s.',
+          video: '2Wt4GiS3m9M',
+          coords: [5214,2457]
+        },
+        {
+          id: 'mondstadt5',
+          text: 'Tuez tous les ennemis en 60s.',
+          video: '7mIc69g84ps',
+          coords: [5425,2345]
+        },
+        {
+          id: 'mondstadt6',
+          text: 'Allumez tous les braseros et ouvrez le coffre en 30s.',
+          video: 'QAliyQcjZnQ',
+          coords: [5602,2354]
+        },
+        {
+          id: 'mondstadt7',
+          text: 'Ouvrez le coffre en moins de 60s.',
+          video: 'O1ntwm61sTY',
+          coords: [5675,2302]
+        },
+        {
+          id: 'mondstadt8',
+          text: 'Ouvrez le coffre en moins de 30s.',
+          video: '8m2i0QQnIs4',
+          coords: [5688,2229]
+        },
+        {
+          id: 'mondstadt9',
+          text: 'Tuez tous les ennemis en 20s.',
+          video: 'zkRXJYy5Xno',
+          coords: [4429,2659]
+        },
+        {
+          id: 'mondstadt10',
+          text: 'Tuez tous les ennemis en 60s.',
+          video: '_nDnHNluwLY',
+          coords: [5089,3240]
+        },
+        {
+          id: 'mondstadt11',
+          text: 'Ouvrez le coffre en moins de 30s.',
+          video: 'uQZxXQY3AWU',
+          coords: [4909,3266]
+        },
+        {
+          id: 'mondstadt12',
+          text: 'Ouvrez le coffre en moins de 20s.',
+          video: 's2CQ4Ms4lbE',
+          coords: [4464,2862]
+        },
+        {
+          id: 'mondstadt13',
+          text: 'Tuez tous les ennemis en 30s.',
+          video: 'ewteF9VNmrA',
+          coords: [4153,2822]
+        },
+        {
+          id: 'mondstadt14',
+          text: 'Tuez tous les ennemis en 50s.',
+          video: 'EOJLR0_HX6o',
+          coords: [4007,2237]
+        },
+        {
+          id: 'mondstadt15',
+          text: 'Tuez tous les ennemis en 30s.',
+          video: 'ZJo7JD4PJ_A',
+          coords: [4191,2570]
+        },
+        {
+          id: 'mondstadt16',
+          text: 'Tuez tous les ennemis en 30s.',
+          video: 'ekGBUrJXAgA',
+          coords: [3725,2305]
+        },
+        {
+          id: 'mondstadt17',
+          text: 'Ouvrez le coffre en moins de 50s.',
+          video: 'cCdHlxM9vQI',
+          coords: [3699,2360]
+        },
+        {
+          id: 'mondstadt18',
+          text: 'Ouvrez le coffre en moins de 30s.',
           video: 'jkZ5FrdO1jo',
           coords: [4717,3685]
         },
         {
-          id: 'dragonspine05',
+          id: 'mondstadt19',
+          text: 'Explosez les 3 tonneaux explosifs en moins de 30s.',
+          video: 'y9SkYCW8H-M',
+          coords: [4894,3600]
+        },
+        {
+          id: 'mondstadt21',
+          text: 'Explosez les 5 tonneaux en moins de 30s.',
+          video: 'fkH9RxiwsbA',
+          coords: [5351,4241]
+        },
+        {
+          id: 'mondstadt22',
+          text: 'Ouvrez le coffre en moins de 16s.',
+          video: 'GzHhQauia3g',
+          coords: [5277, 4577]
+        },
+        {
+          id: 'mondstadt23',
           text: 'Ramassez 8 particules Anemo en moins de 50s.',
           video: 'Otq1FHm-8QY',
           coords: [5041,4469]
         },
         {
-          id: 'dragonspine06',
+          id: 'mondstadt24',
           text: 'Tuez tous les ennemis en 180s.',
           video: 'LB27Cg3VVFA',
           coords: [5046,4179]
+        },
+        {
+          id: 'mondstadt25',
+          text: 'Tuez tous les ennemis en 60s.',
+          video: 's6_DTpfCq7U',
+          coords: [4983,3805]
+        },
+        {
+          id: 'mondstadt26',
+          text: 'Ramassez 8 particules Anemo en moins de 40s.',
+          video: '_ZvpOhy1sAI',
+          coords: [5131,4111]
+        },
+        {
+          id: 'mondstadt27',
+          text: 'Tuez tous les ennemis en 180s.',
+          video: 'dafebp9OHw8',
+          coords: [4534,4028]
+        },
+        {
+          id: 'mondstadt28',
+          text: 'Ramassez 8 particules Anemo en moins de 90s.',
+          video: 'Br_EgHkBgi4',
+          coords: [5035,4123]
+        },
+        {
+          id: 'mondstadt29',
+          text: 'Ramassez 8 particules Anemo en moins de 60s.',
+          video: 'FIh3-KW0msw',
+          coords: [4869,4279]
+        },  
+        {
+          id: 'liyue1',
+          text: 'Tuez tous les ennemis en 30s.',
+          video: 'WziDtNmzLJs',
+          coords: [3446,3230]
+        },
+        {
+          id: 'liyue2',
+          text: 'Explosez les 5 tonneaux explosifs en moins de 60s.',
+          video: 'j_bXfT81rGI',
+          coords: [3504,3383]
+        },
+        {
+          id: 'liyue3',
+          text: 'Explosez les 5 tonneaux explosifs en moins de 15s.',
+          video: '3EDE6sVWo0E',
+          coords: [4318,3824]
+        },  
+        {
+          id: 'liyue4',
+          text: 'Tuez tous les ennemis en 45s.',
+          video: '0FEn7bu1L5U',
+          coords: [4056,3885]
+        },
+        {
+          id: 'liyue5',
+          text: 'Tuez tous les ennemis en 50s.',
+          video: '7-S5hlf4x7g',
+          coords: [3478,5769]
+        },
+        {
+          id: 'liyue6',
+          text: 'Tuez tous les ennemis en 120s.',
+          video: 'hI7o0nAknI4',
+          coords: [3477,5638]
+        },
+        {
+          id: 'liyue7',
+          text: 'Tuez tous les ennemis en 45s.',
+          video: 'HGLc8MbzV78',
+          coords: [3938,4481]
+        },
+        {
+          id: 'liyue8',
+          text: 'Tuez tous les ennemis en 45s.',
+          video: 'paTQhEX5xfg',
+          coords: [5053,5390]
+        },
+        {
+          id: 'liyue9',
+          text: 'Tuez tous les ennemis en 30s.',
+          video: '9T9SNniy_QI',
+          coords: [2226,4268]
+        },  
+        {
+          id: 'liyue10',
+          text: 'Tuez tous les ennemis en 30s.',
+          video: 'NCXRp1fAwJI',
+          coords: [2159,4447]
+        },
+        {
+          id: 'liyue11',
+          text: 'Tuez tous les ennemis en 30s.',
+          video: 'yLAvPbLl3tE',
+          coords: [2474,4445]
+        },
+        {
+          id: 'liyue12',
+          text: 'Ouvrez le coffre en moins de 45s.',
+          video: 'JosesYBjnFs',
+          coords: [2550,3776]
+        },
+        {
+          id: 'liyue13',
+          text: 'Tuez tous les ennemis en 30s.',
+          video: 'fCU6_w1WjY4',
+          coords: [3923,3783]
+        },
+        {
+          id: 'liyue14',
+          text: 'Tuez tous les ennemis en 45s.',
+          video: 'MchxMKPL8HM',
+          coords: [2521,4383]
+        },
+        {
+          id: 'liyue15',
+          text: 'Tuez tous les ennemis en 60s.',
+          video: '5PLcwdPCMj8',
+          coords: [4499,4405]
         }
       ]
     },
