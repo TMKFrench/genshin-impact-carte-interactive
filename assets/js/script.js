@@ -804,19 +804,390 @@
         },
       ]
     },
-    // {
-    //   id: 'geoculus',
-    //   group: geoculusGroup,
-    //   icon: geoculusIcon,
-    //   format: 'image',
-    //   checkbox: true,
-    //   markers: [
-    //     {
-    //       id: '01',
-    //       coords: [6298, 2422],
-    //     },
-    //   ]
-    // },
+    {
+      id: 'geoculus',
+      group: geoculusGroup,
+      icon: geoculusIcon,
+      format: 'image',
+      checkbox: true,
+      markers: [
+        {
+          id: '001',
+          text: 'Activez le moulin à vent avec la compétence Anémo de votre voyageur, pour pouvoir prendre de la hauteur de vol et récupérer ce Géoculus.',
+          coords: [2448, 4166],
+        },
+        {
+          id: '002',
+          coords: [2516, 3883],
+        },
+        {
+          id: '003',
+          coords: [2782, 3902],
+        },
+        {
+          id: '004',
+          coords: [3556, 3330],
+        },
+        {
+          id: '005',
+          coords: [3625, 3289],
+        },
+        {
+          id: '006',
+          coords: [3477, 3177],
+        },
+        {
+          id: '007',
+          coords: [3514, 3401],
+        },
+        {
+          id: '008',
+          coords: [3407, 3348],
+        },
+        {
+          id: '009',
+          coords: [3379, 3269],
+        },
+        {
+          id: '010',
+          coords: [3224, 4477],
+        },
+        {
+          id: '011',
+          coords: [2922, 4554],
+        },
+        {
+          id: '012',
+          coords: [3018, 4475],
+        },
+        {
+          id: '013',
+          coords: [2437, 4393],
+        },
+        {
+          id: '014',
+          coords: [4118, 5181],
+        },
+        {
+          id: '015',
+          coords: [3006, 5662],
+        },
+        {
+          id: '016',
+          coords: [2813, 5634],
+        },
+        {
+          id: '017',
+          coords: [3280, 4719],
+        },
+        {
+          id: '018',
+          format: 'video',
+          video: 'NPFJ3s2DhZo',
+          coords: [4314, 5749],
+        },
+        {
+          id: '019',
+          coords: [3638, 3642],
+        },
+        {
+          id: '020',
+          coords: [3511, 3606],
+        },
+        {
+          id: '021',
+          coords: [3202, 3508],
+        },
+        {
+          id: '022',
+          coords: [2703, 4496],
+        },
+        {
+          id: '023',
+          coords: [2797, 3676],
+        },
+        {
+          id: '024',
+          coords: [2850, 3726],
+        },
+        {
+          id: '025',
+          coords: [4665, 5243],
+        },
+        {
+          id: '026',
+          text: 'Utilisez la compétence Géo du voyageur pour atteindre ce Géoculus.',
+          coords: [5112, 5330],
+        },
+        {
+          id: '027',
+          coords: [4844, 5461],
+        },
+        {
+          id: '028',
+          coords: [4994, 5226],
+        },
+        {
+          id: '029',
+          coords: [4861, 4719],
+        },
+        {
+          id: '030',
+          coords: [3627, 3710],
+        },
+        {
+          id: '031',
+          format: 'video',
+          video: '9nXo8Xe8cGw',
+          coords: [3647, 3816],
+        },
+        {
+          id: '032',
+          coords: [3728, 3574],
+        },
+        {
+          id: '033',
+          coords: [3451, 3762],
+        },
+        {
+          id: '034',
+          coords: [3221, 3377],
+        },
+        {
+          id: '035',
+          coords: [3329, 3418],
+        },
+        {
+          id: '036',
+          coords: [2856, 4167],
+        },
+        {
+          id: '037',
+          coords: [2773, 4131],
+        },
+        {
+          id: '038',
+          coords: [2801, 4390],
+        },
+        {
+          id: '039',
+          coords: [2787, 4374],
+        },
+        {
+          id: '040',
+          coords: [2561, 4232],
+        },
+        {
+          id: '041',
+          coords: [2343, 4164],
+        },
+        {
+          id: '042',
+          coords: [2248, 4342],
+        },
+        {
+          id: '043',
+          coords: [2299, 4445],
+        },
+        {
+          id: '044',
+          coords: [2252, 4459],
+        },
+        {
+          id: '045',
+          format: 'video',
+          video: 'THhpu38aWFw',
+          coords: [2419, 4399],
+        },
+        {
+          id: '046',
+          coords: [4371, 4523],
+        },
+        {
+          id: '047',
+          coords: [4597, 4500],
+        },
+        {
+          id: '048',
+          coords: [4544, 4633],
+        },
+        {
+          id: '049',
+          coords: [4520, 4656],
+        },
+        {
+          id: '050',
+          coords: [4069, 4463],
+        },
+        {
+          id: '051',
+          coords: [4023, 4578],
+        },
+        {
+          id: '052',
+          coords: [4203, 4852],
+        },
+        {
+          id: '053',
+          coords: [3899, 3539],
+        },
+        {
+          id: '054',
+          coords: [3900, 3841],
+        },
+        {
+          id: '055',
+          coords: [3757, 4223],
+        },
+        {
+          id: '056',
+          coords: [3726, 4216],
+        },
+        {
+          id: '057',
+          coords: [3820, 4291],
+        },
+        {
+          id: '058',
+          coords: [3869, 5092],
+        },
+        {
+          id: '059',
+          coords: [3880, 4787],
+        },
+        {
+          id: '060',
+          coords: [3956, 4977],
+        },
+        {
+          id: '061',
+          coords: [3629, 4841],
+        },
+        {
+          id: '062',
+          coords: [3305, 3610],
+        },
+        {
+          id: '063',
+          coords: [3342, 3584],
+        },
+        {
+          id: '064',
+          coords: [3742, 3883],
+        },
+        {
+          id: '065',
+          text: 'Activez le moulin à vent avec la compétence Anémo de votre voyageur, pour pouvoir prendre de la hauteur de vol et récupérer ce Géoculus.',
+          coords: [3933, 4171],
+        },
+        {
+          id: '066',
+          coords: [3469, 3667],
+        },
+        {
+          id: '067',
+          coords: [3666, 4052],
+        },
+        {
+          id: '068',
+          coords: [4230, 3896],
+        },
+        {
+          id: '069',
+          format: 'video',
+          video: 'kA5Anc17mRw',
+          coords: [4237, 5079],
+        },
+        {
+          id: '070',
+          coords: [3189, 3968],
+        },
+        {
+          id: '071',
+          text: 'Activez le moulin à vent avec la compétence Anémo de votre voyageur, pour pouvoir prendre de la hauteur de vol et récupérer ce Géoculus.',
+          coords: [3085, 3718],
+        },
+        {
+          id: '072',
+          coords: [3311, 5961],
+        },
+        {
+          id: '073',
+          coords: [3396, 5697],
+        },
+        {
+          id: '074',
+          format: 'video',
+          video: 'Tmkw4w__EjI',
+          coords: [3446, 5551],
+        },
+        {
+          id: '075',
+          format: 'video',
+          video: 'PXfpJwdAn9U',
+          coords: [3479, 5639],
+        },
+        {
+          id: '076',
+          coords: [3215, 5619],
+        },
+        {
+          id: '077',
+          coords: [3658, 3436],
+        },
+        {
+          id: '078',
+          coords: [2838, 4466],
+        },
+        {
+          id: '079',
+          format: 'video',
+          video: '5GLMu91EMJ4',
+          coords: [2484, 4230],
+        },
+        {
+          id: '080',
+          coords: [2338, 4376],
+        },
+        {
+          id: '081',
+          text: 'Utilisez la compétence du Voyageur Géo pour atteindre ce Géoculus.',
+          coords: [3786, 3747],
+        },
+        {
+          id: '082',
+          coords: [4331, 4169],
+        },
+        {
+          id: '083',
+          coords: [4382, 4381],
+        },
+        {
+          id: '084',
+          coords: [3376, 5015],
+        },
+        {
+          id: '085',
+          coords: [4550, 4452],
+        },
+        {
+          id: '086',
+          coords: [2474, 4139],
+        },
+        {
+          id: '087',
+          coords: [3553, 4235],
+        },
+        {
+          id: '088',
+          coords: [3057, 5278],
+        },
+        {
+          id: '089',
+          coords: [4181, 4299],
+        },
+      ]
+    },
     {
       id: 'panorama',
       group: panoramaGroup,
@@ -2294,7 +2665,7 @@
       else if(format === 'video')
         marker.bindPopup(title+'<a class="video" href="//www.youtube.com/watch?v='+m.video+'" data-lity><img src="https://i.ytimg.com/vi/'+m.video+'/hqdefault.jpg" /></a>'+text+guide+checkbox);
       else if(format === 'image')
-        marker.bindPopup(title+'<a href="assets/img/medias/'+g.id+m.id+'.jpg" class="image" width="300" height="300" data-lity><img src="assets/img/medias/'+g.id+m.id+'-thumb.jpg" onerror="this.src=\'assets/img/medias/default.jpg\'" /></a>'+text+guide+checkbox);
+        marker.bindPopup(title+'<a href="assets/img/medias/'+g.id+m.id+'.jpg" class="image" data-lity><img src="thumb/'+g.id+m.id+'" /></a>'+text+guide+checkbox);
       else if(format === 'banner')
         marker.bindPopup(title+'<img src="assets/img/medias/'+g.id+m.id+'.jpg" onerror="this.src=\'assets/img/medias/default.jpg\'" />'+text+guide+checkbox);
       else if(format === 'region')
