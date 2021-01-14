@@ -1,0 +1,9 @@
+<Files "config.ini">
+  Order Allow,Deny
+  Deny from all
+</Files>
+
+<Files "gici.db">
+  Order Allow,Deny
+  Deny from all
+</Files>

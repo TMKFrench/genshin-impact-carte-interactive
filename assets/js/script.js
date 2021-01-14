@@ -10,6 +10,32 @@
     currentMarker = this;
   }
 
+  function saveUserMarker(uid, checked) {
+    var markers = getUserMarkers();
+
+    if(checked) {
+      $.post('api/addmarker/'+uid, function(res) {
+        if(typeof(res.error) !== 'undefined') {
+          alert('Vous avez été déconnecté. La page va se rafraîchir.');
+          window.location.reload();
+        }
+
+        currentMarker.setOpacity(.66);
+        userMarkers = res.markers;
+      });
+    } else {
+      $.post('api/removemarker/'+uid, function(res) {
+        if(typeof(res.error) !== 'undefined') {
+          alert('Vous avez été déconnecté. La page va se rafraîchir.');
+          window.location.reload();
+        }
+
+        currentMarker.setOpacity(1);
+        userMarkers = res.markers;
+      });
+    }
+  }
+
   function saveUserMarkers(uid, checked) {
     var markers = getUserMarkers();
 
@@ -26,6 +52,7 @@
     }
 
     localStorage.setItem('userMarkers', JSON.stringify(markers));
+    userMarkers = JSON.stringify(markers);
   }
 
   function getUserMarkers() {
@@ -57,7 +84,7 @@
     var content = e.popup.getContent();
 
     if($(content).find('input#user-marker').length > 0) {
-      var userMarkers = getUserMarkers();
+      // var userMarkers = getUserMarkers();
       if(userMarkers.indexOf( $(content).find('input#user-marker').first().data('id') ) >= 0) {
         $('input#user-marker[data-id="'+$(content).find('input#user-marker').first().data('id')+'"]').prop('checked', 'checked');
       }
@@ -71,6 +98,7 @@
   var params = getParamsURL();
   var userMarkers = getUserMarkers();
   var debugMarkers = [];
+  var userLocal = true;
 
 
 
@@ -84,18 +112,7 @@
   var liyueshrineIcon = L.icon({ iconUrl: 'assets/img/liyue-shrine.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0, -32] });
   var seelieIcon = L.icon({ iconUrl: 'assets/img/seelie.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0, -32] });
   var fireseelieIcon = L.icon({ iconUrl: 'assets/img/fireseelie.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0, -32] });
-  var itswarmIcon = L.icon({ iconUrl: 'assets/img/itswarm.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0, -32] });
   var debugIcon = L.icon({ iconUrl: 'assets/img/debug.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0, -32] });
-  var achievementIcon = L.icon({ iconUrl: 'assets/img/achievement.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0, -32] });
-  var achievement01Icon = L.icon({ iconUrl: 'assets/img/achievement01.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0, -32] });
-  var achievement02Icon = L.icon({ iconUrl: 'assets/img/achievement02.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0, -32] });
-  var achievement03Icon = L.icon({ iconUrl: 'assets/img/achievement03.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0, -32] });
-  var achievement04Icon = L.icon({ iconUrl: 'assets/img/achievement04.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0, -32] });
-  var achievement05Icon = L.icon({ iconUrl: 'assets/img/achievement05.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0, -32] });
-  var achievement06Icon = L.icon({ iconUrl: 'assets/img/achievement06.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0, -32] });
-  var achievement07Icon = L.icon({ iconUrl: 'assets/img/achievement07.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0, -32] });
-  var achievement08Icon = L.icon({ iconUrl: 'assets/img/achievement08.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0, -32] });
-  var achievement09Icon = L.icon({ iconUrl: 'assets/img/achievement09.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0, -32] });
   var circleIcon = L.icon({ iconUrl: 'assets/img/circle.png', iconSize: [32,32], iconAnchor: [16,16], popupAnchor: [0, -16] });
   var oneIcon = L.icon({ iconUrl: 'assets/img/one.png', iconSize: [24,24], iconAnchor: [12,12], popupAnchor: [0, -12] });
   var twoIcon = L.icon({ iconUrl: 'assets/img/two.png', iconSize: [24,24], iconAnchor: [12,12], popupAnchor: [0, -12] });
@@ -3047,8 +3064,18 @@
   var toolbarResetMarkers = L.easyBar([
     L.easyButton( '<img src="assets/img/reset.png" alt="Réinitialiser" title="Réinitialiser le suivi de vos marqueurs">',  function(control, map){
       if(confirm('Êtes-vous sûr de vouloir supprimer le suivi de vos marqueurs ?')) {
-        localStorage.removeItem('userMarkers');
-        window.location.reload();
+        if(userLocal) {
+          localStorage.removeItem('userMarkers');
+          window.location.reload();
+        } else {
+          $.post('api/resetmarkers', function() {
+            if(typeof(res.error) !== 'undefined') {
+              alert('Vous avez été déconnecté. La page va se rafraîchir.');
+            }
+
+            window.location.reload();
+          });
+        }
       }
     }),
   ]);
@@ -3066,65 +3093,69 @@
 
 
   // Génération des marqueurs
-  markers.forEach(function(g) {
+  function initMarkers() {
+    markers.forEach(function(g) {
 
-    g.markers.forEach(function(m){
-      var checkbox = '', icon, format, title = '', text = '', guide = '';
+      g.markers.forEach(function(m){
+        var checkbox = '', icon, format, title = '', text = '', guide = '';
 
-      if((typeof m.checkbox !== 'undefined' && m.checkbox) || (typeof g.checkbox !== 'undefined' && g.checkbox))
-        checkbox = '<label><input type="checkbox" id="user-marker" data-id="'+g.id+m.id+'" /><span>Terminé</span></label>';
+        if((typeof m.checkbox !== 'undefined' && m.checkbox) || (typeof g.checkbox !== 'undefined' && g.checkbox))
+          checkbox = '<label><input type="checkbox" id="user-marker" data-id="'+g.id+m.id+'" /><span>Terminé</span></label>';
 
-      if(typeof g.text !== 'undefined')
-        text = '<p>'+g.text+'</p>';
-      if(typeof m.text !== 'undefined')
-        text = '<p>'+m.text+'</p>';
+        if(typeof g.text !== 'undefined')
+          text = '<p>'+g.text+'</p>';
+        if(typeof m.text !== 'undefined')
+          text = '<p>'+m.text+'</p>';
 
-      if(typeof g.title !== 'undefined')
-        title = '<h4>'+g.title+'</h4>';
-      if(typeof m.title !== 'undefined')
-        title = '<h4>'+m.title+'</h4>';
+        if(typeof g.title !== 'undefined')
+          title = '<h4>'+g.title+'</h4>';
+        if(typeof m.title !== 'undefined')
+          title = '<h4>'+m.title+'</h4>';
 
-      if(typeof g.guide !== 'undefined')
-        guide = '<a href="'+g.guide+'" class="guide" target="_blank">Guide</a>';
-      if(typeof m.guide !== 'undefined')
-        if(typeof g.guide !== 'undefined' && m.guide.substr(0, 1) === '#')
-          guide = '<a href="'+g.guide+m.guide+'" class="guide" target="_blank">Guide</a>';
-        else
-          guide = '<a href="'+m.guide+'" class="guide" target="_blank">Guide</a>';
+        if(typeof g.guide !== 'undefined')
+          guide = '<a href="'+g.guide+'" class="guide" target="_blank">Guide</a>';
+        if(typeof m.guide !== 'undefined')
+          if(typeof g.guide !== 'undefined' && m.guide.substr(0, 1) === '#')
+            guide = '<a href="'+g.guide+m.guide+'" class="guide" target="_blank">Guide</a>';
+          else
+            guide = '<a href="'+m.guide+'" class="guide" target="_blank">Guide</a>';
 
-      icon = (typeof m.icon !== 'undefined') ? m.icon : g.icon;
-      format = (typeof m.format !== 'undefined') ? m.format : g.format;
+        icon = (typeof m.icon !== 'undefined') ? m.icon : g.icon;
+        format = (typeof m.format !== 'undefined') ? m.format : g.format;
 
-      var marker = L.marker(unproject(m.coords), {icon: icon});
+        var marker = L.marker(unproject(m.coords), {icon: icon});
 
-      if(format === 'popup')
-        marker.bindPopup(title+text+guide+checkbox);
-      else if(format === 'video')
-        marker.bindPopup(title+'<a class="video" href="//www.youtube.com/watch?v='+m.video+'" data-lity><img src="https://i.ytimg.com/vi/'+m.video+'/hqdefault.jpg" /></a>'+text+guide+checkbox);
-      else if(format === 'image')
-        marker.bindPopup(title+'<a href="assets/img/medias/'+g.id+m.id+'.jpg" class="image" data-lity><img src="thumb/'+g.id+m.id+'" /></a>'+text+guide+checkbox);
-      else if(format === 'banner')
-        marker.bindPopup(title+'<img src="assets/img/medias/'+g.id+m.id+'.jpg" onerror="this.src=\'assets/img/medias/default.jpg\'" />'+text+guide+checkbox);
-      else if(format === 'region')
-        marker.bindTooltip(m.title, {permanent: true, className: 'region', offset: [0, 13], direction: 'top'}).openTooltip();
+        if(format === 'popup')
+          marker.bindPopup(title+text+guide+checkbox);
+        else if(format === 'video')
+          marker.bindPopup(title+'<a class="video" href="//www.youtube.com/watch?v='+m.video+'" data-lity><img src="https://i.ytimg.com/vi/'+m.video+'/hqdefault.jpg" /></a>'+text+guide+checkbox);
+        else if(format === 'image')
+          marker.bindPopup(title+'<a href="assets/img/medias/'+g.id+m.id+'.jpg" class="image" data-lity><img src="thumb/'+g.id+m.id+'" /></a>'+text+guide+checkbox);
+        else if(format === 'banner')
+          marker.bindPopup(title+'<img src="assets/img/medias/'+g.id+m.id+'.jpg" onerror="this.src=\'assets/img/medias/default.jpg\'" />'+text+guide+checkbox);
+        else if(format === 'region')
+          marker.bindTooltip(m.title, {permanent: true, className: 'region', offset: [0, 13], direction: 'top'}).openTooltip();
 
-      if(checkbox)
-        marker.on('click', updateCurrentMarker);
+        if(checkbox)
+          marker.on('click', updateCurrentMarker);
 
-      marker.addTo(g.group);
-      total++;
+        marker.addTo(g.group);
+        total++;
 
-      if(userMarkers.indexOf(g.id+m.id) >= 0)
-        marker.setOpacity(.66);
 
-      if(params['debug'] && g.id !== 'region')
-        debugMarkers.push({name: g.id+m.id, marker: marker, coords: m.coords, icon: icon});
+        if(userMarkers.indexOf(g.id+m.id) >= 0)
+          marker.setOpacity(.66);
+
+        if(params['debug'] && g.id !== 'region')
+          debugMarkers.push({name: g.id+m.id, marker: marker, coords: m.coords, icon: icon});
+
+      });
 
     });
 
-  });
+    $('#total').text(total);
+  }
 
-  $('#total').text(total);
 
 
 
@@ -3179,6 +3210,30 @@
 
   $(document).ready(function() {
 
+    $.get('api/user', function(res) {
+      if(typeof res.login !== 'undefined') {
+        $('#discord').attr('href', res.login);
+        initMarkers();
+      }
+
+      if(typeof res.uid !== 'undefined') {
+        $('#discord')
+            .toggleClass('bg-indigo-400 bg-white text-white text-gray-900 border-indigo-400 border-gray-400 text-xs')
+            .html('<img src="'+res.avatar+'" onerror="this.src=\''+res.avatar_default+'\'" class="mr-2 h-6 rounded-full" /><strong>'+res.username+'</strong>')
+            .attr('href', res.logout);
+        userLocal = false;
+        userMarkers = res.markers;
+        initMarkers();
+
+        if(res.menu) {
+          $(res.menu).each(function(key, type) {
+            $('#menu a[data-type="'+type+'"]').addClass('active');
+            map.addLayer(window[type+'Group']);
+          });
+        }
+      }
+    });
+
     var w = window.innerWidth;
     if(w <= 500) {
       $('body').removeClass('show-menu');
@@ -3209,7 +3264,13 @@
     }
 
     $(document).on('change', 'input[type="checkbox"]', function() {
-      saveUserMarkers($(this).data('id'), $(this).is(':checked'));
+      console.log('check before click', userLocal);
+      if(userLocal) {
+        saveUserMarkers($(this).data('id'), $(this).is(':checked'));
+      } else {
+        saveUserMarker($(this).data('id'), $(this).is(':checked'));
+      }
+
     });
 
     $('#menu a[data-type]').on('click', function(e){
@@ -3219,8 +3280,12 @@
 
       if($(this).hasClass('active')) {
         map.removeLayer(window[type+'Group']);
+        if(!userLocal)
+          $.post('api/removemenu/'+type);
       } else {
         map.addLayer(window[type+'Group']);
+        if(!userLocal)
+          $.post('api/addmenu/'+type);
       }
 
       $(this).toggleClass('active');
