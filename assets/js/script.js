@@ -2530,40 +2530,262 @@
       format: 'video',
       markers: [
         {
-          id: 'dragonspine01',
-          text: 'Ouvrez le coffre en moins de 16&nbsp;s.',
-          video: 'GzHhQauia3g',
-          coords: [5277, 4577]
+          id: 'mondstadt01',
+          text: 'Ouvrez le coffre en moins de 30s.',
+          video: 'CEgU79_TBpI',
+          coords: [4556,3159]
         },
         {
-          id: 'dragonspine02',
-          text: 'Explosez les 5 tonneaux en moins de 30&nbsp;s.',
-          video: 'fkH9RxiwsbA',
-          coords: [5351,4241]
+          id: 'mondstadt02',
+          text: 'Ouvrez le coffre en moins de 60s.',
+          video: 'M8PVB6xzTFg',
+          coords: [5788,2595]
         },
         {
-          id: 'dragonspine03',
-          text: 'Explosez les 3 tonneaux explosifs en moins de 30&nbsp;s.',
-          video: 'y9SkYCW8H-M',
-          coords: [4894,3600]
+          id: 'mondstadt03',
+          text: 'Explosez les 4 tonneaux en moins de 20s.',
+          video: 'gVJ2wFUxmLs',
+          coords: [5502,2778]
         },
         {
-          id: 'dragonspine04',
-          text: 'Ouvrez le coffre en moins de 30&nbsp;s.',
+          id: 'mondstadt04',
+          text: 'Tuez tous les ennemis en 30s.',
+          video: '2Wt4GiS3m9M',
+          coords: [5214,2457]
+        },
+        {
+          id: 'mondstadt05',
+          text: 'Tuez tous les ennemis en 60s.',
+          video: '7mIc69g84ps',
+          coords: [5425,2345]
+        },
+        {
+          id: 'mondstadt06',
+          text: 'Allumez tous les braseros et ouvrez le coffre en 30s.',
+          video: 'QAliyQcjZnQ',
+          coords: [5602,2354]
+        },
+        {
+          id: 'mondstadt07',
+          text: 'Ouvrez le coffre en moins de 60s.',
+          video: 'O1ntwm61sTY',
+          coords: [5675,2302]
+        },
+        {
+          id: 'mondstadt08',
+          text: 'Ouvrez le coffre en moins de 30s.',
+          video: '8m2i0QQnIs4',
+          coords: [5688,2229]
+        },
+        {
+          id: 'mondstadt09',
+          text: 'Tuez tous les ennemis en 20s.',
+          video: 'zkRXJYy5Xno',
+          coords: [4429,2659]
+        },
+        {
+          id: 'mondstadt10',
+          text: 'Tuez tous les ennemis en 60s.',
+          video: '_nDnHNluwLY',
+          coords: [5089,3240]
+        },
+        {
+          id: 'mondstadt11',
+          text: 'Ouvrez le coffre en moins de 30s.',
+          video: 'uQZxXQY3AWU',
+          coords: [4909,3266]
+        },
+        {
+          id: 'mondstadt12',
+          text: 'Ouvrez le coffre en moins de 20s.',
+          video: 's2CQ4Ms4lbE',
+          coords: [4464,2862]
+        },
+        {
+          id: 'mondstadt13',
+          text: 'Tuez tous les ennemis en 30s.',
+          video: 'ewteF9VNmrA',
+          coords: [4153,2822]
+        },
+        {
+          id: 'mondstadt14',
+          text: 'Tuez tous les ennemis en 50s.',
+          video: 'EOJLR0_HX6o',
+          coords: [4007,2237]
+        },
+        {
+          id: 'mondstadt15',
+          text: 'Tuez tous les ennemis en 30s.',
+          video: 'ZJo7JD4PJ_A',
+          coords: [4191,2570]
+        },
+        {
+          id: 'mondstadt16',
+          text: 'Tuez tous les ennemis en 30s.',
+          video: 'ekGBUrJXAgA',
+          coords: [3725,2305]
+        },
+        {
+          id: 'mondstadt17',
+          text: 'Ouvrez le coffre en moins de 50s.',
+          video: 'cCdHlxM9vQI',
+          coords: [3699,2360]
+        },
+        {
+          id: 'mondstadt18',
+          text: 'Ouvrez le coffre en moins de 30s.',
           video: 'jkZ5FrdO1jo',
           coords: [4717,3685]
         },
         {
-          id: 'dragonspine05',
-          text: 'Ramassez 8 particules Anemo en moins de 50s.',
+          id: 'mondstadt19',
+          text: 'Explosez les 3 tonneaux en moins de 30s.',
+          video: 'y9SkYCW8H-M',
+          coords: [4894,3600]
+        },
+        {
+          id: 'mondstadt21',
+          text: 'Explosez les 5 tonneaux en moins de 30s.',
+          video: 'fkH9RxiwsbA',
+          coords: [5351,4241]
+        },
+        {
+          id: 'mondstadt22',
+          text: 'Ouvrez le coffre en moins de 16s.',
+          video: 'GzHhQauia3g',
+          coords: [5277, 4577]
+        },
+        {
+          id: 'mondstadt23',
+          text: 'Ramassez 8 particules Anémo en moins de 50s.',
           video: 'Otq1FHm-8QY',
           coords: [5041,4469]
         },
         {
-          id: 'dragonspine06',
+          id: 'mondstadt24',
           text: 'Tuez tous les ennemis en 180s.',
           video: 'LB27Cg3VVFA',
           coords: [5046,4179]
+        },
+        {
+          id: 'mondstadt25',
+          text: 'Tuez tous les ennemis en 60s.',
+          video: 's6_DTpfCq7U',
+          coords: [4983,3805]
+        },
+        {
+          id: 'mondstadt26',
+          text: 'Ramassez 8 particules Anémo en moins de 40s.',
+          video: '_ZvpOhy1sAI',
+          coords: [5131,4111]
+        },
+        {
+          id: 'mondstadt27',
+          text: 'Tuez tous les ennemis en 180s.',
+          video: 'dafebp9OHw8',
+          coords: [4534,4028]
+        },
+        {
+          id: 'mondstadt28',
+          text: 'Ramassez 8 particules Anémo en moins de 90s.',
+          video: 'Br_EgHkBgi4',
+          coords: [5035,4123]
+        },
+        {
+          id: 'mondstadt29',
+          text: 'Ramassez 8 particules Anémo en moins de 60s.',
+          video: 'FIh3-KW0msw',
+          coords: [4869,4279]
+        },
+        {
+          id: 'liyue01',
+          text: 'Tuez tous les ennemis en 30s.',
+          video: 'WziDtNmzLJs',
+          coords: [3446,3230]
+        },
+        {
+          id: 'liyue02',
+          text: 'Explosez les 5 tonneaux en moins de 60s.',
+          video: 'j_bXfT81rGI',
+          coords: [3504,3383]
+        },
+        {
+          id: 'liyue03',
+          text: 'Explosez les 5 tonneaux en moins de 15s.',
+          video: '3EDE6sVWo0E',
+          coords: [4318,3824]
+        },
+        {
+          id: 'liyue04',
+          text: 'Tuez tous les ennemis en 45s.',
+          video: '0FEn7bu1L5U',
+          coords: [4056,3885]
+        },
+        {
+          id: 'liyue05',
+          text: 'Tuez tous les ennemis en 50s.',
+          video: '7-S5hlf4x7g',
+          coords: [3478,5769]
+        },
+        {
+          id: 'liyue06',
+          text: 'Tuez tous les ennemis en 120s.',
+          video: 'hI7o0nAknI4',
+          coords: [3477,5638]
+        },
+        {
+          id: 'liyue07',
+          text: 'Tuez tous les ennemis en 45s.',
+          video: 'HGLc8MbzV78',
+          coords: [3938,4481]
+        },
+        {
+          id: 'liyue08',
+          text: 'Tuez tous les ennemis en 45s.',
+          video: 'paTQhEX5xfg',
+          coords: [5053,5390]
+        },
+        {
+          id: 'liyue09',
+          text: 'Tuez tous les ennemis en 30s.',
+          video: '9T9SNniy_QI',
+          coords: [2226,4268]
+        },
+        {
+          id: 'liyue10',
+          text: 'Tuez tous les ennemis en 30s.',
+          video: 'NCXRp1fAwJI',
+          coords: [2159,4447]
+        },
+        {
+          id: 'liyue11',
+          text: 'Tuez tous les ennemis en 30s.',
+          video: 'yLAvPbLl3tE',
+          coords: [2474,4445]
+        },
+        {
+          id: 'liyue12',
+          text: 'Ouvrez le coffre en moins de 45s.',
+          video: 'JosesYBjnFs',
+          coords: [2550,3776]
+        },
+        {
+          id: 'liyue13',
+          text: 'Tuez tous les ennemis en 30s.',
+          video: 'fCU6_w1WjY4',
+          coords: [3923,3783]
+        },
+        {
+          id: 'liyue14',
+          text: 'Tuez tous les ennemis en 45s.',
+          video: 'MchxMKPL8HM',
+          coords: [2521,4383]
+        },
+        {
+          id: 'liyue15',
+          text: 'Tuez tous les ennemis en 60s.',
+          video: '5PLcwdPCMj8',
+          coords: [4499,4405]
         }
       ]
     },
