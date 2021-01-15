@@ -3068,7 +3068,7 @@
           localStorage.removeItem('userMarkers');
           window.location.reload();
         } else {
-          $.post('api/resetmarkers', function() {
+          $.post('api/resetmarkers', function(res) {
             if(typeof(res.error) !== 'undefined') {
               alert('Vous avez été déconnecté. La page va se rafraîchir.');
             }
