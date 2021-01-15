@@ -3177,6 +3177,7 @@
 
   // Debug
   if(params['debug']) {
+    initMarkers();
       $('#menu ul').html('');
       debugMarkers.forEach(function(m, k) {
           $('#menu ul').append('<li class="marker col-span-2"><a href="#" data-debug-marker="'+m.name+'" class="active"><img src="'+m.icon.options.iconUrl+'" /> <span>'+m.name+'</span></a></li>');
@@ -3209,6 +3210,13 @@
 
 
   $(document).ready(function() {
+
+    var updateDiscord = localStorage.getItem('update-discord');
+    if(!updateDiscord) {
+      var lightbox = lity('#update-discord');
+      localStorage.setItem('update-discord', '1');
+    }
+
 
     $.get('api/user', function(res) {
       if(typeof res.login !== 'undefined') {
