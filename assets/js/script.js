@@ -20,7 +20,7 @@
           window.location.reload();
         }
 
-        currentMarker.setOpacity(.66);
+        currentMarker.setOpacity(.5);
         userMarkers = res.markers;
       });
     } else {
@@ -43,7 +43,7 @@
       if(markers.indexOf(uid) < 0) {
         markers.push(uid);
       }
-      currentMarker.setOpacity(.66);
+      currentMarker.setOpacity(.5);
     } else {
       if(markers.indexOf(uid) >= 0) {
         markers.splice(markers.indexOf(uid), 1);
@@ -3138,7 +3138,7 @@
 
 
         if(userMarkers.indexOf(g.id+m.id) >= 0)
-          marker.setOpacity(.66);
+          marker.setOpacity(.5);
 
         if(params['debug'] && g.id !== 'region')
           debugMarkers.push({name: g.id+m.id, marker: marker, coords: m.coords, icon: icon});
