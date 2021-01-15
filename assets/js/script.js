@@ -3272,7 +3272,6 @@
     }
 
     $(document).on('change', 'input[type="checkbox"]', function() {
-      console.log('check before click', userLocal);
       if(userLocal) {
         saveUserMarkers($(this).data('id'), $(this).is(':checked'));
       } else {
