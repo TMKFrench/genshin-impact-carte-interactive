@@ -288,9 +288,6 @@ class SQLite3Database
                 //parse as a string
                 case 's':
                 default:
-                    //if magic quotes are enabled (ie auto slashes), strip them out
-                    if( get_magic_quotes_gpc() )
-                        $arg = stripslashes($arg);
 
                     //sanitize single quotes (SQLite escape standard)
                     $arg = str_replace( "'", "''", $arg );
