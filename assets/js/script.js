@@ -3220,7 +3220,7 @@
 
     $.get('api/user', function(res) {
       if(typeof res.login !== 'undefined') {
-        $('#discord').attr('href', res.login);
+        $('#discord').attr('href', res.login).attr('target', (window.location !== window.parent.location) ? '_blank' : '_self');
         initMarkers();
       }
 
