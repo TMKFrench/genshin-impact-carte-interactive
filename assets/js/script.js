@@ -1160,7 +1160,7 @@
           id: '079',
           format: 'video',
           video: '5GLMu91EMJ4',
-          coords: [2488, 4204],
+          coords: [2486, 4235],
         },
         {
           id: '080',
@@ -1205,32 +1205,30 @@
         },
         {
           id: '090',
-          title: 'Géoculus 90',
+          text: 'Terminez la quête "Le Secret de Chi" pour accéder à ce Géoculus.<br />Suivez le guide&nbsp;!',
+          guide: '/genshin-impact/guides/secret-de-chi/',
           coords: [3337, 2988],
         },
         {
           id: '091',
-          title: 'Géoculus 91',
           coords: [3248, 3166],
         },
         {
           id: '092',
-          title: 'Géoculus 92',
+          text: 'Entrez dans la petite grotte pour y trouver ce Géoculus.',
           coords: [3262, 3231],
         },
         {
           id: '093',
-          title: 'Géoculus 93',
-          coords: [3557, 3429],
+          coords: [3578, 3442],
         },
         {
           id: '094',
-          title: 'Géoculus 94',
           coords: [3722, 3683],
         },
         {
           id: '095',
-          title: 'Géoculus 95',
+          text: 'Utilisez la compétence Géo du voyageur pour atteindre ce Géoculus.',
           coords: [3135, 3769],
         },
         {
@@ -1245,7 +1243,7 @@
         },
         {
           id: '098',
-          title: 'Géoculus 98',
+          text: 'En haut de la tour, à l\'extérieur.',
           coords: [2662, 4963],
         },
         {
@@ -1280,12 +1278,11 @@
         },
         {
           id: '105',
-          title: 'Géoculus 105',
+          text: 'Après avoir fait descendre le niveau de l\'eau en activant les braséros et l\'intérupteur Géo, ramenez les fées (deux dans le bâtiment à l\'est et une dans le bâtiment ouest après avoir terminé le défi) jusqu\'à leur cour pour faire disparaître le bouclier. Ouvrez le coffre luxueux pour faire apparaître un vent ascendant et récupérer ce Géoculus.',
           coords: [3143, 5290],
         },
         {
           id: '106',
-          title: 'Géoculus 106',
           coords: [3202, 5276],
         },
         {
@@ -1295,7 +1292,7 @@
         },
         {
           id: '108',
-          title: 'Géoculus 108',
+          text: 'Accessible en résolvant l\'énigme pour déverrouiller l\'accès au Manoir Taishen.',
           coords: [2876, 4378],
         },
         {
@@ -1305,7 +1302,7 @@
         },
         {
           id: '110',
-          title: 'Géoculus 110',
+          text: 'Utilisez la compétence Géo du voyageur pour atteindre ce Géoculus.',
           coords: [2932, 3515],
         },
         {
@@ -1335,17 +1332,16 @@
         },
         {
           id: '116',
-          title: 'Géoculus 116',
+          text: 'Activez le moulin à vent avec la compétence Anémo de votre voyageur, pour pouvoir prendre de la hauteur de vol et récupérer ce Géoculus.',
           coords: [3615, 4665],
         },
         {
           id: '117',
-          title: 'Géoculus 117',
           coords: [3749, 4996],
         },
         {
           id: '118',
-          title: 'Géoculus 118',
+          text: 'Détruisez le rocher qui obstrue les escaliers puis tuer le gardien des ruines qui protège la porte pour accéder au Géoculus.',
           coords: [3883, 4846],
         },
         {
@@ -1360,17 +1356,16 @@
         },
         {
           id: '121',
-          title: 'Géoculus 121',
           coords: [4317, 4546],
         },
         {
           id: '122',
-          title: 'Géoculus 122',
+          text: 'Utilisez la compétence Géo du voyageur pour atteindre ce Géoculus.',
           coords: [4332, 4274],
         },
         {
           id: '123',
-          title: 'Géoculus 123',
+          text: 'Activez le moulin à vent avec la compétence Anémo de votre voyageur, pour pouvoir prendre de la hauteur de vol et récupérer ce Géoculus.',
           coords: [4170, 4372],
         },
         {
@@ -1410,7 +1405,7 @@
         },
         {
           id: '131',
-          title: 'Géoculus 131',
+          text: 'Prennez de la hauteur pour passer par dessus le champ de force.',
           coords: [3519, 3980],
         },
         {
@@ -2365,7 +2360,6 @@
         },
         {
           id: '48',
-          title: 'Agate pourpre 48',
           coords: [5007, 4185]
         },
         {
