@@ -1074,7 +1074,7 @@
         },
         {
           id: '060',
-          coords: [3956, 4977],
+          coords: [3955, 4879],
         },
         {
           id: '061',
@@ -1207,7 +1207,7 @@
           id: '090',
           text: 'Terminez la quête "Le Secret de Chi" pour accéder à ce Géoculus.<br />Suivez le guide&nbsp;!',
           guide: '/genshin-impact/guides/secret-de-chi/',
-          coords: [3337, 2988],
+          coords: [3353, 2956],
         },
         {
           id: '091',
@@ -1233,7 +1233,7 @@
         },
         {
           id: '096',
-          title: 'Géoculus 96',
+          text: 'Utilisez la compétence Géo du voyageur pour atteindre ce Géoculus.',
           coords: [2445, 4010],
         },
         {
@@ -1248,7 +1248,6 @@
         },
         {
           id: '099',
-          title: 'Géoculus 99',
           coords: [2850, 5364],
         },
         {
@@ -1307,22 +1306,22 @@
         },
         {
           id: '111',
-          title: 'Géoculus 111',
+          format: 'video',
+          video: 'nE1ZIKxWsUY',
           coords: [3436, 4291],
         },
         {
           id: '112',
-          title: 'Géoculus 112',
+          text: 'Utilisez la compétence Géo du voyageur pour atteindre ce Géoculus.',
           coords: [3568, 4338],
         },
         {
           id: '113',
-          title: 'Géoculus 113',
+          text: 'Utilisez la compétence Géo du voyageur pour atteindre ce Géoculus.',
           coords: [3416, 4378],
         },
         {
           id: '114',
-          title: 'Géoculus 114',
           coords: [3147, 4340],
         },
         {
@@ -1345,14 +1344,9 @@
           coords: [3883, 4846],
         },
         {
-          id: '119',
-          title: 'Géoculus 119',
-          coords: [3955, 4879],
-        },
-        {
           id: '120',
           title: 'Géoculus 120',
-          coords: [4253, 4888],
+          coords: [4288, 4757],
         },
         {
           id: '121',
@@ -1375,12 +1369,12 @@
         },
         {
           id: '125',
-          title: 'Géoculus 125',
+          text: 'Escaladez la plus haute montagne et planez en direction du bateau. Le Géoculus se trouve en haut du plus long mât.',
           coords: [5219, 5498],
         },
         {
           id: '126',
-          title: 'Géoculus 126',
+          text: 'Dans les buissons aux pieds de la statue se situe l\'entrée d\'une petite grotte où vous récupérez ce Géoculus.',
           coords: [3588, 5877],
         },
         {
@@ -1390,17 +1384,16 @@
         },
         {
           id: '128',
-          title: 'Géoculus 128',
+          text: 'Activez le moulin à vent avec la compétence Anémo de votre voyageur, pour pouvoir prendre de la hauteur de vol et récupérer ce Géoculus.',
           coords: [3623, 5342],
         },
         {
           id: '129',
-          title: 'Géoculus 129',
+          text: 'Allumez la torche pour faire apparaître un vent ascendant, pour pouvoir prendre de la hauteur de vol et récupérer ce Géoculus.',
           coords: [3756, 5281],
         },
         {
           id: '130',
-          title: 'Géoculus 130',
           coords: [3845, 5248],
         },
         {
