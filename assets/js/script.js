@@ -3206,6 +3206,13 @@
 
 
     $.get('api/user', function(res) {
+
+      if(typeof res.users !== 'undefined')
+        $('#total-users').text(res.users);
+
+      if(typeof res.visits !== 'undefined')
+        $('#total-visits').text(res.visits);
+
       if(typeof res.login !== 'undefined') {
         $('#discord').attr('href', res.login).attr('target', (window.location !== window.parent.location) ? '_blank' : '_self');
         initMarkers();

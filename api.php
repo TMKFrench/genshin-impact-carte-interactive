@@ -53,6 +53,17 @@ if($method == 'GET' && $action == 'login') {
 } elseif($method == 'GET' && $action == 'user') {
     header('Content-Type: application/json');
 
+    $dbCountUsers = $db->get_row("SELECT COUNT(*) AS total FROM users");
+
+    if(!session('visited')){
+        $counter = file_get_contents('hits.txt') + 1;
+        file_put_contents('hits.txt', $counter);
+    } else {
+        $counter = file_get_contents('hits.txt');
+    }
+
+    $_SESSION['visited'] = TRUE;
+
     if($user = session('user')) {
 
         $dbUser = $db->get_row("SELECT * FROM users WHERE uid = {$user['uid']}");
@@ -68,12 +79,14 @@ if($method == 'GET' && $action == 'login') {
 
         $user['menu'] = ($dbUser) ? json_decode($dbUser->menu) : [];
         $user['markers'] = ($dbUser) ? json_decode($dbUser->markers) : [];
+        $user['users'] = $dbCountUsers->total;
+        $user['visits'] = $counter;
 
         echo json_encode($user);
         die();
     }
 
-    echo json_encode(['login' => $root . 'api/login']);
+    echo json_encode(['login' => $root . 'api/login', 'users' => $dbCountUsers->total, 'visits' => $counter]);
     die();
 
 } elseif($method == 'POST' && $action == 'addmarker') {
