@@ -1238,7 +1238,6 @@
         },
         {
           id: '097',
-          title: 'Géoculus 97',
           coords: [2656, 4827],
         },
         {
@@ -1252,27 +1251,23 @@
         },
         {
           id: '100',
-          title: 'Géoculus 100',
           coords: [2952, 5454],
         },
         {
           id: '101',
-          title: 'Géoculus 101',
-          coords: [2810, 5754],
+          coords: [2818, 5768],
         },
         {
           id: '102',
-          title: 'Géoculus 102',
-          coords: [2822, 5986],
+          coords: [2825, 5996],
         },
         {
           id: '103',
-          title: 'Géoculus 103',
           coords: [3157, 5960],
         },
         {
           id: '104',
-          title: 'Géoculus 104',
+          text: 'Utilisez la compétence Géo du voyageur sur la plaque, pour faire apparaître des plateformes. Utilisez sa compétence, une seconde fois, sur la dernière plateforme pour atteindre ce Géoculus.',
           coords: [3501, 5528],
         },
         {
@@ -1286,7 +1281,8 @@
         },
         {
           id: '107',
-          title: 'Géoculus 107',
+          text: 'Ce Géoculus est accessible avec le succès "Splendide vue". Suivez le guide&nbsp;!',
+          guide: '/genshin-impact/guides/splendide-vue/',
           coords: [2665, 4283],
         },
         {
@@ -1326,7 +1322,6 @@
         },
         {
           id: '115',
-          title: 'Géoculus 115',
           coords: [3367, 4775],
         },
         {
@@ -1345,8 +1340,8 @@
         },
         {
           id: '120',
-          title: 'Géoculus 120',
-          coords: [4288, 4757],
+          text: 'Utilisez la compétence Géo du voyageur pour atteindre ce Géoculus.',
+          coords: [4292, 4752],
         },
         {
           id: '121',
@@ -1364,7 +1359,6 @@
         },
         {
           id: '124',
-          title: 'Géoculus 124',
           coords: [4228, 4228],
         },
         {
@@ -1379,7 +1373,7 @@
         },
         {
           id: '127',
-          title: 'Géoculus 127',
+          text: 'Entrez dans le couloir, là où se trouve le flambeau et récupérez le Géoculus au bout de celui-ci.',
           coords: [3547, 5791],
         },
         {
@@ -1403,7 +1397,6 @@
         },
         {
           id: '132',
-          title: 'Géoculus 132',
           coords: [3487, 3528],
         },
       ]
