@@ -11,3 +11,4 @@ assets/js/*.min.js
 cache/*.jpg
 config.ini
 gici.db
+hits.txt

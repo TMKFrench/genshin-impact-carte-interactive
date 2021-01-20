@@ -56,10 +56,10 @@ if($method == 'GET' && $action == 'login') {
     $dbCountUsers = $db->get_row("SELECT COUNT(*) AS total FROM users");
 
     if(!session('visited')){
-        $counter = file_get_contents('hits.txt') + 1;
+        $counter = (int) file_get_contents('hits.txt') + 1;
         file_put_contents('hits.txt', $counter);
     } else {
-        $counter = file_get_contents('hits.txt');
+        $counter = (int) file_get_contents('hits.txt');
     }
 
     $_SESSION['visited'] = TRUE;
