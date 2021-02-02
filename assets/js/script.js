@@ -133,6 +133,10 @@
   var futileendeavorIcon = L.icon({ iconUrl: 'assets/img/futileendeavor.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0,-32] });
   var prodigalsonreturnIcon = L.icon({ iconUrl: 'assets/img/prodigalsonreturn.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0,-32] });
   var lostinthesnowIcon = L.icon({ iconUrl: 'assets/img/lostinthesnow.png', iconSize: [32,32], iconAnchor: [16,16], popupAnchor: [0,-32] });
+  var treasureguili01Icon = L.icon({ iconUrl: 'assets/img/treasureguili01.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0,-32] });
+  var treasureguili02Icon = L.icon({ iconUrl: 'assets/img/treasureguili02.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0,-32] });
+  var treasureguili03Icon = L.icon({ iconUrl: 'assets/img/treasureguili03.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0,-32] });
+  var treasureguili04Icon = L.icon({ iconUrl: 'assets/img/treasureguili04.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0,-32] });
 
 
   // Initialisation de la carte
@@ -149,7 +153,7 @@
     'statue', 'teleporter', 'anemoculus', 'geoculus', 'panorama', 'mondstadtshrine', 'liyueshrine', 'seelie', 'fireseelie',
     'jueyunchili', 'valberry', 'itswarm', 'overlookingview', 'dungeon', 'region', 'quest', 'crimsonagate',
     'priestprincessscribe', 'challenge', 'unusualhilichurl', 'glacialsteel', 'futileendeavor', 'prodigalsonreturn',
-    'lostinthesnow'
+    'lostinthesnow', 'treasureguili'
   ];
   groups.forEach(function(e) {
     window[e+'Group'] = L.layerGroup();
@@ -3538,6 +3542,87 @@
           id: '03',
           text: 'Journal d’inspection ancien –&nbsp;<b>Partie II</b>.',
           coords: [4741, 4291]
+        },
+      ]
+    },
+    {
+      id: 'treasureguili',
+      group: treasureguiliGroup,
+      icon: treasureguili01Icon,
+      format: 'image',
+      checkbox: true,
+      guide: '/genshin-impact/guides/le-tresor-des-plaines-guili/',
+      markers: [
+        {
+          id: '01',
+          title: '<em>Le trésor des Plaines Guili</em><br />Étape 1 - Stèle ancienne 1',
+          coords: [3820, 4766]
+        },
+        {
+          id: '02',
+          title: '<em>Le trésor des Plaines Guili</em><br />Étape 1 - Stèle ancienne 2',
+          coords: [3909, 4746]
+        },
+        {
+          id: '03',
+          title: '<em>Le trésor des Plaines Guili</em><br />Étape 1 - Stèle ancienne 3',
+          coords: [3982, 4833]
+        },
+        {
+          id: '04',
+          title: '<em>Le trésor des Plaines Guili</em><br />Étape 1 - Stèle ancienne 4',
+          coords: [3920, 4816]
+        },
+        {
+          id: '05',
+          title: '<em>Le trésor des Plaines Guili</em><br />Étape 1 - Stèle ancienne 5',
+          coords: [3872, 4841]
+        },
+        {
+          id: '06',
+          icon: treasureguili02Icon,
+          title: '<em>Le trésor des Plaines Guili</em><br />Étape 2 - Stèle en pierre 1',
+          coords: [3605, 4869]
+        },
+        {
+          id: '07',
+          icon: treasureguili02Icon,
+          title: '<em>Le trésor des Plaines Guili</em><br />Étape 2 - Stèle en pierre 2',
+          text: 'Tuez les ennemis et brûlez les ronces pour entrer dans le bâtiment et interagir avec la stèle.',
+          coords: [3999, 4934]
+        },
+        {
+          id: '08',
+          icon: treasureguili03Icon,
+          title: '<em>Le trésor des Plaines Guili</em><br />Étape 3 - Disque 1',
+          text: 'Approchez du champ de force pour faire apparaître des monstres. Tuez-les pour le désactiver et interagir avec le disque.',
+          coords: [3695, 4430]
+        },
+        {
+          id: '09',
+          icon: treasureguili03Icon,
+          title: '<em>Le trésor des Plaines Guili</em><br />Étape 3 - Disque 2',
+          text: 'Tuez les pilleurs pour pouvoir interagir avec le disque.',
+          coords: [3957, 4636]
+        },
+        {
+          id: '10',
+          icon: treasureguili03Icon,
+          title: '<em>Le trésor des Plaines Guili</em><br />Étape 3 - Disque 3',
+          coords: [4020, 4928]
+        },
+        {
+          id: '11',
+          icon: treasureguili03Icon,
+          title: '<em>Le trésor des Plaines Guili</em><br />Étape 3 - Disque 4',
+          coords: [3642, 4812]
+        },
+        {
+          id: '12',
+          icon: treasureguili04Icon,
+          title: '<em>Le trésor des Plaines Guili</em><br />Étape 4 - Trésor et succès',
+          text: 'Activez le disque au nord et tuez les 3 gardiens des ruines pour accéder aux coffres.',
+          coords: [3858, 4680]
         },
       ]
     }
