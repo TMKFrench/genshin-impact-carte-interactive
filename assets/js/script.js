@@ -1654,75 +1654,574 @@
         },
       ]
     },
-    // {
-    //   id: 'seelie',
-    //   group: seelieGroup,
-    //   icon: seelieIcon,
-    //   format: 'image',
-    //   checkbox: true,
-    //   markers: [
-    //     {
-    //       id: '01',
-    //       coords: [6442, 2542],
-    //     },
-    //   ]
-    // },
+    {
+      id: 'seelie',
+      group: seelieGroup,
+      icon: seelieIcon,
+      format: 'video',
+      checkbox: true,
+      markers: [
+        {
+          id: 'mondstadt01',
+          video: 'TZB-uZuNvac',
+          coords: [5648,3145]
+        },
+        {
+          id: 'mondstadt02',
+          video: 'PVpHrmzbLQE',
+          coords: [5399,3487]
+        },
+        {
+          id: 'mondstadt03',
+          video: 'eplX5l7ngbE',
+          coords: [4477,2771]
+        },
+        {
+          id: 'mondstadt04',
+          video: '8qtVWkC7bO8',
+          coords: [5202,3378]
+        },
+        {
+          id: 'mondstadt05',
+          video: 'c-X9r7vfjao',
+          coords: [5697,2668]
+        },
+        {
+          id: 'mondstadt06',
+          video: 'lY2HX7YUUWA',
+          coords: [5857,2945]
+        },
+        {
+          id: 'mondstadt07',
+          video: 'E8GOZ0nAU0c',
+          coords: [5567,2812]
+        },
+        {
+          id: 'mondstadt08',
+          video: 'BAs6r_iiUeg',
+          coords: [5400,2931]
+        },
+        {
+          id: 'mondstadt09',
+          video: 'r7c3zcIY-v4',
+          coords: [5501,2502]
+        },
+        {
+          id: 'mondstadt010',
+          video: 'f6_G22FH9dw',
+          coords: [5272,3066]
+        },
+        {
+          id: 'mondstadt11',
+          video: 'p_Xvn5hqACo',
+          coords: [5179,2460]
+        },
+        {
+          id: 'mondstadt12',
+          video: 'V4O-TFPGxFY',
+          coords: [5413,2419]
+        },
+        {
+          id: 'mondstadt13',
+          video: '6dPYfTIguPY',
+          coords: [5824,2221]
+        },
+        {
+          id: 'mondstadt14',
+          video: 'k82yijP8paU',
+          coords: [5398,3244]
+        },
+        {
+          id: 'mondstadt15',
+          video: 'MrK1dFs8FtU',
+          coords: [5610,3729]
+        },
+        {
+          id: 'mondstadt16',
+          video: '8U-ZwGZ8uLI',
+          coords: [4517,2708]
+        },
+        {
+          id: 'mondstadt17',
+          video: 'Qa0ORWhLwBg',
+          coords: [4533,2616]
+        },
+        {
+          id: 'mondstadt18',
+          video: 'QsVK4EJq9_8',
+          coords: [4991,3383]
+        },
+        {
+          id: 'mondstadt19',
+          video: '2-fGTrJN85U',
+          coords: [5833,3796]
+        },
+        {
+          id: 'mondstadt20',
+          video: '8JwURhH-nCY',
+          coords: [4967,3214]
+        },
+        {
+          id: 'mondstadt21',
+          video: '6M3yxiRyEEo',
+          coords: [5054,3164]
+        },
+        {
+          id: 'mondstadt22',
+          video: 'VHQjkYNj0Oc',
+          coords: [4634,3385]
+        },
+        {
+          id: 'mondstadt23',
+          video: 'IGFumD1ZSBk',
+          coords: [4300,3257]
+        },
+        {
+          id: 'mondstadt24',
+          video: 'fjJpahjTLEE',
+          coords: [4614,2998]
+        },
+        {
+          id: 'mondstadt25',
+          video: 'nhP4xoHcREQ',
+          coords: [4275,2748]
+        },
+        {
+          id: 'mondstadt26',
+          video: '0HA_TTPgvvg',
+          coords: [4368,2561]
+        },
+        {
+          id: 'mondstadt27',
+          video: 'eP1dr5g0Byc',
+          coords: [4444,2429]
+        },
+        {
+          id: 'mondstadt28',
+          video: 'Xf4qcPL4Sxw',
+          coords: [4543,2447]
+        },
+        {
+          id: 'mondstadt29',
+          video: 'RkRKS6N4qjw',
+          coords: [4157,2498]
+        },
+        {
+          id: 'mondstadt30',
+          video: 'CVRj-04WnXo',
+          coords: [3867,2616]
+        },
+        {
+          id: 'mondstadt31',
+          video: 'E60LRd6cbAc',
+          coords: [4047,2369]
+        },
+        {
+          id: 'mondstadt32',
+          video: 'm2x9bAzSc8Q',
+          coords: [5888,2247]
+        },
+        {
+          id: 'mondstadt33',
+          video: '6appAY6Cyk0',
+          coords: [3750,2491]
+        },
+        {
+          id: 'mondstadt34',
+          video: 'NLsF0VsYa_4',
+          coords: [3807,2289]
+        },
+        {
+          id: 'mondstadt35',
+          video: 'ndADX_rsmDc',
+          coords: [3725,2574]
+        },
+        {
+          id: 'mondstadt36',
+          video: '3ZaParP1YnY',
+          coords: [3945,2272]
+        },
+        {
+          id: 'mondstadt37',
+          video: '0AL-_onB6yA',
+          coords: [4073,2419]
+        },
+        {
+          id: 'liyue01',
+          video: 'eQrfEC7b6CE',
+          coords: [3380,3214]
+        },
+        {
+          id: 'liyue02',
+          video: 'FMxuTJn-duM',
+          coords: [3484,3349]
+        },
+        {
+          id: 'liyue03',
+          video: 'taH6kWMYiss',
+          coords: [3425,3329]
+        },
+        {
+          id: 'liyue04',
+          video: 'pMddbiH5pF0',
+          coords: [2696,4367]
+        },
+        {
+          id: 'liyue05',
+          video: 'a1sfn6x21r0',
+          coords: [4550,5309]
+        },
+        {
+          id: 'liyue06',
+          video: 'yJPHSllYB08',
+          coords: [5123,5394]
+        },
+        {
+          id: 'liyue07',
+          video: 'RWPImzEXz4M',
+          coords: [5119,5305]
+        },
+        {
+          id: 'liyue08',
+          video: 'wr8_EANVU44',
+          coords: [4820,5489]
+        },
+        {
+          id: 'liyue09',
+          video: 'rjJKg2oLHuc',
+          coords: [3669,3591]
+        },
+        {
+          id: 'liyue10',
+          video: 'jkxNv0CBSqY',
+          coords: [2279,4429]
+        },
+        {
+          id: 'liyue11',
+          video: 'hc4Xe-oICZc',
+          coords: [2382,4517]
+        },
+        {
+          id: 'liyue12',
+          video: 'TPh9vWYzNu0',
+          coords: [2395,4503]
+        },
+        {
+          id: 'liyue13',
+          video: 'SDFp2cMtP4s',
+          coords: [3383,4066]
+        },
+        {
+          id: 'liyue14',
+          video: 'J3d_cu03bt8',
+          coords: [3295,3633]
+        },
+        {
+          id: 'liyue15',
+          video: 'SetGcCBsUWY',
+          coords: [3851,4005]
+        },
+        {
+          id: 'liyue16',
+          video: 'sG7kimUcxcw',
+          coords: [3804,4197]
+        },
+        {
+          id: 'liyue17',
+          video: '3rEII58ORQU',
+          coords: [3341,3710]
+        },
+        {
+          id: 'liyue18',
+          video: 'cKKo4F15mJY',
+          coords: [3873,3868]
+        },
+        {
+          id: 'liyue19',
+          video: 'EqzAvKr8GKE',
+          coords: [2763,4461]
+        },
+        {
+          id: 'liyue20',
+          video: 'xsEcIWJrRrA',
+          coords: [3457,5853]
+        },
+        {
+          id: 'liyue21',
+          video: 'zSbq9UXA_jo',
+          coords: [3407,5830]
+        },
+        {
+          id: 'liyue22',
+          video: 'Y89ibWX8yVc',
+          coords: [3506,5694]
+        },
+        {
+          id: 'liyue23',
+          video: '0lLnN2BW7zU',
+          coords: [3211,5673]
+        },
+        {
+          id: 'liyue24',
+          video: '6euAMTzB5vY',
+          coords: [2701,3864]
+        },
+        {
+          id: 'liyue25',
+          video: '7gA02wg4lU8',
+          coords: [3711,3401]
+        },
+        {
+          id: 'liyue26',
+          video: 'L8silP0r_KA',
+          coords: [4354,4416]
+        },
+        {
+          id: 'liyue27',
+          video: 'MkFyqDMmGzs',
+          coords: [2356,4430]
+        },
+        {
+          id: 'liyue28',
+          video: '8tJcCGUNW28',
+          coords: [2559,4499]
+        },
+        {
+          id: 'liyue29',
+          video: 'IpR4W1TnYxQ',
+          coords: [2669,4455]
+        },
+        {
+          id: 'liyue30',
+          video: '6knIjmpAZaU',
+          coords: [3561,5507]
+        },
+        {
+          id: 'liyue31',
+          video: 'LoqV3GXvTso',
+          coords: [3019,4600]
+        },
+        {
+          id: 'liyue32',
+          video: '8b-dkoR90nk',
+          coords: [3199,4492]
+        },
+        {
+          id: 'liyue33',
+          video: 'Pp9x6mfk9cM',
+          coords: [3445,4205]
+        },
+        {
+          id: 'liyue34',
+          video: 'ci30v-Ehdos',
+          coords: [3018,5676]
+        },
+        {
+          id: 'liyue3536',
+          video: '2cE2w-E3_0A',
+          coords: [2960,3673]
+        },
+        {
+          id: 'liyue37',
+          video: 'BtBev75avRI',
+          coords: [2482,4256]
+        },
+        {
+          id: 'liyue38',
+          video: 'nqIe9Ahd8Lo',
+          coords: [2461,4189]
+        },
+        {
+          id: 'liyue39',
+          video: '5R_JHFbO_gs',
+          coords: [3635,3522]
+        },
+        {
+          id: 'liyue40',
+          video: 'YKvzeL0zzwg',
+          coords: [4446,4419]
+        },
+        {
+          id: 'liyue41',
+          video: 'tS-nrJ2ntEE',
+          coords: [3579,4533]
+        },
+        {
+          id: 'liyue42',
+          video: 'wft4maj2L7c',
+          coords: [3603,3687]
+        },
+        {
+          id: 'liyue43',
+          video: 'SxX_jqWzmTk',
+          coords: [3986,5245]
+        },
+        {
+          id: 'liyue44',
+          video: 'Mf2exHVcN7s',
+          coords: [4013,4952]
+        }
+      ]
+    },
     {
       id: 'fireseelie',
       group: fireseelieGroup,
       icon: fireseelieIcon,
-      format: 'image',
+      format: 'video',
       checkbox: true,
       markers: [
         {
           id: '01',
-          coords: [4716, 4212],
+          video: '2gjfTudQqfE',
+          coords: [4718,4238]
         },
         {
           id: '02',
-          coords: [4868, 3644],
+          video: 'bDogNZ_QHmI',
+          coords: [4874,3631]
         },
         {
           id: '03',
-          coords: [4655, 3801],
+          video: 'fod0Cqx8pBM',
+          coords: [4682,3779]
         },
         {
           id: '04',
-          coords: [5092, 3957],
+          video: 'VtLkjOZs3BA',
+          coords: [5107,3974]
         },
         {
           id: '05',
-          coords: [4776, 4171],
+          video: 'jj6WOhL6u7E',
+          coords: [4772,4177]
         },
         {
           id: '06',
-          coords: [5166, 3751]
-        }
+          video: 'QVoCEF8XoR8',
+          coords: [5158,3759]
+        },
+        {
+          id: '07',
+          video: 'rILFfWIEfyk',
+          coords: [5169,3889]
+        },
+        {
+          id: '08',
+          video: 'e4QwjqVre-4',
+          coords: [4549,3784]
+        },
+        {
+          id: '09',
+          video: 'bmDtGK8sUXg',
+          coords: [5405,4219]
+        },
+        {
+          id: '10',
+          video: '2uKhRyzb9dc',
+          coords: [5397,4074]
+        },
+        {
+          id: '11',
+          video: 'wo5BKCJNWF4',
+          coords: [5164,4383]
+        },
+        {
+          id: '12',
+          video: 'jRT7pYvpRtw',
+          coords: [4549,4088]
+        },
+        {
+          id: '13',
+          video: '-JX7fyk_gxY',
+          coords: [4643,3937]
+        },
+        {
+          id: '14',
+          video: 'XZtRiBFBCsM',
+          coords: [4656,3947]
+        },
+        {
+          id: '15',
+          video: 'Rk_ge8GnTUg',
+          coords: [4688,3933]
+        },
+        {
+          id: '16',
+          video: 'vIFY0Jg0thg',
+          coords: [4439,4210]
+        },
+        {
+          id: '17',
+          video: 'HrlufjrQS2g',
+          coords: [4580,4193]
+        },
+        {
+          id: '18',
+          video: 's4yakU2egBo',
+          coords: [5035,3803]
+        },
+        {
+          id: '19',
+          video: 'ecpS-CwCjsU',
+          coords: [5220,4156]
+        },
+        {
+          id: '20',
+          video: 'gttSS-qlo_0',
+          coords: [4988,4106]
+        },
+        {
+          id: '21',
+          video: 't9T4R7ZkHXY',
+          coords: [5043,4080]
+        },
+        {
+          id: '22',
+          video: 'w0AZ5eE-QTo',
+          coords: [5017,4165]
+        },
+        {
+          id: '23',
+          video: '_Nh2kU-ctXA',
+          coords: [4965,4058]
+        },
+        {
+          id: '24',
+          video: '_3pPfuoi5N4',
+          coords: [4944,3978]
+        },
+        {
+          id: '25',
+          video: 'bB19m0CDDhU',
+          coords: [4836,4192]
+        },
+        {
+          id: '26',
+          video: 'I1YXpeZQWEQ',
+          coords: [4634,4319]
+        },
+        {
+          id: '27',
+          video: 'qXgG1uG5788',
+          coords: [5061,4203]
+        },
+        {
+          id: '28',
+          video: 'YRkjqFY1ePE',
+          coords: [5082,4110]
+        },
+        {
+          id: '29',
+          video: '9SwlGp8Z6BA',
+          coords: [5031,4090]
+        },
+        {
+          id: '30',
+          video: 'WxJe3J2FMzk',
+          coords: [4979,4185]
+        },
       ]
     },
-    // {
-    //   id: 'jueyunchili',
-    //   group: jueyunchiliGroup,
-    //   icon: jueyunchiliIcon,
-    //   format: 'simple',
-    //   markers: [
-    //     {
-    //       coords: [6150, 2718],
-    //     },
-    //   ]
-    // },
-    // {
-    //   id: 'valberry',
-    //   group: valberryGroup,
-    //   icon: valberryIcon,
-    //   format: 'popup',
-    //   markers: [
-    //     {
-    //       id: '01',
-    //       coords: [6250, 2718],
-    //     },
-    //   ]
-    // },
     {
       id: 'overlookingview',
       group: overlookingviewGroup,
@@ -2695,6 +3194,12 @@
           coords: [4869,4279]
         },
         {
+          id: 'mondstadt30',
+          text: 'Ramassez 8 particules Anemo en moins de 40s.',
+          video: 'aK36viVPF7Y',
+          coords: [5217,3996]
+        },
+        {
           id: 'liyue01',
           text: 'Tuez tous les ennemis en 30s.',
           video: 'WziDtNmzLJs',
@@ -2783,6 +3288,36 @@
           text: 'Tuez tous les ennemis en 60s.',
           video: '5PLcwdPCMj8',
           coords: [4499,4405]
+        },
+        {
+          id: 'liyue16',
+          text: 'Tuez tous les ennemis en 60s.',
+          video: '8h7uku-mzQ0',
+          coords: [3680,3656]
+        },
+        {
+          id: 'liyue17',
+          text: 'Tuez tous les ennemis en 60s.',
+          video: 'Ry_cmN8d458',
+          coords: [3103,5291]
+        },
+        {
+          id: 'liyue18',
+          text: 'Explosez les 3 tonneaux en 40s.',
+          video: 'ht7Byu-vQHQ',
+          coords: [3941,3432]
+        },
+        {
+          id: 'liyue19',
+          text: 'Tuez tous les ennemis en 60s.',
+          video: 'E5uxaP5Alkc',
+          coords: [3029,3618]
+        },
+        {
+          id: 'liyue20',
+          text: 'Tuez tous les ennemis en 45s.',
+          video: 'sqqj6jDEg60',
+          coords: [2543,3895]
         }
       ]
     },
