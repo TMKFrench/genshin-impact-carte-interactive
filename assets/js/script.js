@@ -3811,11 +3811,11 @@
 
   $(document).ready(function() {
 
-    var updateDiscord = localStorage.getItem('update-discord');
-    if(!updateDiscord) {
-      var lightbox = lity('#update-discord');
-      localStorage.setItem('update-discord', '1');
-    }
+    // var updateDiscord = localStorage.getItem('update-discord');
+    // if(!updateDiscord) {
+    //   var lightbox = lity('#update-discord');
+    //   localStorage.setItem('update-discord', '1');
+    // }
 
 
     $.get('api/user', function(res) {
