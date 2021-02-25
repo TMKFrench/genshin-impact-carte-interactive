@@ -137,6 +137,17 @@
   var treasureguili02Icon = L.icon({ iconUrl: 'assets/img/treasureguili02.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0,-32] });
   var treasureguili03Icon = L.icon({ iconUrl: 'assets/img/treasureguili03.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0,-32] });
   var treasureguili04Icon = L.icon({ iconUrl: 'assets/img/treasureguili04.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0,-32] });
+  var bossStormterrorIcon = L.icon({ iconUrl: 'assets/img/bossstormterror.png', iconSize: [40,40], iconAnchor: [20,20], popupAnchor: [0,-20] });
+  var bossAndriusIcon = L.icon({ iconUrl: 'assets/img/bossandrius.png', iconSize: [40,40], iconAnchor: [20,20], popupAnchor: [0,-20] });
+  var bossHypostasisAnemoIcon = L.icon({ iconUrl: 'assets/img/bosshypostasisanemo.png', iconSize: [40,40], iconAnchor: [20,20], popupAnchor: [0,-20] });
+  var bossHypostasisElectroIcon = L.icon({ iconUrl: 'assets/img/bosshypostasiselectro.png', iconSize: [40,40], iconAnchor: [20,20], popupAnchor: [0,-20] });
+  var bossHypostasisGeoIcon = L.icon({ iconUrl: 'assets/img/bosshypostasisgeo.png', iconSize: [40,40], iconAnchor: [20,20], popupAnchor: [0,-20] });
+  var bossOceanidIcon = L.icon({ iconUrl: 'assets/img/bossoceanid.png', iconSize: [40,40], iconAnchor: [20,20], popupAnchor: [0,-20] });
+  var bossPrimoGeovishapIcon = L.icon({ iconUrl: 'assets/img/bossprimogeovishap.png', iconSize: [40,40], iconAnchor: [20,20], popupAnchor: [0,-20] });
+  var bossRegisvineCryoIcon = L.icon({ iconUrl: 'assets/img/bossregisvinecryo.png', iconSize: [40,40], iconAnchor: [20,20], popupAnchor: [0,-20] });
+  var bossRegisvinePyroIcon = L.icon({ iconUrl: 'assets/img/bossregisvinepyro.png', iconSize: [40,40], iconAnchor: [20,20], popupAnchor: [0,-20] });
+  var bossTartagliaIcon = L.icon({ iconUrl: 'assets/img/bosstartaglia.png', iconSize: [40,40], iconAnchor: [20,20], popupAnchor: [0,-20] });
+
 
 
   // Initialisation de la carte
@@ -153,7 +164,7 @@
     'statue', 'teleporter', 'anemoculus', 'geoculus', 'panorama', 'mondstadtshrine', 'liyueshrine', 'seelie', 'fireseelie',
     'jueyunchili', 'valberry', 'itswarm', 'overlookingview', 'dungeon', 'region', 'quest', 'crimsonagate',
     'priestprincessscribe', 'challenge', 'unusualhilichurl', 'glacialsteel', 'futileendeavor', 'prodigalsonreturn',
-    'lostinthesnow', 'treasureguili'
+    'lostinthesnow', 'treasureguili', 'boss'
   ];
   groups.forEach(function(e) {
     window[e+'Group'] = L.layerGroup();
@@ -3623,6 +3634,83 @@
           title: '<em>Le trésor des Plaines Guili</em><br />Étape 4 - Trésor et succès',
           text: 'Activez le disque au nord et tuez les 3 gardiens des ruines pour accéder aux coffres.',
           coords: [3858, 4680]
+        },
+      ]
+    },
+    {
+      id: 'boss',
+      group: bossGroup,
+      format: 'banner',
+      markers: [
+        {
+          id: 'stormterror',
+          title: 'Stormterror',
+          icon: bossStormterrorIcon,
+          // guide: '',
+          coords: [3964, 2464],
+        },
+        {
+          id: 'andrius',
+          title: 'Andros',
+          icon: bossAndriusIcon,
+          // guide: '',
+          coords: [4359, 3124],
+        },
+        {
+          id: 'hypostasisanemo',
+          title: 'Hypostase Anémo',
+          icon: bossHypostasisAnemoIcon,
+          // guide: '',
+          coords: [5395, 2212],
+        },
+        {
+          id: 'hypostasiselectro',
+          title: 'Hypostase Électro',
+          icon: bossHypostasisElectroIcon,
+          // guide: '',
+          coords: [6035, 3810],
+        },
+        {
+          id: 'regisvinecryo',
+          title: 'Arbre congelé',
+          icon: bossRegisvineCryoIcon,
+          // guide: '',
+          coords: [5772, 3019],
+        },
+        {
+          id: 'hypostasisgeo',
+          title: 'Hypostase Géo',
+          icon: bossHypostasisGeoIcon,
+          // guide: '',
+          coords: [4947, 5072],
+        },
+        {
+          id: 'regisvinepyro',
+          title: 'Arbre enflammé',
+          icon: bossRegisvinePyroIcon,
+          // guide: '',
+          coords: [3141, 4968],
+        },
+        {
+          id: 'oceanid',
+          title: 'Esprit de l\'eau',
+          icon: bossOceanidIcon,
+          // guide: '',
+          coords: [3816, 3323],
+        },
+        {
+          id: 'tartaglia',
+          title: 'Tartaglia',
+          icon: bossTartagliaIcon,
+          // guide: '',
+          coords: [3847, 6024],
+        },
+        {
+          id: 'primogeovishap',
+          title: 'Géolézard antique',
+          icon: bossPrimoGeovishapIcon,
+          // guide: '',
+          coords: [2630, 4885],
         },
       ]
     }
