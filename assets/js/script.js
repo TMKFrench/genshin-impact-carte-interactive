@@ -3693,7 +3693,7 @@
         },
         {
           id: 'oceanid',
-          title: 'Esprit de l\'eau',
+          title: 'Esprit des eaux',
           icon: bossOceanidIcon,
           // guide: '',
           coords: [3816, 3323],
