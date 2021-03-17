@@ -2835,9 +2835,6 @@
         },
         {
           id: '42',
-          format: 'video',
-          text: '<em>Vidéo de GameControl.</em>',
-          video: 'BjXjItLP6b4',
           coords: [4946, 4153]
         },
         {
