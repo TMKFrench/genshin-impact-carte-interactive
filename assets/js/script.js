@@ -3215,6 +3215,30 @@
           coords: [5217,3996]
         },
         {
+          id: 'mondstadt31',
+          text: 'Ramassez 8 particules Anemo en moins de 40s.',
+          video: 'el4GWAKYR8o',
+          coords: [4512,3776]
+        },
+        {
+          id: 'mondstadt32',
+          text: 'Ramassez 12 particules Anemo en moins de 90s.',
+          video: 'yxPqcqZJjv4',
+          coords: [4590,4070]
+        },
+        {
+          id: 'mondstadt33',
+          text: 'Ramassez 8 particules Anemo en moins de 40s.',
+          video: 'l6D9_HMnGrk',
+          coords: [4844,3825]
+        },
+        {
+          id: 'mondstadt34',
+          text: 'Explosez les 3 tonneaux en 30s.',
+          video: 'Iug37KvN6Ig',
+          coords: [4921,3753]
+        },
+        {
           id: 'liyue01',
           text: 'Tuez tous les ennemis en 30s.',
           video: 'WziDtNmzLJs',
@@ -3333,6 +3357,132 @@
           text: 'Tuez tous les ennemis en 45s.',
           video: 'sqqj6jDEg60',
           coords: [2543,3895]
+        },
+        {
+          id: 'liyue21',
+          text: 'Ouvrez le coffre en moins de 10s.',
+          video: 'QVaamsfMYbg',
+          coords: [2563,4820]
+        },
+        {
+          id: 'liyue22',
+          text: 'Ouvrez le coffre en moins de 15s.',
+          video: 'QamwKZhAcoM',
+          coords: [2440,4763]
+        },
+        {
+          id: 'liyue23',
+          text: 'Tuez tous les ennemis en 60s.',
+          video: 'ze55XkHGaJs',
+          coords: [4223,4401]
+        },
+        {
+          id: 'liyue24',
+          text: 'Tuez tous les ennemis en 30s.',
+          video: 'noHy6OJvE68',
+          coords: [2911,5074]
+        },
+        {
+          id: 'liyue25',
+          text: 'Tuez tous les ennemis en 30s.',
+          video: '1fwIumFImo8',
+          coords: [4547,4677]
+        },
+        {
+          id: 'liyue26',
+          text: 'Explosez les 3 tonneaux en 15s.',
+          video: 'MZ7mIrDfUEs',
+          coords: [3276,5030]
+        },
+        {
+          id: 'liyue27',
+          text: 'Tuez tous les ennemis en 60s.',
+          video: 'H8Rn4xkV_HQ',
+          coords: [2864,5289]
+        },
+        {
+          id: 'liyue28',
+          text: 'Explosez les 3 tonneaux en 25s.',
+          video: 'WS32im-CGQM',
+          coords: [4515,4637]
+        },
+        {
+          id: 'liyue29',
+          text: 'Tuez tous les ennemis en 45s.',
+          video: 'KrliK1l9lNY',
+          coords: [2448,4063]
+        },
+        {
+          id: 'liyue30',
+          text: 'Ouvrez le coffre en moins de 38s.',
+          video: '-NBpUVa3xxc',
+          coords: [2584,4125]
+        },
+        {
+          id: 'liyue31',
+          text: 'Tuez tous les ennemis en 30s.',
+          video: 'kqBaV3x8W1s',
+          coords: [2525,4228]
+        },
+        {
+          id: 'liyue32',
+          text: 'Ouvrez le coffre en moins de 18s.',
+          video: 'aQuLCJ95ZLk',
+          coords: [2577,4240]
+        },
+        {
+          id: 'liyue33',
+          text: 'Tuez tous les ennemis en 50s.',
+          video: 'RW8aafDfrKU',
+          coords: [2715,4229]
+        },
+        {
+          id: 'liyue34',
+          text: 'Tuez tous les ennemis en 30s.',
+          video: 'T5ILVhvfwE0',
+          coords: [2921,4341]
+        },
+        {
+          id: 'liyue35',
+          text: 'Tuez tous les ennemis en 60s.',
+          video: 'Gm2J0MSo_6M',
+          coords: [3272,4537]
+        },
+        {
+          id: 'liyue36',
+          text: 'Tuez tous les ennemis en 30s.',
+          video: 'XpdzdjGwZCA',
+          coords: [3224,4764]
+        },
+        {
+          id: 'liyue37',
+          text: 'Tuez tous les ennemis en 50s.',
+          video: 'cMjdQxGRruk',
+          coords: [2940,5156]
+        },
+        {
+          id: 'liyue38',
+          text: 'Ouvrez le coffre en moins de 60s.',
+          video: 'aw2-YywoxRg',
+          coords: [2807,5988]
+        },
+        {
+          id: 'liyue39',
+          text: 'Tuez tous les ennemis en 60s.',
+          video: 'EXUrFc7WiQw',
+          coords: [3094,5994]
+        },
+        {
+          id: 'liyue40',
+          text: 'Explosez les 4 tonneaux en 30s.',
+          video: 'O-GVDdA1rw8',
+          coords: [3601,5342]
+        },
+        {
+          id: 'liyue41',
+          text: 'Ouvrez le coffre en moins de 20s.',
+          video: 'xkF9Hq8V2YI',
+          coords: [4196,4570]
         }
       ]
     },
