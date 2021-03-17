@@ -2835,7 +2835,9 @@
         },
         {
           id: '42',
-          title: 'Agate pourpre 42',
+          format: 'video',
+          text: '<em>Vidéo de GameControl.</em>',
+          video: 'BjXjItLP6b4',
           coords: [4946, 4153]
         },
         {
@@ -2995,6 +2997,10 @@
         {
           id: '77',
           coords: [4652,3902]
+        },
+        {
+          id: '78',
+          coords: [4598,4069]
         },
       ]
     },
