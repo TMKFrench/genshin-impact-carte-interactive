@@ -241,6 +241,7 @@ function onMapClick(e) {
   var bossTartagliaIcon = L.icon({ iconUrl: 'assets/img/bosstartaglia.png', iconSize: [40,40], iconAnchor: [20,20], popupAnchor: [0,-20] });
   var testIcon = L.icon({ iconUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon.png', iconSize: [25,41], iconAnchor: [12,41], popupAnchor: [0,-41] });
   var ironIcon = L.icon({ iconUrl: 'assets/img/iron.png', iconSize: [30,30], iconAnchor: [15,15], popupAnchor: [0,-15] });
+  var tinplateIcon = L.icon({ iconUrl: 'assets/img/tinplate.png', iconSize: [30,30], iconAnchor: [15,15], popupAnchor: [0,-15] });
 
 
 
@@ -258,7 +259,7 @@ function onMapClick(e) {
     'statue', 'teleporter', 'anemoculus', 'geoculus', 'panorama', 'mondstadtshrine', 'liyueshrine', 'seelie', 'fireseelie',
     'jueyunchili', 'valberry', 'itswarm', 'overlookingview', 'dungeon', 'region', 'quest', 'crimsonagate',
     'priestprincessscribe', 'challenge', 'unusualhilichurl', 'glacialsteel', 'futileendeavor', 'prodigalsonreturn',
-    'lostinthesnow', 'treasureguili', 'boss', 'test', 'iron'
+    'lostinthesnow', 'treasureguili', 'boss', 'iron', 'tinplate'
   ];
   groups.forEach(function(e) {
     window[e+'Group'] = L.layerGroup();
@@ -4022,14 +4023,10 @@ function onMapClick(e) {
           coords: [3948, 3466],
           polygon: [
             [30.977609093348686, -18.149414062500004],
-            [28.57487404744697, -6.372070312500001],
             [34.379712580462204, 3.5595703125],
-            [26.23430203240676, 0.9228515625000001],
             [20.879342971957897, 9.272460937500002],
-            [24.84656534821976, -7.558593750000001],
             [15.538375926292062, -9.272460937500002],
             [18.521283325496288, -15.952148437500002],
-            [26.62781822639305, -12.260742187500002]
           ]
         },
         {
@@ -4086,6 +4083,145 @@ function onMapClick(e) {
             [-35.67514743608468, -1.7578125000000002],
             [-40.979898069620134, -6.020507812500001]
           ]
+        },
+      ]
+    },
+    {
+      id:'tinplate',
+      title: 'Fer blanc',
+      group: tinplateGroup,
+      icon: tinplateIcon,
+      format: 'popup',
+      checkbox: true,
+      countdown: 48,
+      color: '#b6c0c2',
+      markers: [
+        {
+          id:'01',
+          title: 'Fer blanc #01',
+          coords: [4474, 2449],
+          polygon: [
+            [59.5343180010956, 12.832031250000002],
+            [60.6301017662667, 15.952148437500002],
+            [58.332567131957916, 19.291992187500004],
+            [54.87660665410869, 18.500976562500004]
+          ]
+        },
+        {
+          id:'02',
+          title: 'Fer blanc #02',
+          coords: [4450, 2921],
+          polygon: [
+            [48.83579746243093, 10.151367187500002],
+            [48.80686346108519, 17.753906250000004],
+            [44.62175409623327, 26.059570312500004],
+            [41.50857729743935, 14.018554687500002],
+            [44.05601169578525, 8.305664062500002]
+          ]
+        },
+        {
+          id:'03',
+          title: 'Fer blanc #03',
+          coords: [5467, 2388],
+          polygon: [
+            [58.69977573144006, 59.28222656250001],
+            [59.355596110016315, 58.93066406250001],
+            [60.994423108456154, 62.31445312500001]
+          ]
+        },
+        {
+          id:'04',
+          title: 'Fer blanc #04',
+          coords: [5730, 2207]
+        },
+        {
+          id:'05',
+          title: 'Fer blanc #05',
+          coords: [6716, 3476],
+        },
+        {
+          id:'06',
+          title: 'Fer blanc #06',
+          coords: [4062, 3504],
+          polygon: [
+            [26.391869671769022, -12.0849609375],
+            [28.420391085674304, 4.042968750000001],
+            [21.657428197370653, 9.448242187500002],
+            [22.917922936146045, -9.096679687500002]
+          ]
+        },
+        {
+          id:'07',
+          title: 'Fer blanc #07',
+          coords: [3552, 3946],
+        },
+        {
+          id:'08',
+          title: 'Fer blanc #08',
+          coords: [4319, 4252],
+          polygon: [
+            [-6.0968598188879355, 1.7138671875000002],
+            [-1.7136116598836224, 10.327148437500002],
+            [-7.100892668623642, 14.633789062500002],
+            [-13.453737213419249, 9.667968750000002]
+          ]
+        },
+        {
+          id:'09',
+          title: 'Fer blanc #09',
+          coords: [2495, 4012],
+          polygon: [
+            [8.233237111274565, -70.13671875000001],
+            [1.9771465537125772, -71.98242187500001],
+            [1.3182430568620136, -68.51074218750001]
+          ]
+        },
+        {
+          id:'10',
+          title: 'Fer blanc #10',
+          coords: [3101, 4438],
+          polygon: [
+            [-14.26438308756265, -47.85644531250001],
+            [-9.40571004160001, -40.42968750000001],
+            [-11.652236404115387, -37.66113281250001],
+            [-22.187404991398775, -45.08789062500001]
+          ]
+        },
+        {
+          id:'11',
+          title: 'Fer blanc #11',
+          coords: [2879, 4964],
+          polygon: [
+            [-38.27268853598096, -61.74316406250001],
+            [-32.175612478499325, -48.33984375],
+            [-36.20882309283712, -51.28417968750001]
+          ]
+        },
+        {
+          id:'12',
+          title: 'Fer blanc #12',
+          coords: [3037, 5779],
+          polygon: [
+            [-58.92733441827545, -57.61230468750001],
+            [-53.17311920264063, -40.51757812500001],
+            [-59.10830825860495, -38.75976562500001],
+            [-64.43489204304059, -43.85742187500001]
+          ]
+        },
+        {
+          id:'13',
+          title: 'Fer blanc #13',
+          coords: [3295, 5403],
+        },
+        {
+          id:'14',
+          title: 'Fer blanc #14',
+          coords: [4289, 5216],
+        },
+        {
+          id:'15',
+          title: 'Fer blanc #15',
+          coords: [4112, 4696],
         },
       ]
     }
