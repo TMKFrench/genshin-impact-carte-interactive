@@ -65,25 +65,26 @@ if($method == 'GET' && $action == 'login') {
     $_SESSION['visited'] = TRUE;
 
     if($user = session('user')) {
+        if(isset($user['uid'])) {
+            $dbUser = $db->get_row("SELECT * FROM users WHERE uid = {$user['uid']}");
+            if(!$dbUser) {
+                $db->insert('users', [
+                    'uid' => $user['uid'],
+                    'created_at' => date('Y-m-d H:i:s'),
+                    'last_login' => date('Y-m-d H:i:s')
+                ]);
+            } else {
+                $db->update('users', [ 'last_login' => date('Y-m-d H:i:s') ], [ 'uid' => $user['uid'] ]);
+            }
 
-        $dbUser = $db->get_row("SELECT * FROM users WHERE uid = {$user['uid']}");
-        if(!$dbUser) {
-            $db->insert('users', [
-                'uid' => $user['uid'],
-                'created_at' => date('Y-m-d H:i:s'),
-                'last_login' => date('Y-m-d H:i:s')
-            ]);
-        } else {
-            $db->update('users', [ 'last_login' => date('Y-m-d H:i:s') ], [ 'uid' => $user['uid'] ]);
+            $user['menu'] = ($dbUser) ? json_decode($dbUser->menu) : [];
+            $user['markers'] = ($dbUser) ? json_decode($dbUser->markers) : [];
+            $user['users'] = $dbCountUsers->total;
+            $user['visits'] = $counter;
+
+            echo json_encode($user);
+            die();
         }
-
-        $user['menu'] = ($dbUser) ? json_decode($dbUser->menu) : [];
-        $user['markers'] = ($dbUser) ? json_decode($dbUser->markers) : [];
-        $user['users'] = $dbCountUsers->total;
-        $user['visits'] = $counter;
-
-        echo json_encode($user);
-        die();
     }
 
     echo json_encode(['login' => $root . 'api/login', 'users' => $dbCountUsers->total, 'visits' => $counter]);

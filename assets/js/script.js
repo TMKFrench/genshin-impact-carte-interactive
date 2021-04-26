@@ -1,5 +1,6 @@
-  function onMapClick(e) {
+function onMapClick(e) {
     console.log("Position @ " + map.project([e.latlng.lat, e.latlng.lng], map.getMaxZoom()));
+    console.log("Point @ [" + e.latlng.lat + ", " + e.latlng.lng + "]");
   }
 
   function unproject(coord) {
@@ -10,8 +11,56 @@
     currentMarker = this;
   }
 
+  function updateUserCountdowns(checked) {
+    var countdowns = getUserCountdowns();
+
+    if(typeof(currentMarker._tooltip) !== 'undefined' && currentMarker._tooltip.options.className === 'countdown') {
+      var cid = currentMarker._tooltip.options.countdownid;
+      if(checked) {
+        var nextTime = moment();
+        nextTime.add(currentMarker._tooltip.options.countdown, 'hours');
+        currentMarker._tooltip.setContent('<div id="countdown-'+currentMarker._tooltip.options.countdownid+'">Prochain reset :</div>');
+
+        // var nextTime = moment().add(10, 'seconds');
+        $($('#countdown-'+currentMarker._tooltip.options.countdownid)).countdown(nextTime.toDate(), function(event) {
+
+          if(event.type === 'finish') {
+            resetCountdown(cid);
+            $(this).html('');
+          } else {
+            var totalDays = event.offset.weeks * 7 + event.offset.days;
+            if(totalDays > 0) {
+              $(this).html('Prochain reset :<br />'+event.strftime('%-D j. %H:%M:%S'));
+            } else {
+              $(this).html('Prochain reset :<br />'+event.strftime('%H:%M:%S'));
+            }
+          }
+
+        });
+
+        if(searchId(cid, countdowns) <= 0) {
+          countdowns.push({id: cid, date: nextTime.format('YYYY-MM-DD HH:mm:ss')});
+        }
+
+      } else {
+        var i = searchId(cid, countdowns);
+        if(i >= 0) {
+          countdowns.splice(i, 1);
+        }
+
+        currentMarker._tooltip.setContent('<div id="countdown-'+currentMarker._tooltip.options.countdownid+'"></div>');
+
+      }
+
+      localStorage.setItem('userCountdowns', JSON.stringify(countdowns));
+      userCountdowns = JSON.stringify(countdowns);
+    }
+  }
+
   function saveUserMarker(uid, checked) {
     var markers = getUserMarkers();
+
+    updateUserCountdowns(checked);
 
     if(checked) {
       $.post('api/addmarker/'+uid, function(res) {
@@ -36,8 +85,37 @@
     }
   }
 
+  function searchId(nameKey, myArray){
+    for (var i=0; i < myArray.length; i++) {
+      if (myArray[i].id === nameKey) {
+        return i;
+      }
+    }
+
+    return -1;
+  }
+
+  function resetCountdown(cid) {
+    var markers = getUserMarkers();
+    var countdowns = getUserCountdowns();
+    var i = searchId(cid, countdowns);
+    if(i >= 0) {
+      allMarkers[cid].setOpacity(1);
+      countdowns.splice(i, 1);
+    }
+    if(markers.indexOf(cid) >= 0) {
+      markers.splice(markers.indexOf(cid), 1);
+    }
+    localStorage.setItem('userCountdowns', JSON.stringify(countdowns));
+    userCountdowns = JSON.stringify(countdowns);
+    localStorage.setItem('userMarkers', JSON.stringify(markers));
+    userMarkers = JSON.stringify(markers);
+  }
+
   function saveUserMarkers(uid, checked) {
     var markers = getUserMarkers();
+
+    updateUserCountdowns(checked);
 
     if(checked) {
       if(markers.indexOf(uid) < 0) {
@@ -53,6 +131,18 @@
 
     localStorage.setItem('userMarkers', JSON.stringify(markers));
     userMarkers = JSON.stringify(markers);
+  }
+
+  function getUserCountdowns() {
+    var countdowns = localStorage.getItem('userCountdowns');
+
+    if(!countdowns) {
+      countdowns = [];
+    } else {
+      countdowns = JSON.parse(countdowns);
+    }
+
+    return countdowns;
   }
 
   function getUserMarkers() {
@@ -97,8 +187,10 @@
   var total = 0;
   var params = getParamsURL();
   var userMarkers = getUserMarkers();
+  var userCountdowns = getUserCountdowns();
   var debugMarkers = [];
   var userLocal = true;
+  var allMarkers = [];
 
 
 
@@ -147,6 +239,8 @@
   var bossRegisvineCryoIcon = L.icon({ iconUrl: 'assets/img/bossregisvinecryo.png', iconSize: [40,40], iconAnchor: [20,20], popupAnchor: [0,-20] });
   var bossRegisvinePyroIcon = L.icon({ iconUrl: 'assets/img/bossregisvinepyro.png', iconSize: [40,40], iconAnchor: [20,20], popupAnchor: [0,-20] });
   var bossTartagliaIcon = L.icon({ iconUrl: 'assets/img/bosstartaglia.png', iconSize: [40,40], iconAnchor: [20,20], popupAnchor: [0,-20] });
+  var testIcon = L.icon({ iconUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon.png', iconSize: [25,41], iconAnchor: [12,41], popupAnchor: [0,-41] });
+  var ironIcon = L.icon({ iconUrl: 'assets/img/iron.png', iconSize: [30,30], iconAnchor: [15,15], popupAnchor: [0,-15] });
 
 
 
@@ -164,7 +258,7 @@
     'statue', 'teleporter', 'anemoculus', 'geoculus', 'panorama', 'mondstadtshrine', 'liyueshrine', 'seelie', 'fireseelie',
     'jueyunchili', 'valberry', 'itswarm', 'overlookingview', 'dungeon', 'region', 'quest', 'crimsonagate',
     'priestprincessscribe', 'challenge', 'unusualhilichurl', 'glacialsteel', 'futileendeavor', 'prodigalsonreturn',
-    'lostinthesnow', 'treasureguili', 'boss'
+    'lostinthesnow', 'treasureguili', 'boss', 'test', 'iron'
   ];
   groups.forEach(function(e) {
     window[e+'Group'] = L.layerGroup();
@@ -3866,6 +3960,134 @@
           coords: [2630, 4885],
         },
       ]
+    },
+    {
+      id:'iron',
+      title: 'Fer',
+      group: ironGroup,
+      icon: ironIcon,
+      format: 'popup',
+      checkbox: true,
+      countdown: 24,
+      color: '#5c4849',
+      markers: [
+        {
+          id:'01',
+          title: 'Fer #01',
+          coords: [5513, 2606],
+          polygon: [
+            [54.44449176335765, 60.29296875000001],
+            [55.55349545845371, 64.20410156250001],
+            [54.39335222384589, 62.75390625000001]
+          ]
+        },
+        {
+          id:'02',
+          title: 'Fer #02',
+          coords: [5611, 3084],
+          polygon: [
+            [42.84375132629023, 58.27148437500001],
+            [41.96765920367816, 69.96093750000001],
+            [40.34654412118006, 71.10351562500001],
+            [36.63316209558658, 68.68652343750001]
+          ]
+        },
+        {
+          id:'03',
+          title: 'Fer #03',
+          coords: [5426, 3363],
+          polygon: [
+            [33.32134852669881, 50.75683593750001],
+            [33.8339199536547, 56.60156250000001],
+            [31.16580958786196, 59.37011718750001],
+            [28.14950321154457, 67.67578125000001],
+            [29.954934549656144, 56.20605468750001]
+          ]
+        },
+        {
+          id:'04',
+          title: 'Fer #04',
+          coords: [3769, 2491],
+          polygon: [
+            [63.97596090918338, -14.677734375000002],
+            [55.55349545845371, -18.281250000000004],
+            [53.51418452077113, -15.161132812500002],
+            [52.696361078274485, -10.151367187500002],
+            [54.597527852113885, -9.448242187500002]
+          ]
+        },
+        {
+          id:'05',
+          title: 'Fer #05',
+          coords: [3948, 3466],
+          polygon: [
+            [30.977609093348686, -18.149414062500004],
+            [28.57487404744697, -6.372070312500001],
+            [34.379712580462204, 3.5595703125],
+            [26.23430203240676, 0.9228515625000001],
+            [20.879342971957897, 9.272460937500002],
+            [24.84656534821976, -7.558593750000001],
+            [15.538375926292062, -9.272460937500002],
+            [18.521283325496288, -15.952148437500002],
+            [26.62781822639305, -12.260742187500002]
+          ]
+        },
+        {
+          id:'06',
+          title: 'Fer #06',
+          coords: [4258, 2934],
+          polygon: [
+            [46.98025235521883, 2.7246093750000004],
+            [43.54854811091288, -0.5712890625000001],
+            [42.553080288955826, 2.9443359375],
+            [44.24519901522129, 12.7001953125],
+            [45.73685954736049, 14.5458984375],
+            [47.48751300895658, 13.579101562500002]
+          ]
+        },
+        {
+          id:'07',
+          title: 'Fer #07',
+          coords: [4285, 4258],
+          polygon: [
+            [-6.18424616128059, 5.800781250000001],
+            [-1.7136116598836224, 10.458984375000002],
+            [-13.581920900545844, 9.931640625000002]
+          ]
+        },
+        {
+          id:'08',
+          title: 'Fer #08',
+          coords: [4857, 3367],
+          polygon: [
+            [27.13736835979561, 22.587890625000004],
+            [30.713503990354965, 27.070312500000004],
+            [32.13840869677251, 32.65136718750001],
+            [32.694865977875075, 46.31835937500001],
+            [29.84064389983441, 40.29785156250001]
+          ]
+        },
+        {
+          id:'09',
+          title: 'Fer #09',
+          coords: [3672, 4673],
+          polygon: [
+            [-23.805449612314625, -21.665039062500004],
+            [-22.105998799750566, -13.535156250000002],
+            [-27.839076094777816, -19.4677734375]
+          ]
+        },
+        {
+          id:'10',
+          title: 'Fer #10',
+          coords: [3949, 5062],
+          polygon: [
+            [-39.53793974517626, -9.975585937500002],
+            [-35.67514743608468, -1.7578125000000002],
+            [-40.979898069620134, -6.020507812500001]
+          ]
+        },
+      ]
     }
   ];
 
@@ -3907,13 +4129,15 @@
       if(confirm('Êtes-vous sûr de vouloir supprimer le suivi de vos marqueurs ?')) {
         if(userLocal) {
           localStorage.removeItem('userMarkers');
+          localStorage.removeItem('userCountdowns');
           window.location.reload();
         } else {
           $.post('api/resetmarkers', function(res) {
             if(typeof(res.error) !== 'undefined') {
               alert('Vous avez été déconnecté. La page va se rafraîchir.');
             }
-
+            localStorage.removeItem('userMarkers');
+            localStorage.removeItem('userCountdowns');
             window.location.reload();
           });
         }
@@ -3938,7 +4162,7 @@
     markers.forEach(function(g) {
 
       g.markers.forEach(function(m){
-        var checkbox = '', icon, format, title = '', text = '', guide = '';
+        var checkbox = '', icon, format, title = '', text = '', guide = '', countdown, timer, finished = false, color = '#3388ff';
 
         if((typeof m.checkbox !== 'undefined' && m.checkbox) || (typeof g.checkbox !== 'undefined' && g.checkbox))
           checkbox = '<label><input type="checkbox" id="user-marker" data-id="'+g.id+m.id+'" /><span>Terminé</span></label>';
@@ -3964,6 +4188,21 @@
         icon = (typeof m.icon !== 'undefined') ? m.icon : g.icon;
         format = (typeof m.format !== 'undefined') ? m.format : g.format;
 
+        if(typeof g.countdown !== 'undefined')
+          countdown = g.countdown;
+        if(typeof m.countdown !== 'undefined')
+          countdown = m.countdown;
+
+        if(typeof g.timer !== 'undefined')
+          timer = g.timer;
+        if(typeof m.timer !== 'undefined')
+          timer = m.timer;
+
+        if(typeof g.color !== 'undefined')
+          color = g.color;
+        if(typeof m.color !== 'undefined')
+          color = m.color;
+
         var marker = L.marker(unproject(m.coords), {icon: icon});
 
         if(format === 'popup')
@@ -3977,24 +4216,72 @@
         else if(format === 'region')
           marker.bindTooltip(m.title, {permanent: true, className: 'region', offset: [0, 13], direction: 'top'}).openTooltip();
 
+        if(typeof(timer) !== 'undefined') {
+          var nextTime = moment();
+          if(nextTime.get('hour') >= 4) {
+            nextTime.add(1, 'day');
+          }
+          nextTime.set({hour: 4, minute: 0, second: 0, millisecond: 0});
+          marker.bindTooltip('<div id="timer-'+g.id+m.id+'">Prochain reset :</div>', {timerid: g.id+m.id, timer: nextTime.toDate(), permanent: true, className: 'timer', offset: [0, 0], direction: 'bottom'}).openTooltip();
+          marker.on('tooltipopen', function(e) {
+            $($('#timer-'+e.tooltip.options.timerid)).countdown(e.tooltip.options.timer, function(event) {
+              $(this).html('Prochain reset :<br />'+event.strftime('%H:%M:%S'));
+            });
+          });
+        }
+
+        if(typeof(countdown) !== 'undefined') {
+
+          marker.bindTooltip('', {countdownid: g.id+m.id, countdown: countdown, permanent: true, className: 'countdown', offset: [0, 10], direction: 'bottom'}).openTooltip();
+
+          var i = searchId(g.id+m.id, userCountdowns);
+          if(i >= 0) {
+            marker._tooltip.setContent('<div id="countdown-'+g.id+m.id+'">Prochain reset :</div>');
+            marker.on('tooltipopen', function(e) {
+              $($('#countdown-'+g.id+m.id)).countdown(userCountdowns[i]['date'], function(event) {
+                if(event.type === 'finish') {
+                  resetCountdown(g.id+m.id);
+                  $(this).html('');
+                } else {
+                  var totalDays = event.offset.weeks * 7 + event.offset.days;
+                  if(totalDays > 0) {
+                    $(this).html('Prochain reset :<br />'+event.strftime('%-D j. %H:%M:%S'));
+                  } else {
+                    $(this).html('Prochain reset :<br />'+event.strftime('%H:%M:%S'));
+                  }
+
+                }
+              });
+            });
+          }
+        }
+
         if(checkbox)
           marker.on('click', updateCurrentMarker);
+
+        if(typeof(m.polygon) !== 'undefined') {
+          var polygon = L.polygon(m.polygon, {color: color, fillColor: color}).addTo(g.group);
+        }
+
+
 
         marker.addTo(g.group);
         total++;
 
-
-        if(userMarkers.indexOf(g.id+m.id) >= 0)
+        if(userMarkers.indexOf(g.id+m.id) >= 0 && !finished)
           marker.setOpacity(.5);
 
         if(params['debug'] && g.id !== 'region')
           debugMarkers.push({name: g.id+m.id, marker: marker, coords: m.coords, icon: icon});
+
+        allMarkers[g.id+m.id] = marker;
 
       });
 
     });
 
     $('#total').text(total);
+
   }
 
 
@@ -4145,4 +4432,8 @@
 
       $(this).toggleClass('active');
     });
+
   });
+
+
+
