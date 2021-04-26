@@ -242,6 +242,7 @@ function onMapClick(e) {
   var testIcon = L.icon({ iconUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon.png', iconSize: [25,41], iconAnchor: [12,41], popupAnchor: [0,-41] });
   var ironIcon = L.icon({ iconUrl: 'assets/img/iron.png', iconSize: [30,30], iconAnchor: [15,15], popupAnchor: [0,-15] });
   var tinplateIcon = L.icon({ iconUrl: 'assets/img/tinplate.png', iconSize: [30,30], iconAnchor: [15,15], popupAnchor: [0,-15] });
+  var electrocristalIcon = L.icon({ iconUrl: 'assets/img/electrocristal.png', iconSize: [30,30], iconAnchor: [15,15], popupAnchor: [0,-15] });
 
 
 
@@ -259,7 +260,7 @@ function onMapClick(e) {
     'statue', 'teleporter', 'anemoculus', 'geoculus', 'panorama', 'mondstadtshrine', 'liyueshrine', 'seelie', 'fireseelie',
     'jueyunchili', 'valberry', 'itswarm', 'overlookingview', 'dungeon', 'region', 'quest', 'crimsonagate',
     'priestprincessscribe', 'challenge', 'unusualhilichurl', 'glacialsteel', 'futileendeavor', 'prodigalsonreturn',
-    'lostinthesnow', 'treasureguili', 'boss', 'iron', 'tinplate'
+    'lostinthesnow', 'treasureguili', 'boss', 'iron', 'tinplate', 'electrocristal'
   ];
   groups.forEach(function(e) {
     window[e+'Group'] = L.layerGroup();
@@ -4222,6 +4223,137 @@ function onMapClick(e) {
           id:'15',
           title: 'Fer blanc #15',
           coords: [4112, 4696],
+        },
+      ]
+    },
+    {
+      id: 'electrocristal',
+      title: 'Électrocristal',
+      group: electrocristalGroup,
+      icon: electrocristalIcon,
+      format: 'popup',
+      checkbox: true,
+      countdown: 48,
+      color: '#c74fff',
+      markers: [
+        {
+          id: '01',
+          title: 'Électrocristal #01',
+          coords: [3970, 2310],
+          polygon: [
+            [52.32191088594773, -7.031250000000001],
+            [56.29215668507645, -19.511718750000004],
+            [62.91523303947614, -15.468750000000002],
+            [64.07219957867284, 4.042968750000001],
+            [60.04290359809166, 15.424804687500002],
+            [59.80063426102869, -3.5595703125]
+          ]
+        },
+        {
+          id: '02',
+          title: 'Électrocristal #02',
+          coords: [4397, 2954],
+          polygon: [
+            [41.64007838467894, 2.8125],
+            [49.49667452747045, 4.570312500000001],
+            [50.90303283111257, 12.128906250000002],
+            [47.15984001304432, 19.775390625],
+            [37.09023980307208, 27.070312500000004],
+            [37.92686760148135, 17.314453125000004]
+          ]
+        },
+        {
+          id: '03',
+          title: 'Électrocristal #03',
+          coords: [5464, 2453],
+        },
+        {
+          id: '04',
+          title: 'Électrocristal #04',
+          coords: [5773, 2664],
+          polygon: [
+
+          ]
+        },
+        {
+          id: '05',
+          title: 'Électrocristal #05',
+          coords: [5653, 3256],
+        },
+        {
+          id: '06',
+          title: 'Électrocristal #06',
+          coords: [6177, 3579],
+        },
+        {
+          id: '07',
+          title: 'Électrocristal #07',
+          coords: [5784, 3682],
+          polygon: [
+            [16.551961721972525, 71.85058593750001],
+            [20.715015145512098, 76.50878906250001],
+            [16.172472808397515, 74.39941406250001]
+          ]
+        },
+        {
+          id: '08',
+          title: 'Électrocristal #08',
+          coords: [5679, 3862],
+        },
+        {
+          id: '09',
+          title: 'Électrocristal #09',
+          coords: [4561, 3533],
+        },
+        {
+          id: '10',
+          title: 'Électrocristal #10',
+          coords: [3977, 3326],
+        },
+        {
+          id: '11',
+          title: 'Électrocristal #11',
+          coords: [3769, 3534],
+        },
+        {
+          id: '12',
+          title: 'Électrocristal #12',
+          coords: [3503, 3727],
+        },
+        {
+          id: '13',
+          title: 'Électrocristal #13',
+          coords: [2725, 3697],
+        },
+        {
+          id: '14',
+          title: 'Électrocristal #14',
+          coords: [2957, 4636],
+        },
+        {
+          id: '15',
+          title: 'Électrocristal #15',
+          coords: [3339, 4713],
+        },
+        {
+          id: '16',
+          title: 'Électrocristal #16',
+          coords: [3483, 5015],
+        },
+        {
+          id: '17',
+          title: 'Électrocristal #17',
+          coords: [3938, 4920],
+        },
+        {
+          id: '18',
+          title: 'Électrocristal #18',
+          coords: [4189, 4577],
+        },
+        {
+          id: '19',
+          title: 'Électrocristal #19',
+          coords: [4709, 5408],
         },
       ]
     }
