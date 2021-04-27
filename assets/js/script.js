@@ -1958,6 +1958,11 @@ function onMapClick(e) {
           coords: [4073,2419]
         },
         {
+          id: 'mondstadt38',
+          video: 'MPO_MK96SKc',
+          coords: [5605,3969]
+        },
+        {
           id: 'liyue01',
           video: 'eQrfEC7b6CE',
           coords: [3380,3214]
