@@ -243,6 +243,7 @@ function onMapClick(e) {
   var ironIcon = L.icon({ iconUrl: 'assets/img/iron.png', iconSize: [30,30], iconAnchor: [15,15], popupAnchor: [0,-15] });
   var tinplateIcon = L.icon({ iconUrl: 'assets/img/tinplate.png', iconSize: [30,30], iconAnchor: [15,15], popupAnchor: [0,-15] });
   var electrocristalIcon = L.icon({ iconUrl: 'assets/img/electrocristal.png', iconSize: [30,30], iconAnchor: [15,15], popupAnchor: [0,-15] });
+  var fragrantCedarIcon = L.icon({ iconUrl: 'assets/img/fragrantcedar.png', iconSize: [30,30], iconAnchor: [15,15], popupAnchor: [0,-15] });
 
 
 
@@ -260,7 +261,8 @@ function onMapClick(e) {
     'statue', 'teleporter', 'anemoculus', 'geoculus', 'panorama', 'mondstadtshrine', 'liyueshrine', 'seelie', 'fireseelie',
     'jueyunchili', 'valberry', 'itswarm', 'overlookingview', 'dungeon', 'region', 'quest', 'crimsonagate',
     'priestprincessscribe', 'challenge', 'unusualhilichurl', 'glacialsteel', 'futileendeavor', 'prodigalsonreturn',
-    'lostinthesnow', 'treasureguili', 'boss', 'iron', 'tinplate', 'electrocristal'
+    'lostinthesnow', 'treasureguili', 'boss', 'iron', 'tinplate', 'electrocristal',
+    'fir', 'fragrantcedar', 'bamboo', 'sandbearer', 'pine', 'cuihua', 'birch'
   ];
   groups.forEach(function(e) {
     window[e+'Group'] = L.layerGroup();
@@ -2514,7 +2516,13 @@ function onMapClick(e) {
           text: 'Cette cité enterrée sous la glace répondait autrefois à quelque nom fier et romantique, tout comme la montagne était autrefois luxuriante. Mais suite à la chute de la gigantesque pointe gelée tombée du ciel appelée &laquo;&nbsp;Mandrin céleste&nbsp;&raquo;, la voix des cieux s\'est tue, et ce lieu où les prêtres s\'assemblaient autrefois lors de leurs célébrations est aujourd\'hui vide de leur présence.<br /><strong>Sets d\'artéfacts 5★&nbsp;: Briseur de glace, Âme du naufragé.</strong>',
           coords: [4916, 4078],
 
-        }
+        },
+        {
+          id: 'ridgewatch',
+          title: 'Garde de la montagne',
+          text: 'Se dressant fièrement au commencement de la crète, ces ruines antiques dominent le nord comme le sud, veillant sur les montagnes et les marais. On prétend que ses portes ne s\'ouvrent que pour ceux dont le c&oelig;urbrûle d\'un feu inextinguible.<br /><strong>Sets d\'artéfacts 5★&nbsp;: Ténacité du Millelithe, Flamme blème.</strong>',
+          coords: [4417, 3654],
+        },
       ]
     },
     {
@@ -4359,6 +4367,121 @@ function onMapClick(e) {
           id: '19',
           title: 'Électrocristal #19',
           coords: [4709, 5408],
+        },
+      ]
+    },
+    {
+      id: 'fragrantcedar',
+      group: fragrantcedarGroup,
+      icon: fragrantCedarIcon,
+      format: 'popup',
+      color: '#448151',
+      markers: [
+        {
+          id: '01',
+          coords: [5774, 2259],
+          title: 'Bois de cèdre parfumé 01',
+          polygon: [
+            [64.01449619484472, 73.30078125000001],
+            [62.87518837993309, 73.25683593750001],
+            [62.02152819100765, 70.53222656250001],
+            [60.88770004207789, 72.02636718750001],
+            [62.71446210149774, 75.41015625],
+            [63.54855223203644, 77.47558593750001]
+          ]
+        },
+        {
+          id: '02',
+          coords: [5425, 2598],
+          title: 'Bois de cèdre parfumé 02',
+          polygon: [
+            [58.950008233357046, 72.07031250000001],
+            [57.397624055000456, 70.09277343750001],
+            [58.24016354341644, 61.04003906250001],
+            [57.088515327886505, 54.27246093750001],
+            [55.25407706707272, 49.96582031250001],
+            [48.922499263758255, 47.32910156250001],
+            [47.368594345213374, 50.00976562500001],
+            [48.48748647988415, 51.7236328125],
+            [50.035973672195496, 51.94335937500001],
+            [50.93073802371819, 50.71289062500001],
+            [51.15178610143037, 52.646484375],
+            [51.86292391360244, 53.21777343750001],
+            [51.590722643120166, 55.50292968750001],
+            [52.40241887397332, 58.40332031250001],
+            [53.067626642387374, 60.77636718750001],
+            [54.7246201949245, 62.79785156250001],
+            [56.0965557505683, 67.76367187500001],
+            [55.727110085045986, 69.60937500000001],
+            [57.77451753559619, 73.30078125000001]
+          ]
+        },
+        {
+          id: '03',
+          coords: [5314, 2980],
+          title: 'Bois de cèdre parfumé 03',
+          polygon: [
+            [45.120052841530544, 48.86718750000001],
+            [45.42929873257377, 51.15234375],
+            [44.653024159812, 55.98632812500001],
+            [43.51668853502909, 57.74414062500001],
+            [41.60722821271717, 55.28320312500001],
+            [43.197167282501276, 51.89941406250001]
+          ]
+        },
+        {
+          id: '04',
+          coords: [5658, 2920],
+          title: 'Bois de cèdre parfumé 04',
+          polygon: [
+            [44.02442151965934, 61.74316406250001],
+            [46.37725420510028, 63.89648437500001],
+            [47.90161354142077, 68.07128906250001],
+            [47.90161354142077, 70.92773437500001],
+            [46.40756396630067, 70.97167968750001],
+            [45.583289756006316, 77.8271484375],
+            [44.59046718130883, 77.38769531250001],
+            [44.68427737181225, 74.57519531250001],
+            [44.18220395771566, 73.08105468750001],
+            [44.62175409623327, 69.52148437500001],
+            [43.32517767999296, 69.08203125000001],
+            [42.261049162113856, 66.66503906250001]
+          ]
+        },
+        {
+          id: '05',
+          coords: [5426, 3338],
+          title: 'Bois de cèdre parfumé 05',
+          polygon: [
+            [32.879587173066305, 51.81152343750001],
+            [33.760882000869195, 53.74511718750001],
+            [33.7243396617476, 57.78808593750001],
+            [31.57853542647338, 62.18261718750001],
+            [28.69058765425071, 65.25878906250001],
+            [28.265682390146477, 62.00683593750001],
+            [29.649868677972304, 57.74414062500001]
+          ]
+        },
+        {
+          id: '06',
+          coords: [5675, 3745],
+          title: 'Bois de cèdre parfumé 06',
+          polygon: [
+            [17.853290114098012, 63.94042968750001],
+            [15.792253570362446, 63.85253906250001],
+            [13.66733825965496, 65.78613281250001],
+            [11.6522364041154, 68.29101562500001],
+            [14.221788628397572, 71.63085937500001],
+            [10.703791711680736, 72.11425781250001],
+            [9.362352822055605, 72.24609375000001],
+            [8.450638800331001, 72.90527343750001],
+            [9.665738395188692, 75.9814453125],
+            [15.029685756555674, 74.61914062500001],
+            [15.368949896534705, 71.63085937500001],
+            [17.644022027872726, 70.83984375000001],
+            [19.973348786110613, 69.38964843750001],
+            [18.521283325496288, 66.09375000000001]
+          ]
         },
       ]
     }
