@@ -310,8 +310,8 @@ function onMapClick(e) {
   // Création de la carte
   L.tileLayer('assets/img/tiles-archipel-pomme-doree/{z}/{x}/{y}.jpg', {
     attribution: '<a href="https://gaming.lebusmagique.fr">Le Bus Magique Gaming</a>',
-    maxZoom: 4,
-    minZoom: 3,
+    maxZoom: 5,
+    minZoom: 4,
     continuousWorld: true,
     maxBoundsViscosity: 0.8,
     noWrap: true
