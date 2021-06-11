@@ -230,6 +230,16 @@ function onMapClick(e) {
       checkbox: true,
       markers: [
         {
+          id: 'I1',
+          title: 'Échos du passé - I<br />Au milieu des cinq monts se cache un village',
+          coords: [5233, 3441]
+        },
+        {
+          id: 'I2',
+          title: 'Échos du passé - I<br />Deux chemins à travers la forêt solitaire',
+          coords: [5041, 3517]
+        },
+        {
           id: 'I3',
           title: 'Échos du passé - I<br />Une rivière coule au milieu',
           coords: [4818, 3476]
@@ -240,9 +250,103 @@ function onMapClick(e) {
           coords: [4906, 3237]
         },
         {
+          id: 'I5',
+          title: 'Échos du passé - I<br />Séparation',
+          coords: [4728, 3215]
+        },
+        {
+          id: 'II1',
+          title: 'Échos du passé - II<br />Complications',
+          coords: [5251, 3997]
+        },
+        {
+          id: 'II2',
+          title: 'Échos du passé - II<br />Responsabilités',
+          coords: [4248, 3315]
+        },
+        {
+          id: 'III1',
+          title: 'Échos du passé - III<br />Apparition inattendue',
+          coords: [4137, 3330]
+        },
+        {
+          id: 'III2',
+          title: 'Échos du passé - III<br />Pensées d\'un père',
+          text: 'Il y a trois énormes rochers reliés par une échelle. Empruntez le chemin du pilier à l\'est pour aller sur le second puis le troisième.',
+          coords: [3679, 2923]
+        },
+        {
+          id: 'III3',
+          title: 'Échos du passé - III<br />Sauveteur mystérieux',
+          text: 'Il y a trois énormes rochers reliés par une échelle. Empruntez le chemin du pilier à l\'est pour aller sur le second puis le troisième.',
+          coords: [3628, 3063]
+        },
+        {
           id: 'IV1',
           title: 'Échos du passé - IV<br />Le général',
           coords: [5026, 4626]
+        },
+        {
+          id: 'IV2',
+          title: 'Échos du passé - IV<br />Fleur du silence',
+          coords: [4325, 3813]
+        },
+        {
+          id: 'IV3',
+          title: 'Échos du passé - IV<br />Pays natal',
+          coords: [4270, 3966]
+        },
+        {
+          id: 'V1',
+          title: 'Échos du passé - V<br />Savoir-faire professionnel',
+          coords: [5599, 4549]
+        },
+        {
+          id: 'V2',
+          title: 'Échos du passé - V<br />La sortie dans le brouillard',
+          text: 'Dans la petite grotte, il y a une pierre à casser pour accéder à cette conque d\'écho.',
+          coords: [2618, 4889]
+        },
+        {
+          id: 'V3',
+          title: 'Échos du passé - V<br />Lune et vent',
+          coords: [4845, 3228]
+        },
+        {
+          id: 'V4',
+          title: 'Échos du passé - V<br />Rocher mirage',
+          coords: [2770, 2570]
+        },
+        {
+          id: 'V5',
+          title: 'Échos du passé - V<br />Navigation et liberté',
+          coords: [5300, 2655]
+        },
+        {
+          id: 'VII1',
+          title: 'Échos du passé - VII<br />Sagesse des ancêtres ',
+          text: 'La conque d\'écho se trouve à l\'intérieur du coquillage.',
+          coords: [4677, 3141]
+        },
+        {
+          id: 'VII2',
+          title: 'Échos du passé - VII<br />Marée montante',
+          coords: [4731, 3421]
+        },
+        {
+          id: 'VII3',
+          title: 'Échos du passé - VII<br />Nulle part où aller',
+          coords: [4347, 5165]
+        },
+        {
+          id: 'VII4',
+          title: 'Échos du passé - VII<br />Le monde extérieur',
+          coords: [4449, 5190]
+        },
+        {
+          id: 'VII5',
+          title: 'Échos du passé - VII<br />Ruines à l\'envers',
+          coords: [4119, 5149]
         },
         {
           id: 'VII6',
@@ -254,6 +358,21 @@ function onMapClick(e) {
           title: 'Échos du passé - VII<br />Sans retour',
           coords: [3814, 3588]
         },
+        {
+          id: 'VII8',
+          title: 'Échos du passé - VII<br />Persuasion',
+          coords: [5331, 4499]
+        },
+        {
+          id: 'VII9',
+          title: 'Échos du passé - VII<br />Gardes en faction',
+          coords: [3564, 3762]
+        },
+        {
+          id: 'VII10',
+          title: 'Échos du passé - VII<br />Alerte',
+          coords: [3461, 3548]
+        },
       ]
     },
     {
@@ -262,22 +381,67 @@ function onMapClick(e) {
       icon: waveriderIcon,
       format: 'popup',
       title: 'Téléporteur de barge',
+      checkbox: true,
       markers: [
+        // {
+        //   id: '01',
+        //   coords: [5024, 4614]
+        // },
+        // {
+        //   id: '02',
+        //   coords: [4744, 3380]
+        // },
+        // {
+        //   id: '03',
+        //   coords: [3595, 3750]
+        // },
+        // {
+        //   id: '04',
+        //   coords: [4103, 5074]
+        // },
         {
-          id: '01',
-          coords: [5024, 4614]
+          id: '05',
+          coords: [5009, 4549]
         },
         {
-          id: '02',
-          coords: [4744, 3380]
+          id: '06',
+          coords: [4435, 3985]
         },
         {
-          id: '03',
-          coords: [3595, 3750]
+          id: '07',
+          coords: [5182, 3945]
         },
         {
-          id: '04',
-          coords: [4103, 5074]
+          id: '08',
+          coords: [4197, 5085]
+        },
+        {
+          id: '09',
+          coords: [3417, 4537]
+        },
+        {
+          id: '10',
+          coords: [3504, 3914]
+        },
+        {
+          id: '11',
+          coords: [3624, 3562]
+        },
+        {
+          id: '11',
+          coords: [3792, 3136]
+        },
+        {
+          id: '12',
+          coords: [4178, 3234]
+        },
+        {
+          id: '13',
+          coords: [4619, 3262]
+        },
+        {
+          id: '14',
+          coords: [5174, 3625]
         },
       ]
     },
@@ -304,6 +468,18 @@ function onMapClick(e) {
         {
           id: 'archipel04',
           coords: [4046, 5030],
+        },
+        {
+          id: 'archipel05',
+          coords: [4434, 3833],
+        },
+        {
+          id: 'archipel06',
+          coords: [3453, 4523],
+        },
+        {
+          id: 'archipel07',
+          coords: [3763, 3105],
         },
       ]
     },
