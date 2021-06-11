@@ -196,8 +196,8 @@ function onMapClick(e) {
 
   // Liste des icons
   var teleporterIcon = L.icon({ iconUrl: 'assets/img/teleporter.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0, -32] });
-  var echoshellIcon = L.icon({ iconUrl: 'assets/img/echoshell.png', iconSize: [30,30], iconAnchor: [15,15], popupAnchor: [0,-15] });
-  var waveriderIcon = L.icon({ iconUrl: 'assets/img/waverider.png', iconSize: [32,32], iconAnchor: [16,16], popupAnchor: [0,-16] });
+  var echoshellIcon = L.icon({ iconUrl: 'assets/img/echoshell.png?v2', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0,-32] });
+  var waveriderIcon = L.icon({ iconUrl: 'assets/img/waverider.png?v2', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0,-32] });
 
 
 
@@ -260,6 +260,8 @@ function onMapClick(e) {
       id: 'waverider',
       group: waveriderGroup,
       icon: waveriderIcon,
+      format: 'popup',
+      title: 'Téléporteur de barge',
       markers: [
         {
           id: '01',
@@ -283,7 +285,8 @@ function onMapClick(e) {
       id: 'teleporter',
       group: teleporterGroup,
       icon: teleporterIcon,
-      format: 'image',
+      format: 'popup',
+      title: 'Téléporteur',
       checkbox: true,
       markers: [
         {
@@ -308,10 +311,10 @@ function onMapClick(e) {
 
 
   // Création de la carte
-  L.tileLayer('assets/img/tiles-archipel-pomme-doree/{z}/{x}/{y}.jpg', {
+  L.tileLayer('assets/img/tiles-archipel-pomme-doree-v2/{z}/{x}/{y}.jpg', {
     attribution: '<a href="https://gaming.lebusmagique.fr">Le Bus Magique Gaming</a>',
     maxZoom: 5,
-    minZoom: 4,
+    minZoom: 3,
     continuousWorld: true,
     maxBoundsViscosity: 0.8,
     noWrap: true
@@ -553,12 +556,6 @@ function onMapClick(e) {
 
 
   $(document).ready(function() {
-
-    // var updateDiscord = localStorage.getItem('update-discord');
-    // if(!updateDiscord) {
-    //   var lightbox = lity('#update-discord');
-    //   localStorage.setItem('update-discord', '1');
-    // }
 
 
     $.get('api/user', function(res) {
