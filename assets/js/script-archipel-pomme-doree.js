@@ -204,6 +204,8 @@ function onMapClick(e) {
   var brokenislepuzzle03Icon = L.icon({ iconUrl: 'assets/img/brokenislepuzzle03.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0,-32] });
   var brokenislepuzzle04Icon = L.icon({ iconUrl: 'assets/img/brokenislepuzzle04.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0,-32] });
   var brokenislepuzzle05Icon = L.icon({ iconUrl: 'assets/img/brokenislepuzzle05.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0,-32] });
+  var muralIcon = L.icon({ iconUrl: 'assets/img/mural.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0,-32] });
+  var boatIcon = L.icon({ iconUrl: 'assets/img/boat.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0,-32] });
 
 
 
@@ -218,7 +220,7 @@ function onMapClick(e) {
 
   // Générer les layers
   var groups = [
-    'teleporter', 'echoshell', 'waverider', 'brokenislepuzzle'
+    'teleporter', 'echoshell', 'waverider', 'brokenislepuzzle', 'mural', 'boat'
   ];
   groups.forEach(function(e) {
     window[e+'Group'] = L.layerGroup();
@@ -543,6 +545,62 @@ function onMapClick(e) {
           title: 'Fin et récompenses',
           text: 'Activez les rochers au sol dans l\'ordre qu\'indiquent les piliers (sud, sud-ouest, est, ouest, sud-est).',
           coords: [3620, 3636],
+        },
+      ]
+    },
+    {
+      id: 'mural',
+      group: muralGroup,
+      icon: muralIcon,
+      format: 'image',
+      checkbox: true,
+      markers: [
+        {
+          id: '01',
+          title: 'Fresque de l’Îlot anonyme',
+          text: 'La quête "Un voyage à travers les brumes et le vent" vous amène sur cet Îlot.',
+          coords: [5188, 1912],
+        },
+        {
+          id: '02',
+          title: 'Fresque des Îles jumelles',
+          text: 'Au niveau de la mer, sous l\'arche.',
+          coords: [4795, 3454],
+        },
+        {
+          id: '03',
+          title: 'Fresque des Îles brisées',
+          text: 'Dans la grotte, derrière le mur, à casser avec l\'haspartum.',
+          coords: [3557, 3831],
+        },
+        {
+          id: '04',
+          title: 'Fresque de l\'Île anonyme',
+          coords: [4252, 3277],
+        },
+        {
+          id: '05',
+          title: 'Fresque des Îles funestes',
+          coords: [4332, 5127],
+        },
+      ]
+    },
+    {
+      id: 'boat',
+      group: boatGroup,
+      icon: boatIcon,
+      format: 'image',
+      checkbox: true,
+      markers: [
+        {
+          id: '01',
+          title: 'Tête du bateau',
+          coords: [4253, 3307],
+        },
+        {
+          id: '02',
+          title: 'Poupe du bateau',
+          coords: [5214, 3994],
         },
       ]
     },
