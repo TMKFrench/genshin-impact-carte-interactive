@@ -198,6 +198,12 @@ function onMapClick(e) {
   var teleporterIcon = L.icon({ iconUrl: 'assets/img/teleporter.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0, -32] });
   var echoshellIcon = L.icon({ iconUrl: 'assets/img/echoshell.png?v2', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0,-32] });
   var waveriderIcon = L.icon({ iconUrl: 'assets/img/waverider.png?v2', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0,-32] });
+  var brokenislepuzzleIcon = L.icon({ iconUrl: 'assets/img/brokenislepuzzle.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0,-32] });
+  var brokenislepuzzle01Icon = L.icon({ iconUrl: 'assets/img/brokenislepuzzle01.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0,-32] });
+  var brokenislepuzzle02Icon = L.icon({ iconUrl: 'assets/img/brokenislepuzzle02.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0,-32] });
+  var brokenislepuzzle03Icon = L.icon({ iconUrl: 'assets/img/brokenislepuzzle03.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0,-32] });
+  var brokenislepuzzle04Icon = L.icon({ iconUrl: 'assets/img/brokenislepuzzle04.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0,-32] });
+  var brokenislepuzzle05Icon = L.icon({ iconUrl: 'assets/img/brokenislepuzzle05.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0,-32] });
 
 
 
@@ -212,7 +218,7 @@ function onMapClick(e) {
 
   // Générer les layers
   var groups = [
-    'teleporter', 'echoshell', 'waverider'
+    'teleporter', 'echoshell', 'waverider', 'brokenislepuzzle'
   ];
   groups.forEach(function(e) {
     window[e+'Group'] = L.layerGroup();
@@ -480,6 +486,63 @@ function onMapClick(e) {
         {
           id: 'archipel07',
           coords: [3763, 3105],
+        },
+      ]
+    },
+    {
+      id: 'brokenislepuzzle',
+      group: brokenislepuzzleGroup,
+      icon: brokenislepuzzleIcon,
+      format: 'image',
+      guide: 'https://lebusmagique.fr',
+      checkbox: true,
+      markers: [
+        {
+          id: 'start',
+          title: 'Début et entrée de la grotte à la fresque',
+          text: 'Terminez le mini-jeu du roi Dodoco pour ouvrir l\'accès à la grotte et découvrir la fresque.',
+          coords: [3557, 3831],
+        },
+        {
+          id: '01',
+          title: 'Bassin n°1',
+          text: 'Remplissez le bassin au niveau 2 (milieu).',
+          icon: brokenislepuzzle01Icon,
+          coords: [3466, 3560],
+        },
+        {
+          id: '02',
+          title: 'Bassin n°2',
+          text: 'D\'abord, tapez la pierre Hydro pour que de l\'eau se dépose dans le bassin puis remplissez-le au niveau 3 (haut).',
+          icon: brokenislepuzzle02Icon,
+          coords: [3447, 3752],
+        },
+        {
+          id: '03',
+          title: 'Bassin n°3',
+          text: 'Remplissez le bassin au niveau 1 (bas).',
+          icon: brokenislepuzzle03Icon,
+          coords: [3638, 3802],
+        },
+        {
+          id: '04',
+          title: 'Bassin n°4',
+          text: 'Remplissez le bassin au niveau 2 (milieu).',
+          icon: brokenislepuzzle04Icon,
+          coords: [3852, 3770],
+        },
+        {
+          id: '05',
+          title: 'Bassin n°5',
+          text: 'Escaladez au-dessus du bassin jusqu\'aux pierres qui bloquent la cascade. Cassez-les le bassin puis remplissez-le au niveau 1 (bas).',
+          icon: brokenislepuzzle05Icon,
+          coords: [3849, 3622],
+        },
+        {
+          id: 'end',
+          title: 'Fin et récompenses',
+          text: 'Activez les rochers au sol dans l\'ordre qu\'indiquent les piliers (sud, sud-ouest, est, ouest, sud-est).',
+          coords: [3620, 3636],
         },
       ]
     },
