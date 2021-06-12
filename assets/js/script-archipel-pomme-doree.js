@@ -494,7 +494,7 @@ function onMapClick(e) {
       group: brokenislepuzzleGroup,
       icon: brokenislepuzzleIcon,
       format: 'image',
-      guide: 'https://lebusmagique.fr',
+      guide: 'https://gaming.lebusmagique.fr/lenigme-des-iles-brisees/',
       checkbox: true,
       markers: [
         {
