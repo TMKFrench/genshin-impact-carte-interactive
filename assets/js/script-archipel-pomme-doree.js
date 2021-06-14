@@ -206,6 +206,7 @@ function onMapClick(e) {
   var brokenislepuzzle05Icon = L.icon({ iconUrl: 'assets/img/brokenislepuzzle05.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0,-32] });
   var muralIcon = L.icon({ iconUrl: 'assets/img/mural.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0,-32] });
   var boatIcon = L.icon({ iconUrl: 'assets/img/boat.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0,-32] });
+  var bossmaguukenkiIcon = L.icon({ iconUrl: 'assets/img/bossmaguukenki.png', iconSize: [32,32], iconAnchor: [16,16], popupAnchor: [0,-16] });
 
 
 
@@ -220,7 +221,7 @@ function onMapClick(e) {
 
   // Générer les layers
   var groups = [
-    'teleporter', 'echoshell', 'waverider', 'brokenislepuzzle', 'mural', 'boat'
+    'teleporter', 'echoshell', 'waverider', 'brokenislepuzzle', 'mural', 'boat', 'maguukenki'
   ];
   groups.forEach(function(e) {
     window[e+'Group'] = L.layerGroup();
@@ -329,6 +330,26 @@ function onMapClick(e) {
           id: 'V5',
           title: 'Échos du passé - V<br />Navigation et liberté',
           coords: [5300, 2655]
+        },
+        {
+          id: 'VI1',
+          title: 'Échos du passé - VI<br />L\'&oelig;uvre d\'un Archon',
+          coords: [4114, 5083]
+        },
+        {
+          id: 'VI2',
+          title: 'Échos du passé - VI<br />Souvenirs de bord de mer',
+          coords: [5387, 3960]
+        },
+        {
+          id: 'VI3',
+          title: 'Échos du passé - VI<br />Poissons grillés, tortues et innocence',
+          coords: [5095, 4633]
+        },
+        {
+          id: 'VI4',
+          title: 'Échos du passé - VI<br />Problèmes de loup',
+          coords: [4375, 3955]
         },
         {
           id: 'VII1',
@@ -601,6 +622,21 @@ function onMapClick(e) {
           id: '02',
           title: 'Poupe du bateau',
           coords: [5214, 3994],
+        },
+      ]
+    },
+    {
+      id: 'maguu',
+      group: maguukenkiGroup,
+      icon: bossmaguukenkiIcon,
+      format: 'video',
+      markers: [
+        {
+          id: 'kenki',
+          title: 'Lame Oni',
+          video: 'y8r0JVT4WB4',
+          text: 'Vidéo de <a href="https://www.youtube.com/channel/UC71ppkmJKTsBAqCzRC6NrmQ" target="_blank" class="text-blue-500 underline">Herriaus</a>',
+          coords: [4346, 3893],
         },
       ]
     },
