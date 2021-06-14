@@ -334,21 +334,25 @@ function onMapClick(e) {
         {
           id: 'VI1',
           title: 'Échos du passé - VI<br />L\'&oelig;uvre d\'un Archon',
+          text: 'Vous devez avoir terminé la partie 3 de l\'Odyssée estivale dans les îles pour accéder à cette conque.',
           coords: [4114, 5083]
         },
         {
           id: 'VI2',
           title: 'Échos du passé - VI<br />Souvenirs de bord de mer',
+          text: 'Vous devez avoir terminé la partie 3 de l\'Odyssée estivale dans les îles pour accéder à cette conque.',
           coords: [5387, 3960]
         },
         {
           id: 'VI3',
           title: 'Échos du passé - VI<br />Poissons grillés, tortues et innocence',
+          text: 'Vous devez avoir terminé la partie 3 de l\'Odyssée estivale dans les îles pour accéder à cette conque.',
           coords: [5095, 4633]
         },
         {
           id: 'VI4',
           title: 'Échos du passé - VI<br />Problèmes de loup',
+          text: 'Vous devez avoir terminé la partie 3 de l\'Odyssée estivale dans les îles pour accéder à cette conque.',
           coords: [4375, 3955]
         },
         {
