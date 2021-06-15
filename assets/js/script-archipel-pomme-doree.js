@@ -627,6 +627,21 @@ function onMapClick(e) {
           title: 'Poupe du bateau',
           coords: [5214, 3994],
         },
+        {
+          id: '03',
+          title: 'Bulle n°1',
+          coords: [4500, 3505],
+        },
+        {
+          id: '04',
+          title: 'Bulle n°2',
+          coords: [4735, 3670],
+        },
+        {
+          id: '05',
+          title: 'Bulle n°3',
+          coords: [4997, 3846],
+        },
       ]
     },
     {
