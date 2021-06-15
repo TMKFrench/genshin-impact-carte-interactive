@@ -207,10 +207,11 @@ function onMapClick(e) {
   var muralIcon = L.icon({ iconUrl: 'assets/img/mural.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0,-32] });
   var boatIcon = L.icon({ iconUrl: 'assets/img/boat.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0,-32] });
   var bossmaguukenkiIcon = L.icon({ iconUrl: 'assets/img/bossmaguukenki.png', iconSize: [32,32], iconAnchor: [16,16], popupAnchor: [0,-16] });
+  var challengeIcon = L.icon({ iconUrl: 'assets/img/challenge.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0,-32] });
 
 
 
-  // Initialisation de la carte
+// Initialisation de la carte
   var map = new L.Map('map', {
       center : [0,0],
       zoom : 4,
@@ -221,7 +222,7 @@ function onMapClick(e) {
 
   // Générer les layers
   var groups = [
-    'teleporter', 'echoshell', 'waverider', 'brokenislepuzzle', 'mural', 'boat', 'maguukenki'
+    'teleporter', 'echoshell', 'waverider', 'brokenislepuzzle', 'mural', 'boat', 'maguukenki', 'challenge'
   ];
   groups.forEach(function(e) {
     window[e+'Group'] = L.layerGroup();
@@ -659,6 +660,81 @@ function onMapClick(e) {
         },
       ]
     },
+    {
+      id: 'challenge',
+      checkbox: true,
+      group: challengeGroup,
+      icon: challengeIcon,
+      format: 'video',
+      markers: [
+        {
+          id: 'golden1',
+          text: 'Explosez 6 tonneaux en 20 secondes.',
+          video: 'ZQBIJ7oe6f4',
+          coords: [4392,4622]
+        },
+        {
+          id: 'golden2',
+          text: 'Ramassez 8 particules Anemo en 40 secondes.',
+          video: 'pXi5NwZ-ayQ',
+          coords: [4187,5159]
+        },
+        {
+          id: 'golden3',
+          text: 'Ouvrez le coffre en 60 secondes.',
+          video: 'NruKcKDBmr0',
+          coords: [4464,5204]
+        },
+        {
+          id: 'golden4',
+          text: 'Ouvrez le coffre en 40 secondes.',
+          video: '1po99RCOd3A',
+          coords: [4985,4666]
+        },
+        {
+          id: 'golden5',
+          text: 'Explosez 6 tonneaux en 25 secondes.',
+          video: 'xxMsgW_WqKk',
+          coords: [5363,4725]
+        },
+        {
+          id: 'golden6',
+          text: 'Explosez 6 tonneaux en 60 secondes.',
+          video: 'VU9xIurFL34',
+          coords: [5230,2987]
+        },
+        {
+          id: 'golden7',
+          text: 'Détruire les 3 peintures murale du Roi Dodo en 90 secondes.',
+          video: 'cPjFScpkYek',
+          coords: [4169,3307]
+        },
+        {
+          id: 'golden8',
+          text: 'Explosez 6 tonneaux en 30 secondes.',
+          video: 'ftrVPjSZapw',
+          coords: [3981,3273]
+        },
+        {
+          id: 'golden9',
+          text: 'Explosez 6 tonneaux en 30 secondes.',
+          video: 'gQ7Vu9qjvLg',
+          coords: [3344,2671]
+        },
+        {
+          id: 'golden10',
+          text: 'Ouvrez le coffre en 90 secondes.',
+          video: 't0oMKriA2vA',
+          coords: [3457,3541]
+        },
+        {
+          id: 'golden11',
+          text: 'Explosez 6 tonneaux en 90 secondes.',
+          video: 'XNtMgW9wjAY',
+          coords: [3449,4865]
+        }
+      ]
+    }
   ];
 
 
