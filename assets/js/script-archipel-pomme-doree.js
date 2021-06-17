@@ -209,6 +209,7 @@ function onMapClick(e) {
   var bossmaguukenkiIcon = L.icon({ iconUrl: 'assets/img/bossmaguukenki.png', iconSize: [32,32], iconAnchor: [16,16], popupAnchor: [0,-16] });
   var challengeIcon = L.icon({ iconUrl: 'assets/img/challenge.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0,-32] });
   var seelieIcon = L.icon({ iconUrl: 'assets/img/seelie.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0, -32] });
+  var starboardIcon = L.icon({ iconUrl: 'assets/img/starboard.png', iconSize: [32,32], iconAnchor: [16,16], popupAnchor: [0, -16] });
 
 
 
@@ -223,7 +224,7 @@ function onMapClick(e) {
 
   // Générer les layers
   var groups = [
-    'teleporter', 'echoshell', 'waverider', 'brokenislepuzzle', 'mural', 'boat', 'maguukenki', 'challenge', 'seelie'
+    'teleporter', 'echoshell', 'waverider', 'brokenislepuzzle', 'mural', 'boat', 'maguukenki', 'challenge', 'seelie', 'starboard'
   ];
   groups.forEach(function(e) {
     window[e+'Group'] = L.layerGroup();
@@ -749,6 +750,57 @@ function onMapClick(e) {
           text: 'Explosez 6 tonneaux en 90 secondes.',
           video: 'XNtMgW9wjAY',
           coords: [3449,4865]
+        }
+      ]
+    },
+    {
+      id: 'starboard',
+      group: starboardGroup,
+      icon: starboardIcon,
+      format: 'video',
+      checkbox: true,
+      markers: [
+        {
+          id: '01',
+          title: 'Savoir-faire de Capitaine',
+          text: 'Ramassez 13 pièces en 3 minutes.',
+          video: 'n5cmUCfEQus',
+          coords: [3755,3138]
+        },
+        {
+          id: '02',
+          title: 'Poisson & brise marine',
+          text: 'Ramassez 13 pièces en 3 minutes.',
+          video: 'geJuTjFfl08',
+          coords: [4791,4404]
+        },
+        {
+          id: '03',
+          title: 'Voyage tournoyant',
+          text: 'Ramassez 13 pièces en 3 minutes.',
+          video: 'l1kedYdvyiA',
+          coords: [3686,3947]
+        },
+        {
+          id: '04',
+          title: 'Rythme de course',
+          text: 'Ramassez 13 pièces en 3 minutes.',
+          video: 'faa-_Gb2WKU',
+          coords: [4308,4889]
+        },
+        {
+          id: '05',
+          title: 'Briseur de vague',
+          text: 'Ramassez 13 pièces en 3 minutes.',
+          video: 'z6CH48EWamA',
+          coords: [5050,4403]
+        },
+        {
+          id: '06',
+          title: 'Ruée d\'eau tumultueuse',
+          text: 'Ramassez 13 pièces en 3 minutes.',
+          video: 'WGJjWm2nTnQ',
+          coords: [5217,3645]
         }
       ]
     }
