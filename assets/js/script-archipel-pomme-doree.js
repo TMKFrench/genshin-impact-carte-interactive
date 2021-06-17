@@ -208,6 +208,7 @@ function onMapClick(e) {
   var boatIcon = L.icon({ iconUrl: 'assets/img/boat.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0,-32] });
   var bossmaguukenkiIcon = L.icon({ iconUrl: 'assets/img/bossmaguukenki.png', iconSize: [32,32], iconAnchor: [16,16], popupAnchor: [0,-16] });
   var challengeIcon = L.icon({ iconUrl: 'assets/img/challenge.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0,-32] });
+  var seelieIcon = L.icon({ iconUrl: 'assets/img/seelie.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0, -32] });
 
 
 
@@ -222,7 +223,7 @@ function onMapClick(e) {
 
   // Générer les layers
   var groups = [
-    'teleporter', 'echoshell', 'waverider', 'brokenislepuzzle', 'mural', 'boat', 'maguukenki', 'challenge'
+    'teleporter', 'echoshell', 'waverider', 'brokenislepuzzle', 'mural', 'boat', 'maguukenki', 'challenge', 'seelie'
   ];
   groups.forEach(function(e) {
     window[e+'Group'] = L.layerGroup();
@@ -232,6 +233,22 @@ function onMapClick(e) {
 
   // Liste des marqueurs
   var markers = [
+    {
+      id: 'seelie',
+      group: seelieGroup,
+      icon: seelieIcon,
+      format: 'video',
+      checkbox: true,
+      guide: 'https://gaming.lebusmagique.fr/le-sinueux-chemin-du-retour/',
+      markers: [
+        {
+          id: 'golden01',
+          title: 'Le sinueux chemin du retour',
+          video: '58dPas2jo4M',
+          coords: [4112, 5211]
+        }
+      ]
+    },
     {
       id: 'echoshell',
       group: echoshellGroup,
