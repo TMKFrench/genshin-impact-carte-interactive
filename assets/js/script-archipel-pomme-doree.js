@@ -347,7 +347,7 @@ function onMapClick(e) {
         },
         {
           id: 'V5',
-          title: 'Échos du passé - V<br />Navigation et liberté',
+          title: 'Échos du passé - V<br />Navigation et liberation',
           coords: [5300, 2655]
         },
         {
