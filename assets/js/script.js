@@ -623,7 +623,7 @@ function onMapClick(e) {
         {
           id: 'dragonspine12',
           coords: [5430, 4291]
-        },
+        }
       ]
     },
     {
@@ -4487,11 +4487,10 @@ function onMapClick(e) {
     }
   ];
 
-
   // Création de la carte
   L.tileLayer('assets/img/tiles/{z}/{x}/{y}.jpg', {
       attribution: '<a href="https://gaming.lebusmagique.fr">Le Bus Magique Gaming</a>',
-      maxZoom: 5,
+      maxZoom: 6,
       minZoom: 3,
       continuousWorld: true,
       maxBoundsViscosity: 0.8,
@@ -4557,49 +4556,67 @@ function onMapClick(e) {
   function initMarkers() {
     markers.forEach(function(g) {
 
-      g.markers.forEach(function(m){
-        var checkbox = '', icon, format, title = '', text = '', guide = '', countdown, timer, finished = false, color = '#3388ff';
+      g.markers.forEach(function(m) {
+        var checkbox = '', icon, format, title = '', text = '', guide = '', countdown, timer, finished = false,
+            color = '#3388ff', shift, region;
 
-        if((typeof m.checkbox !== 'undefined' && m.checkbox) || (typeof g.checkbox !== 'undefined' && g.checkbox))
-          checkbox = '<label><input type="checkbox" id="user-marker" data-id="'+g.id+m.id+'" /><span>Terminé</span></label>';
+        if ((typeof m.checkbox !== 'undefined' && m.checkbox) || (typeof g.checkbox !== 'undefined' && g.checkbox))
+          checkbox = '<label><input type="checkbox" id="user-marker" data-id="' + g.id + m.id + '" /><span>Terminé</span></label>';
 
-        if(typeof g.text !== 'undefined')
-          text = '<p>'+g.text+'</p>';
-        if(typeof m.text !== 'undefined')
-          text = '<p>'+m.text+'</p>';
+        if (typeof g.text !== 'undefined')
+          text = '<p>' + g.text + '</p>';
+        if (typeof m.text !== 'undefined')
+          text = '<p>' + m.text + '</p>';
 
-        if(typeof g.title !== 'undefined')
-          title = '<h4>'+g.title+'</h4>';
-        if(typeof m.title !== 'undefined')
-          title = '<h4>'+m.title+'</h4>';
+        if (typeof g.title !== 'undefined')
+          title = '<h4>' + g.title + '</h4>';
+        if (typeof m.title !== 'undefined')
+          title = '<h4>' + m.title + '</h4>';
 
-        if(typeof g.guide !== 'undefined')
-          guide = '<a href="'+g.guide+'" class="guide" target="_blank">Guide</a>';
-        if(typeof m.guide !== 'undefined')
-          if(typeof g.guide !== 'undefined' && m.guide.substr(0, 1) === '#')
-            guide = '<a href="'+g.guide+m.guide+'" class="guide" target="_blank">Guide</a>';
+        if (typeof g.guide !== 'undefined')
+          guide = '<a href="' + g.guide + '" class="guide" target="_blank">Guide</a>';
+        if (typeof m.guide !== 'undefined')
+          if (typeof g.guide !== 'undefined' && m.guide.substr(0, 1) === '#')
+            guide = '<a href="' + g.guide + m.guide + '" class="guide" target="_blank">Guide</a>';
           else
-            guide = '<a href="'+m.guide+'" class="guide" target="_blank">Guide</a>';
+            guide = '<a href="' + m.guide + '" class="guide" target="_blank">Guide</a>';
 
         icon = (typeof m.icon !== 'undefined') ? m.icon : g.icon;
         format = (typeof m.format !== 'undefined') ? m.format : g.format;
 
-        if(typeof g.countdown !== 'undefined')
+        if (typeof g.countdown !== 'undefined')
           countdown = g.countdown;
-        if(typeof m.countdown !== 'undefined')
+        if (typeof m.countdown !== 'undefined')
           countdown = m.countdown;
 
-        if(typeof g.timer !== 'undefined')
+        if (typeof g.timer !== 'undefined')
           timer = g.timer;
-        if(typeof m.timer !== 'undefined')
+        if (typeof m.timer !== 'undefined')
           timer = m.timer;
 
-        if(typeof g.color !== 'undefined')
+        if (typeof g.color !== 'undefined')
           color = g.color;
-        if(typeof m.color !== 'undefined')
+        if (typeof m.color !== 'undefined')
           color = m.color;
 
-        var marker = L.marker(unproject(m.coords), {icon: icon});
+        if(typeof g.region !== 'undefined') {
+          region = g.region;
+        } else if(typeof m.region !== 'undefined') {
+          region = m.region;
+        } else {
+          region = 'base';
+        }
+
+        switch(region) {
+          case 'inazuma':
+            shift = 0;
+            break;
+          default:
+            shift = 2560;
+            break;
+        }
+
+        var marker = L.marker(unproject([(m.coords[0]+shift), (m.coords[1]+shift)]), {icon: icon});
 
         if(format === 'popup')
           marker.bindPopup(title+text+guide+checkbox);
@@ -4684,7 +4701,7 @@ function onMapClick(e) {
 
 
   // Limites de la carte
-  map.setMaxBounds(new L.LatLngBounds(unproject([1024,1024]), unproject([7168, 7168])));
+  map.setMaxBounds(new L.LatLngBounds(unproject([3584,3584]), unproject([12800, 12800])));
 
 
 
@@ -4779,7 +4796,7 @@ function onMapClick(e) {
       map.invalidateSize();
     }
 
-    var zoom = (params.z && ['3', '4', '5'].indexOf(params.z) >= 0) ? params.z : 4;
+    var zoom = (params.z && ['3', '4', '5', '6'].indexOf(params.z) >= 0) ? params.z : 4;
 
     if(params.x && params.y) {
       map.setView(unproject([params.x, params.y]), zoom);
