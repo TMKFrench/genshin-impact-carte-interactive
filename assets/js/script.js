@@ -199,6 +199,7 @@ function onMapClick(e) {
   var teleporterIcon = L.icon({ iconUrl: 'assets/img/teleporter.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0, -32] });
   var anemoculusIcon = L.icon({ iconUrl: 'assets/img/anemoculus.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0, -32] });
   var geoculusIcon = L.icon({ iconUrl: 'assets/img/geoculus.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0, -32] });
+  var electroculusIcon = L.icon({ iconUrl: 'assets/img/electroculus.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0, -32] });
   var panoramaIcon = L.icon({ iconUrl: 'assets/img/panorama.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0, -32] });
   var mondstadtshrineIcon = L.icon({ iconUrl: 'assets/img/mondstadt-shrine.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0, -32] });
   var liyueshrineIcon = L.icon({ iconUrl: 'assets/img/liyue-shrine.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0, -32] });
@@ -258,7 +259,7 @@ function onMapClick(e) {
 
   // Générer les layers
   var groups = [
-    'statue', 'teleporter', 'anemoculus', 'geoculus', 'panorama', 'mondstadtshrine', 'liyueshrine', 'seelie', 'fireseelie',
+    'statue', 'teleporter', 'anemoculus', 'geoculus', 'electroculus', 'panorama', 'mondstadtshrine', 'liyueshrine', 'seelie', 'fireseelie',
     'jueyunchili', 'valberry', 'itswarm', 'overlookingview', 'dungeon', 'region', 'quest', 'crimsonagate',
     'priestprincessscribe', 'challenge', 'unusualhilichurl', 'glacialsteel', 'futileendeavor', 'prodigalsonreturn',
     'lostinthesnow', 'treasureguili', 'boss', 'iron', 'tinplate', 'electrocristal',
@@ -1560,6 +1561,32 @@ function onMapClick(e) {
         {
           id: '132',
           coords: [3487, 3528],
+        },
+      ]
+    },
+    {
+      id: 'electroculus',
+      group: electroculusGroup,
+      icon: electroculusIcon,
+      format: 'image',
+      checkbox: true,
+      region: 'inazuma',
+      markers: [
+        {
+          id: '01',
+          coords: [10801, 10450],
+        },
+        {
+          id: '02',
+          coords: [10827, 10612],
+        },
+        {
+          id: '03',
+          coords: [11113, 10440],
+        },
+        {
+          id: '04',
+          coords: [11299, 10244],
         },
       ]
     },
