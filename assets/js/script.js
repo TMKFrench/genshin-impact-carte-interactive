@@ -319,9 +319,13 @@ function onMapClick(e) {
         {
           id: 'dragonspine01',
           coords: [5120, 3943]
-        }
+        },
+        {
+          id: 'inazuma01',
+          coords: [10557, 10111],
+          region: 'inazuma'
+        },
       ]
-
     },
     {
       id: 'teleporter',
