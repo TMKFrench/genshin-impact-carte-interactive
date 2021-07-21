@@ -250,7 +250,7 @@ function onMapClick(e) {
   // Initialisation de la carte
   var map = new L.Map('map', {
       center : [0,0],
-      zoom : 4,
+      zoom : 3,
       zoomControl: false
   });
 
@@ -623,7 +623,52 @@ function onMapClick(e) {
         {
           id: 'dragonspine12',
           coords: [5430, 4291]
-        }
+        },
+        {
+          id: 'inazuma01',
+          coords: [10289, 10210],
+          region: 'inazuma',
+        },
+        {
+          id: 'inazuma02',
+          coords: [10463, 10230],
+          region: 'inazuma',
+        },
+        {
+          id: 'inazuma03',
+          coords: [10692, 10322],
+          region: 'inazuma',
+        },
+        {
+          id: 'inazuma04',
+          coords: [10779, 10431],
+          region: 'inazuma',
+        },
+        {
+          id: 'inazuma05',
+          coords: [10875, 10683],
+          region: 'inazuma',
+        },
+        {
+          id: 'inazuma06',
+          coords: [11055, 10732],
+          region: 'inazuma',
+        },
+        {
+          id: 'inazuma07',
+          coords: [11145, 10895],
+          region: 'inazuma',
+        },
+        {
+          id: 'inazuma08',
+          coords: [11083, 10481],
+          region: 'inazuma',
+        },
+        {
+          id: 'inazuma09',
+          coords: [11238, 10264],
+          region: 'inazuma',
+        },
       ]
     },
     {
