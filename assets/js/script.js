@@ -2823,6 +2823,30 @@ function onMapClick(e) {
           title: 'Enquête alpestre',
           coords: [4693, 3625]
         },
+        {
+          id: 'inazuma01',
+          title: 'Rituel de purification du cerisier sacré / Une histoire étrange à Konda',
+          coords: [10714, 10318],
+          region: 'inazuma'
+        },
+        {
+          id: 'inazuma02',
+          title: 'Le Jeu de Temari',
+          coords: [10890, 10694],
+          region: 'inazuma'
+        },
+        {
+          id: 'inazuma03',
+          title: 'L\'invitation de la Chambre Yae',
+          coords: [11051, 10689],
+          region: 'inazuma'
+        },
+        {
+          id: 'inazuma04',
+          title: 'Catherine à Inazuma ?',
+          coords: [11071, 10771],
+          region: 'inazuma'
+        },
       ]
     },
     {
