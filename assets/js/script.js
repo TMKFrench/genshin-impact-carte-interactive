@@ -245,6 +245,7 @@ function onMapClick(e) {
   var tinplateIcon = L.icon({ iconUrl: 'assets/img/tinplate.png', iconSize: [30,30], iconAnchor: [15,15], popupAnchor: [0,-15] });
   var electrocristalIcon = L.icon({ iconUrl: 'assets/img/electrocristal.png', iconSize: [30,30], iconAnchor: [15,15], popupAnchor: [0,-15] });
   var fragrantCedarIcon = L.icon({ iconUrl: 'assets/img/fragrantcedar.png', iconSize: [30,30], iconAnchor: [15,15], popupAnchor: [0,-15] });
+  var waveriderIcon = L.icon({ iconUrl: 'assets/img/waverider.png?v2', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0,-32] });
 
 
 
@@ -263,7 +264,7 @@ function onMapClick(e) {
     'jueyunchili', 'valberry', 'itswarm', 'overlookingview', 'dungeon', 'region', 'quest', 'crimsonagate',
     'priestprincessscribe', 'challenge', 'unusualhilichurl', 'glacialsteel', 'futileendeavor', 'prodigalsonreturn',
     'lostinthesnow', 'treasureguili', 'boss', 'iron', 'tinplate', 'electrocristal',
-    'fir', 'fragrantcedar', 'bamboo', 'sandbearer', 'pine', 'cuihua', 'birch'
+    'fir', 'fragrantcedar', 'bamboo', 'sandbearer', 'pine', 'cuihua', 'birch', 'waverider'
   ];
   groups.forEach(function(e) {
     window[e+'Group'] = L.layerGroup();
@@ -672,6 +673,21 @@ function onMapClick(e) {
         {
           id: 'inazuma09',
           coords: [11238, 10264],
+          region: 'inazuma',
+        },
+        {
+          id: 'inazuma10',
+          coords: [11040, 10182],
+          region: 'inazuma',
+        },
+        {
+          id: 'inazuma11',
+          coords: [10871, 10076],
+          region: 'inazuma',
+        },
+        {
+          id: 'inazuma12',
+          coords: [10780, 9446],
           region: 'inazuma',
         },
       ]
@@ -2884,6 +2900,12 @@ function onMapClick(e) {
           coords: [11071, 10771],
           region: 'inazuma'
         },
+        {
+          id: 'inazuma05',
+          title: 'Le récit d\'un voyage international',
+          coords: [10946, 10700],
+          region: 'inazuma'
+        },
       ]
     },
     {
@@ -4619,6 +4641,31 @@ function onMapClick(e) {
             [19.973348786110613, 69.38964843750001],
             [18.521283325496288, 66.09375000000001]
           ]
+        },
+      ]
+    },
+    {
+      id: 'waverider',
+      group: waveriderGroup,
+      icon: waveriderIcon,
+      format: 'image',
+      title: 'Téléporteur de barge',
+      checkbox: true,
+      markers: [
+        {
+          id: 'inazuma01',
+          coords: [10936, 9830],
+          region: 'inazuma'
+        },
+        {
+          id: 'inazuma02',
+          coords: [10968, 10617],
+          region: 'inazuma'
+        },
+        {
+          id: 'inazuma03',
+          coords: [11354, 10144],
+          region: 'inazuma'
         },
       ]
     }
