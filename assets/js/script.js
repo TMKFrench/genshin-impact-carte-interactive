@@ -1588,6 +1588,43 @@ function onMapClick(e) {
           id: '04',
           coords: [11299, 10244],
         },
+        {
+          id: '05',
+          coords: [11160, 10194],
+        },
+        {
+          id: '06',
+          coords: [11105, 10251],
+        },
+        {
+          id: '07',
+          coords: [11044, 10167],
+        },
+        {
+          id: '08',
+          coords: [10911, 10007],
+        },
+        {
+          id: '09',
+          coords: [10648, 10317],
+        },
+        {
+          id: '10',
+          coords: [11265, 11030],
+          text: 'L\'accès à cet électroculus se fait via une caverne dont l\'entrée se situe au niveau de la mer.'
+        },
+        {
+          id: '11',
+          coords: [11278, 10154],
+        },
+        {
+          id: '12',
+          coords: [11016, 10310],
+        },
+        {
+          id: '13',
+          coords: [10998, 10246],
+        },
       ]
     },
     {
