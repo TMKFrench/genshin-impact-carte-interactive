@@ -203,6 +203,7 @@ function onMapClick(e) {
   var panoramaIcon = L.icon({ iconUrl: 'assets/img/panorama.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0, -32] });
   var mondstadtshrineIcon = L.icon({ iconUrl: 'assets/img/mondstadt-shrine.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0, -32] });
   var liyueshrineIcon = L.icon({ iconUrl: 'assets/img/liyue-shrine.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0, -32] });
+  var inazumashrineIcon = L.icon({ iconUrl: 'assets/img/inazuma-shrine.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0, -32] });
   var seelieIcon = L.icon({ iconUrl: 'assets/img/seelie.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0, -32] });
   var fireseelieIcon = L.icon({ iconUrl: 'assets/img/fireseelie.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0, -32] });
   var debugIcon = L.icon({ iconUrl: 'assets/img/debug.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0, -32] });
@@ -260,7 +261,7 @@ function onMapClick(e) {
 
   // Générer les layers
   var groups = [
-    'statue', 'teleporter', 'anemoculus', 'geoculus', 'electroculus', 'panorama', 'mondstadtshrine', 'liyueshrine', 'seelie', 'fireseelie',
+    'statue', 'teleporter', 'anemoculus', 'geoculus', 'electroculus', 'panorama', 'mondstadtshrine', 'liyueshrine', 'inazumashrine', 'seelie', 'fireseelie',
     'jueyunchili', 'valberry', 'itswarm', 'overlookingview', 'dungeon', 'region', 'quest', 'crimsonagate',
     'priestprincessscribe', 'challenge', 'unusualhilichurl', 'glacialsteel', 'futileendeavor', 'prodigalsonreturn',
     'lostinthesnow', 'treasureguili', 'boss', 'iron', 'tinplate', 'electrocristal',
@@ -688,6 +689,36 @@ function onMapClick(e) {
         {
           id: 'inazuma12',
           coords: [10780, 9446],
+          region: 'inazuma',
+        },
+        {
+          id: 'inazuma13',
+          coords: [9393, 11088],
+          region: 'inazuma',
+        },
+        {
+          id: 'inazuma14',
+          coords: [9194, 11223],
+          region: 'inazuma',
+        },
+        {
+          id: 'inazuma15',
+          coords: [9062, 11601],
+          region: 'inazuma',
+        },
+        {
+          id: 'inazuma16',
+          coords: [9893, 10841],
+          region: 'inazuma',
+        },
+        {
+          id: 'inazuma17',
+          coords: [8854, 11168],
+          region: 'inazuma',
+        },
+        {
+          id: 'inazuma18',
+          coords: [9812, 11570],
           region: 'inazuma',
         },
       ]
@@ -1840,6 +1871,24 @@ function onMapClick(e) {
           title: 'Neuf Pilliers',
           coords: [3319, 4703],
         },
+        {
+          id: 'inazuma01',
+          title: 'Marée basse au milieu des flammes de la guerre',
+          coords: [9337, 11095],
+          region: 'inazuma'
+        },
+        {
+          id: 'inazuma02',
+          title: 'Sanctuaire de Narukami, Mont Yougou',
+          coords: [11035, 10182],
+          region: 'inazuma'
+        },
+        {
+          id: 'inazuma03',
+          title: 'Ritou, île de Narukami',
+          coords: [10294, 10209],
+          region: 'inazuma'
+        },
       ]
     },
     {
@@ -1947,6 +1996,29 @@ function onMapClick(e) {
         {
           id: '10',
           coords: [4778, 5731],
+        },
+      ]
+    },
+    {
+      id: 'inazumashrine',
+      group: inazumashrineGroup,
+      icon: inazumashrineIcon,
+      format: 'image',
+      checkbox: true,
+      text: 'Requiert une Clé de Sanctuaire des Profondeurs d\'Inazuma.',
+      region: 'inazuma',
+      markers: [
+        {
+          id: '01',
+          coords: [9783, 11605],
+        },
+        {
+          id: '02',
+          coords: [9021, 11588],
+        },
+        {
+          id: '03',
+          coords: [9662, 11417],
         },
       ]
     },
@@ -2958,6 +3030,42 @@ function onMapClick(e) {
           id: 'inazuma05',
           title: 'Le récit d\'un voyage international',
           coords: [10946, 10700],
+          region: 'inazuma'
+        },
+        {
+          id: 'inazuma06',
+          title: 'Contempler trois mille lieues au loin',
+          coords: [9007, 11741],
+          region: 'inazuma'
+        },
+        {
+          id: 'inazuma07',
+          title: 'L\'héritage d\'Orobashi',
+          coords: [8889, 11277],
+          region: 'inazuma'
+        },
+        {
+          id: 'inazuma08',
+          title: 'Traitement de l\'île',
+          coords: [8806, 11343],
+          region: 'inazuma'
+        },
+        {
+          id: 'inazuma09',
+          title: 'Rêves d\'un épéiste',
+          coords: [9754, 11499],
+          region: 'inazuma'
+        },
+        {
+          id: 'inazuma10',
+          title: 'Une demeure au-dessus de l\'océan',
+          coords: [6504, 8272],
+          region: 'inazuma'
+        },
+        {
+          id: 'inazuma11',
+          title: 'Pizza d\'un autre monde',
+          coords: [11014, 10679],
           region: 'inazuma'
         },
       ]
@@ -5085,6 +5193,3 @@ function onMapClick(e) {
     });
 
   });
-
-
-
