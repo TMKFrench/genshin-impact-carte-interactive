@@ -251,8 +251,8 @@ function onMapClick(e) {
 
   // Initialisation de la carte
   var map = new L.Map('map', {
-      center : [0,0],
-      zoom : 3,
+      center : [-50.20503326494333, 64.18212890625001],
+      zoom : 6,
       zoomControl: false
   });
 
