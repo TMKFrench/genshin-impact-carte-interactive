@@ -1641,6 +1641,60 @@ function onMapClick(e) {
           id: '13',
           coords: [10998, 10246],
         },
+        {
+          id: '14',
+          coords: [9464, 11322],
+        },
+        {
+          id: '15',
+          coords: [9439, 11219],
+        },
+        {
+          id: '16',
+          coords: [9296, 11165],
+        },
+        {
+          id: '17',
+          coords: [9079, 11623],
+          text: 'L\'entrée de la grotte se situe à la Mine Jakotsu.'
+        },
+        {
+          id: '18',
+          coords: [9928, 10946]
+        },
+        {
+          id: '19',
+          coords: [8743, 11440]
+        },
+        {
+          id: '20',
+          coords: [8842, 11196],
+          text: 'Utilisez l\'électrogranum que l\'on aperçoit en haut à droite pour traverser la bulle et atteindre l\'électroculus.'
+        },
+        {
+          id: '21',
+          coords: [10696, 10697]
+        },
+        {
+          id: '22',
+          coords: [10545, 10191],
+          text: 'Près de la statue, grimpez dans l\'arbre et planez jusqu\'au toit. Continuez votre progression jusqu\'à atteindre cet électroculus.'
+        },
+        {
+          id: '23',
+          coords: [11001, 10395],
+          text: 'Après avoir terminé le rituel de purification, en vous approchant de la grille, vous pouvez utiliser une clé pour l\'ouvrir et accéder à cet électroculus.'
+        },
+        {
+          id: '24',
+          coords: [10738, 10511],
+          text: 'Après avoir récupéré la clé du puits dans la quête "Rituel de purification du cerisier sacré", explorez le puits pour trouver cet électroculus.'
+        },
+        {
+          id: '25',
+          coords: [10719, 10503],
+          text: 'Après avoir récupéré la clé du puits dans la quête "Rituel de purification du cerisier sacré", explorez le puits pour trouver cet électroculus.'
+        },
       ]
     },
     {
