@@ -328,6 +328,16 @@ function onMapClick(e) {
           coords: [10557, 10111],
           region: 'inazuma'
         },
+        {
+          id: 'inazuma02',
+          coords: [9895, 11213],
+          region: 'inazuma'
+        },
+        {
+          id: 'inazuma03',
+          coords: [8874, 11382],
+          region: 'inazuma'
+        },
       ]
     },
     {
@@ -719,6 +729,46 @@ function onMapClick(e) {
         {
           id: 'inazuma18',
           coords: [9812, 11570],
+          region: 'inazuma',
+        },
+        {
+          id: 'inazuma19',
+          coords: [9052, 11810],
+          region: 'inazuma',
+        },
+        {
+          id: 'inazuma20',
+          coords: [8614, 11253],
+          region: 'inazuma',
+        },
+        {
+          id: 'inazuma21',
+          coords: [10054, 11233],
+          region: 'inazuma',
+        },
+        {
+          id: 'inazuma22',
+          coords: [9682, 11300],
+          region: 'inazuma',
+        },
+        {
+          id: 'inazuma23',
+          coords: [9945, 11333],
+          region: 'inazuma',
+        },
+        {
+          id: 'inazuma24',
+          coords: [10132, 11435],
+          region: 'inazuma',
+        },
+        {
+          id: 'inazuma25',
+          coords: [11025, 9853],
+          region: 'inazuma',
+        },
+        {
+          id: 'inazuma26',
+          coords: [10094,10996],
           region: 'inazuma',
         },
       ]
@@ -1726,6 +1776,136 @@ function onMapClick(e) {
           coords: [10719, 10503],
           text: 'Après avoir récupéré la clé du puits dans la quête "Rituel de purification du cerisier sacré", explorez le puits pour trouver cet électroculus.'
         },
+        {
+          id: '26',
+          coords: [10592, 10929],
+        },
+        {
+          id: '27',
+          format: 'video',
+          video: '7vGX7hQonLM',
+          coords: [10628, 10392],
+        },
+        {
+          id: '28',
+          coords: [9694, 11563],
+          text: 'L\'entrée se situe au niveau de la plage un peu plus à l\'ouest.',
+        },
+        {
+          id: '29',
+          coords: [9652, 11568],
+          text: 'Grimpez sur les rochers à l\'est pour atteindre la cime de l\'arbre, car vous ne pouvez pas l\'escalader.',
+        },
+        {
+          id: '30',
+          coords: [8835, 11301],
+        },
+        {
+          id: '31',
+          format: 'video',
+          video: '_a1NntGBqWE',
+          coords: [8933, 11706],
+        },
+        {
+          id: '32',
+          coords: [9052, 11760],
+        },
+        {
+          id: '33',
+          coords: [8658, 11290],
+        },
+        {
+          id: '34',
+          coords: [8625, 11184],
+        },
+        {
+          id: '35',
+          coords: [10145, 10885],
+        },
+        {
+          id: '36',
+          coords: [9004, 11813],
+        },
+        {
+          id: '37',
+          coords: [9108, 11544],
+        },
+        {
+          id: '38',
+          coords: [9855, 11293],
+        },
+        {
+          id: '39',
+          coords: [11130, 10331],
+        },
+        {
+          id: '40',
+          coords: [11147, 9777],
+          text: 'Vous accédez à cette partie de la carte grâce à la quête "Rituel de purification du cerisier sacré".'
+        },
+        {
+          id: '41',
+          coords: [11446, 10028],
+        },
+        {
+          id: '42',
+          coords: [11050, 10220],
+          text: 'Vous devez être à la dernière étape de la quête "Rituel de purification du cerisier sacré" pour accéder à cet électroculus.'
+        },
+        {
+          id: '43',
+          coords: [8899, 11809],
+        },
+        {
+          id: '44',
+          format: 'video',
+          video: 'JyFwY6EqErY',
+          coords: [8981, 11365],
+        },
+        {
+          id: '45',
+          coords: [8690, 11544],
+        },
+        {
+          id: '46',
+          coords: [9695, 11139],
+        },
+        {
+          id: '47',
+          coords: [9649, 11346],
+        },
+        {
+          id: '48',
+          coords: [9635, 11440],
+        },
+        {
+          id: '49',
+          format: 'video',
+          video: 'blSno1glbxo',
+          coords: [9644, 11084],
+        },
+        {
+          id: '50',
+          coords: [8849, 11477],
+        },
+        {
+          id: '51',
+          coords: [9118, 11757],
+        },
+        {
+          id: '52',
+          coords: [9859, 10669],
+        },
+        {
+          id: '53',
+          coords: [11015, 10054],
+        },
+        {
+          id: '54',
+          format: 'video',
+          video: 'pG7jtnZoJSw',
+          coords: [10113, 11011],
+        },
       ]
     },
     {
@@ -1887,6 +2067,30 @@ function onMapClick(e) {
           id: 'inazuma03',
           title: 'Ritou, île de Narukami',
           coords: [10294, 10209],
+          region: 'inazuma'
+        },
+        {
+          id: 'inazuma04',
+          title: 'Poste d\'observation des îles de Tatara',
+          coords: [10095, 11001],
+          region: 'inazuma'
+        },
+        {
+          id: 'inazuma05',
+          title: 'La forêt sacrée au clair de lune',
+          coords: [11092, 10482],
+          region: 'inazuma'
+        },
+        {
+          id: 'inazuma06',
+          title: 'Périphérie d\'Inazuma',
+          coords: [10909, 10697],
+          region: 'inazuma'
+        },
+        {
+          id: 'inazuma07',
+          title: 'Vallée de la fosse, île de Yashiori',
+          coords: [9016, 11267],
           region: 'inazuma'
         },
       ]
@@ -4827,6 +5031,28 @@ function onMapClick(e) {
         {
           id: 'inazuma03',
           coords: [11354, 10144],
+          region: 'inazuma'
+        },
+        {
+          id: 'inazuma04',
+          coords: [8467, 11324],
+          region: 'inazuma'
+        },
+        {
+          id: 'inazuma05',
+          coords: [10119, 11452],
+          region: 'inazuma'
+        },
+        {
+          id: 'inazuma06',
+          coords: [10566, 10675],
+          format: 'video',
+          video: 'hZfHrLu6xJU',
+          region: 'inazuma'
+        },
+        {
+          id: 'inazuma07',
+          coords: [8700, 11526],
           region: 'inazuma'
         },
       ]
