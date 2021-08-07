@@ -1894,6 +1894,8 @@ function onMapClick(e) {
         },
         {
           id: '52',
+          format: 'video',
+          video: '_0m89hKm8lg',
           coords: [9859, 10669],
         },
         {
@@ -1905,6 +1907,104 @@ function onMapClick(e) {
           format: 'video',
           video: 'pG7jtnZoJSw',
           coords: [10113, 11011],
+        },
+        {
+          id: '55',
+          coords: [9675, 11554],
+        },
+        {
+          id: '56',
+          text: 'Grimpez dans l\'arbre pour l’attraper.',
+          coords: [10123, 9834],
+        },
+        {
+          id: '57',
+          coords: [8457, 11496],
+        },
+        {
+          id: '58',
+          coords: [10913, 10220],
+        },
+        {
+          id: '59',
+          coords: [9039, 11486],
+        },
+        {
+          id: '60',
+          coords: [9094, 11467],
+        },
+        {
+          id: '61',
+          format: 'video',
+          video: '5KLlYWK6JJc',
+          coords: [9095, 11319],
+        },
+        {
+          id: '62',
+          coords: [10943, 10110],
+        },
+        {
+          id: '63',
+          text: 'L\'accès à la grotte ce fait depuis la plage, au nord-ouest.',
+          coords: [10821, 10172],
+        },
+        {
+          id: '64',
+          coords: [10762, 10149],
+        },
+        {
+          id: '65',
+          coords: [11127, 10130],
+        },
+        {
+          id: '66',
+          coords: [8761, 11707],
+        },
+        {
+          id: '67',
+          coords: [8833, 11656],
+        },
+        {
+          id: '68',
+          format: 'video',
+          video: 'U9r_fnYLRvo',
+          coords: [8270, 11403],
+        },
+        {
+          id: '69',
+          coords: [10293, 11268],
+        },
+        {
+          id: '70',
+          coords: [9793, 11034],
+        },
+        {
+          id: '71',
+          coords: [9083, 11700],
+        },
+        {
+          id: '72',
+          format: 'video',
+          video: 'LDkSRXvQTKY',
+          coords: [10878, 11047],
+        },
+        {
+          id: '73',
+          format: 'video',
+          video: 'UIaxl3K1hg0',
+          coords: [9212, 11437],
+        },
+        {
+          id: '74',
+          format: 'video',
+          video: 'MdjV8pq1JKo',
+          coords: [8927, 11571],
+        },
+        {
+          id: '75',
+          format: 'video',
+          video: 'LkGerCHBvm0',
+          coords: [9112, 11649],
         },
       ]
     },
@@ -3270,6 +3370,12 @@ function onMapClick(e) {
           id: 'inazuma11',
           title: 'Pizza d\'un autre monde',
           coords: [11014, 10679],
+          region: 'inazuma'
+        },
+        {
+          id: 'inazuma12',
+          title: 'Le destin d\'un guerrier',
+          coords: [9299, 11143],
           region: 'inazuma'
         },
       ]
