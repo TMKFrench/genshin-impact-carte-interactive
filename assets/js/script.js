@@ -2737,6 +2737,166 @@ function onMapClick(e) {
           id: 'liyue44',
           video: 'Mf2exHVcN7s',
           coords: [4013,4952]
+        },
+        {
+          id: 'liyue45',
+          video: 'ddvpebbfmyA',
+          coords: [3367,2971]
+        },
+        {
+          id: 'liyue46',
+          video: 'Kg_ftFxI6M8',
+          coords: [2429,4824]
+        },
+        {
+          id: 'liyue47',
+          video: 'AH88NAC9Ejc',
+          coords: [4171,4282]
+        },
+        {
+          id: 'liyue48',
+          video: 'aKtEf66nfiU',
+          coords: [4248,4389]
+        },
+        {
+          id: 'liyue49',
+          video: '6-6cJTNNabA',
+          coords: [3748,4026]
+        },
+        {
+          id: 'liyue50',
+          video: 'BH3AVQr2zWg',
+          coords: [3574,3310]
+        },
+        {
+          id: 'liyue51',
+          video: 'BFTs6XKpE6o',
+          coords: [3306,5811]
+        },
+        {
+          id: 'liyue52',
+          video: 'mjgjTvhoZXU',
+          coords: [3390,6036]
+        },
+        {
+          id: 'liyue53',
+          video: 'W8OV-oi07XE',
+          coords: [3260,3380]
+        },
+        {
+          id: 'liyue54',
+          video: '90mH0UfrKEY',
+          coords: [3202,4664]
+        },
+        {
+          id: 'liyue55',
+          video: 'kURwSiYOUYM',
+          coords: [3700,3696]
+        },
+        {
+          id: 'liyue56',
+          video: 'gcBJw9HA5ms',
+          coords: [2859,5388]
+        },
+        {
+          id: 'liyue57',
+          video: 'giBeA0r38_E',
+          coords: [4235,4528]
+        },
+        {
+          id: 'liyue58',
+          video: '2g9oV0GKbZI',
+          coords: [4325,4191]
+        },
+        {
+          id: 'liyue59',
+          video: 'BdPIlluGfAo',
+          coords: [4025,3640]
+        },
+        {
+          id: 'liyue60',
+          video: 'hm8KxuohkII',
+          coords: [3511,3771]
+        },
+        {
+          id: 'liyue61',
+          video: 'ReCDiaIhk4A',
+          coords: [2975,3971]
+        },
+        {
+          id: 'liyue62',
+          video: 'IVgw0Cc6EJY',
+          coords: [3271,4133]
+        },
+        {
+          id: 'liyue63',
+          video: 'C25uSRKHkQc',
+          coords: [2511,4171]
+        },
+        {
+          id: 'liyue64',
+          video: 'MKSsJwA4ufk',
+          coords: [2885,4285]
+        },
+        {
+          id: 'liyue65',
+          video: '7NkRr9_Ywfw',
+          coords: [3734,4502]
+        },
+        {
+          id: 'liyue66',
+          video: 'FFNg0Bw34gA',
+          coords: [3688,4647]
+        },
+        {
+          id: 'liyue67',
+          video: 'ttZlSMhPBmc',
+          coords: [3771,4912]
+        },
+        {
+          id: 'liyue68',
+          video: 'E_OAdyxhzj0',
+          coords: [3772,5162]
+        },
+        {
+          id: 'liyue69',
+          video: 'l72UAiowmsQ',
+          coords: [2978,5958]
+        },
+        {
+          id: 'liyue70',
+          video: 'HB6DkdMsbRo',
+          coords: [3586,5873]
+        },
+        {
+          id: 'liyue71',
+          video: 'vEpDtV50ga4',
+          coords: [3476,5605]
+        },
+        {
+          id: 'liyue72',
+          video: '22HuP42ODeg',
+          coords: [3608,5441]
+        },
+        {
+          id: 'liyue73',
+          video: 'ldXRAPv3WT0',
+          coords: [3129,5506]
+        },
+        {
+          id: 'liyue74',
+          video: 'sbmT59ngFQw',
+          coords: [3201,5370]
+        },
+        {
+          id: 'liyue75',
+          video: 'ZIlH24HUoNg',
+          coords: [2912,5530]
+        },
+        {
+          id: 'liyue76',
+          video: 'F5dL0-m05wg',
+          coords: [2796,5979]
         }
       ]
     },
@@ -3738,6 +3898,11 @@ function onMapClick(e) {
         {
           id: '78',
           coords: [4598,4069]
+        },
+        {
+          id: '79',
+          coords: [7817, 6779],
+          region: 'inazuma'
         },
       ]
     },
