@@ -1,13 +1,6 @@
 .idea
 cache/*
 !cache/.gitkeep
-assets/img/medias/*
-!assets/img/medias/.gitkeep
-assets/img/tiles/*
-!assets/img/tiles/.gitkeep
-assets/css/*.css
-assets/css/*.css.map
-assets/js/*.min.js
 cache/*.jpg
 config.ini
 gici.db

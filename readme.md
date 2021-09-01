@@ -6,50 +6,15 @@ Sources du projet de carte interactive de Genshin Impact, par Le Bus Magique.
 
 ### Ajouter des marqueurs
 
-```
-var markers = [
-    {                                   // --- Groupe de marqueurs
-        id: 'teleporter',               // Identifiant pour le suivi [1]
-        group: teleporterGroup,         // Variable L.LayerGroup
-        icon: teleporterIcon,           // Variable L.icon
-        format: 'simple',               // Formats : simple, popup, image, video
-        checkbox: true,                 // Activer une checkbox pour tous les marqueurs [2]
-        guide: 'https://domain.ext',    // Activer un bouton vers cette adresse
-        markers: [
-            {                           // --- Marqueur PopUp
-                id: '01',               // Identifiant pour le suivi [1]
-                format: 'popup'         // Override du format
-                guide: '#anchor',       // (facultatif) Override de l'adresse du guide [3]
-                icon: differentIcon,    // (facultatif) Override de l'icone du groupe
-                title: 'Mon titre',     // (facultatif) Titre affiché dans la popup
-                text: 'Mon<br>text',    // (facultatif) Texte affiché après le média ou le titre
-                coords: [5726, 2288],   // Coordonnées
-            },
-            {                           // --- Marqueur vidéo
-                id: '02',               // Identifiant pour le suivi [1]
-                format: 'video'         // Override du format de la catégorie
-                video: 'id-youtube',    // Identifiant unique de la vidéo YouTube
-                coords: [5726, 2288],   // Coordonnées
-            },
-            {                           // --- Marqueur image [4]
-                id: '03',               // Identifiant pour le suivi [1]
-                format: 'image'         // Override du format de la catégorie
-                coords: [5726, 2288],   // Coordonnées
-            },
-        ],
-    },
-]
-```
+Les groupes et les marqueurs sont dans la base de données SQLite `markers.db`.
+Les données des marqueurs outrepassent celles des groupes (format, icon, title, text, ...).
 
-[1] L'identifiant pour le suivi est composé du l'id du groupe et du marqueur.
+Si une image doit être associée à un marqueur, le nom du fichier doit être composé de l'UID du groupe suivi de l'UID du marqueur, au format JPEG.
+Exemple : `assets/img/medias/statuemondstadt01.jpg`
 
-[2] Si vous ne souhaitez pas activer pour tous les marqueurs de la catégorie, supprimez cette ligne et définissez là pour chaque marqueur où vous en avez besoin.
+### Générer les marqueurs
 
-[3] Si le premier caractère est un '#', l'URL sera constituée de celle du guide et du marqueur, sinon seulement du marqueur.
-
-[4] Le script va chercher deux images dans le dossier "assets/img/medias/", comme suit : 
-* assets/img/medias/{id-group}{id-marker}-thumb.jpg (300&times;300)
-* assets/img/medias/{id-group}{id-marker}.jpg
+Pour générer le tableau javascript de ces marqueurs, lancer l'URL ./generate, puis copier-coller le résulat en remplacement du précédent.
 
 ### Paramètres d'URL
 
@@ -57,6 +22,17 @@ var markers = [
 * **markers=id1,id2,id3** : marqueurs à activer au chargement de la carte
 * **x=0&y=0** : centrer la carte à la position [x,y]
 * **x=0&y=0&z=5** : centrer la carte à la position [x,y] et définir le zoom à z (4 ou 5)
+
+## Mise à jour de tiles
+
+La mise à jour des tiles occasionne dans la plupart des cas un décalage des marqueurs.
+Après la génération des nouvelles tiles, il faut recalculer les nouvelles coordonnées.
+
+Lancer l'URL ./update avec les paramères suivant :
+* **op** : l'opérateur, `plus` ou `minus`
+* **qt** : la quantité
+
+Utiliser le contenu généré pour mettre à jour la base de données des marqueurs.
 
 ## Sources
 
