@@ -125,4 +125,4 @@ $js .= "];";
 
 //dd($map);
 //dd($js);
-dd(str_replace(array("\r", "\n", "\t", "\v"), '', $js));
+dd(str_replace(array("\r", "\n", "\t", "\v"), '', $js) . "\n\n");
