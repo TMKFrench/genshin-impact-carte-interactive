@@ -1,6 +1,13 @@
 <?php require 'includes/_fn.php';
 
-$db = new SQLite3Database('markers.db');
+$map = $_GET['map'];
+if(isset($map) && !empty($map)) {
+    $map = "-{$map}";
+} else {
+    $map = "";
+}
+
+$db = new SQLite3Database("markers$map.db");
 
 $map = [];
 
