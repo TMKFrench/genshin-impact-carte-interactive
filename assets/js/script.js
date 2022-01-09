@@ -415,7 +415,7 @@ var markers = [{id:'statue',group:statueGroup,format:'image',title:'Statue des S
           region = 'base';
         }
 
-        var marker = L.marker(unproject([(m.coords[0]), (m.coords[1])]), {icon: icon});
+        var marker = L.marker(unproject([(m.coords[0]), (m.coords[1])]), {icon: icon, riseOnHover: true});
 
         if(format === 'popup')
           marker.bindPopup(title+text+guide+checkbox);
@@ -427,6 +427,13 @@ var markers = [{id:'statue',group:statueGroup,format:'image',title:'Statue des S
           marker.bindPopup(title+'<img src="assets/img/medias/'+g.id+m.id+'.jpg" onerror="this.src=\'assets/img/medias/default.jpg\'" />'+text+guide+checkbox);
         else if(format === 'region')
           marker.bindTooltip(m.title, {permanent: true, className: 'region', offset: [0, 13], direction: 'top'}).openTooltip();
+        else if(format === 'todo')
+          marker.bindPopup('<h4>' + g.id+m.id  + '</h4>'+'<p><em>Information pour ce marqueur prochainement disponible...</em></p>');
+        else if(format === 'gif')
+          marker.bindPopup(title+'<a href="assets/img/medias/'+g.id+m.id+'.gif" class="image" data-lity><img src="assets/img/medias/'+g.id+m.id+'.gif" /></a>'+text+guide+checkbox);
+
+
+
 
         if(typeof(timer) !== 'undefined') {
           var nextTime = moment();
