@@ -428,7 +428,7 @@ var markers = [{id:'statue',group:statueGroup,format:'image',title:'Statue des S
         else if(format === 'region')
           marker.bindTooltip(m.title, {permanent: true, className: 'region', offset: [0, 13], direction: 'top'}).openTooltip();
         else if(format === 'todo')
-          marker.bindPopup('<h4>' + g.id+m.id  + '</h4>'+'<p><em>Information pour ce marqueur prochainement disponible...</em></p>');
+          marker.bindPopup('<h4>' + g.id+m.id  + '</h4>'+'<p><em>Information pour ce marqueur prochainement disponible...</em></p>'+checkbox);
         else if(format === 'gif')
           marker.bindPopup(title+'<a href="assets/img/medias/'+g.id+m.id+'.gif" class="image" data-lity><img src="assets/img/medias/'+g.id+m.id+'.gif" /></a>'+text+guide+checkbox);
 
