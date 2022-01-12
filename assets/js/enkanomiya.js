@@ -231,7 +231,7 @@ function onMapClick(e) {
   var sigillockthreeIcon = L.icon({ iconUrl: 'assets/img/sigillockthree.png', iconSize: [24,24], iconAnchor: [12,12], popupAnchor: [0,-12] });
   var sigillockfourIcon = L.icon({ iconUrl: 'assets/img/sigillockfour.png', iconSize: [24,24], iconAnchor: [12,12], popupAnchor: [0,-12] });
   var sigillockfiveIcon = L.icon({ iconUrl: 'assets/img/sigillockfive.png', iconSize: [24,24], iconAnchor: [12,12], popupAnchor: [0,-12] });
-  var smashedstoneIcon = L.icon({ iconUrl: 'assets/img/smashedstone.png', iconSize: [32,32], iconAnchor: [0,32], popupAnchor: [0,-32] });
+  var smashedstoneIcon = L.icon({ iconUrl: 'assets/img/smashedstone.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0,-32] });
 
 
   // Initialisation de la carte
