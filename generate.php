@@ -1,13 +1,13 @@
 <?php require 'includes/_fn.php';
 
-$map = $_GET['map'];
-if(isset($map) && !empty($map)) {
-    $map = "-{$map}";
+$_map = $_GET['map'];
+if(isset($_map) && !empty($_map)) {
+    $_map = "-{$_map}";
 } else {
-    $map = "";
+    $_map = "";
 }
 
-$db = new SQLite3Database("markers$map.db");
+$db = new SQLite3Database("markers$_map.db");
 
 $map = [];
 
