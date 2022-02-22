@@ -223,7 +223,7 @@ function onMapClick(e) {
   var sentoutrialIcon = L.icon({ iconUrl: 'assets/img/sentoutrial.png', iconSize: [32,32], iconAnchor: [16,16], popupAnchor: [0,-16] });
   var lightguidingceremonyIcon = L.icon({ iconUrl: 'assets/img/lightguidingceremony.png', iconSize: [32,32], iconAnchor: [16,16], popupAnchor: [0,-16] });
   var statuevassalsIcon = L.icon({ iconUrl: 'assets/img/statuevassals.png', iconSize: [32,32], iconAnchor: [16,16], popupAnchor: [0,-16] });
-  // var bossnarukamiIcon = L.icon({ iconUrl: 'assets/img/bossnarukami.png', iconSize: [32,32], iconAnchor: [16,16], popupAnchor: [0,-16] });
+  var bossnarukamiIcon = L.icon({ iconUrl: 'assets/img/bossnarukami.png', iconSize: [32,32], iconAnchor: [16,16], popupAnchor: [0,-16] });
 
 
 
