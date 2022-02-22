@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Genshin Impact &bull; Carte interactive</title>
+    <link rel="icon" type="image/png" href="assets/img/logo.png" />
+
+    <link href="includes/tailwind-2.0.2.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="includes/leaflet-1.7.1/leaflet.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2.4.0/src/easy-button.min.css">
+    <link rel="stylesheet" href="includes/lity-2.4.1/dist/lity.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="includes/jquery-3.5.1.min.js"></script>
+    <script src="includes/jquery.countdown-2.1.0.min.js"></script>
+    <script src="includes/moment.2-29-1.min.js"></script>
+    <script src="includes/leaflet-1.7.1/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2.4.0/src/easy-button.min.js"></script>
+    <script src="includes/lity-2.4.1/dist/lity.min.js"></script>
+
+    <!-- Matomo -->
+    <script>
+      var _paq = window._paq = window._paq || [];
+      _paq.push(["disableCookies"]);
+      _paq.push(['trackPageView']);
+      _paq.push(['enableLinkTracking']);
+      (function() {
+        var u="//analytics.lebusmagique.fr/";
+        _paq.push(['setTrackerUrl', u+'matomo.php']);
+        _paq.push(['setSiteId', '2']);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+      })();
+    </script>
+    <!-- End Matomo Code -->
+
+  </head>
+  <body class="show-menu">
+
+  <div class="flex flex-wrap h-full">
+    <div class="hidden overflow-y-auto" id="menu">
+      <div class="p-4 text-center text-white shadow-lg" id="header">
+        <div>
+          <h1 title="J'ici" class="text-2xl">G·I·C·I</h1>
+          <h2 class="text-xs uppercase mt-2">Genshin Impact &bull; Carte&nbsp;Interactive</h2>
+        </div>
+      </div>
+
+      <div class="p-4">
+        <ul class="grid grid-cols-2 gap-2 space-y-2 text-gray-600 text-sm">
+
+          <li class="col-span-2">
+            <a href="#!" id="discord" class="flex p-2 border border-indigo-400 bg-indigo-400 rounded text-white items-center justify-center" style="filter: grayscale(0); opacity: 1;">
+              <img src="assets/img/discord.png" class="h-6 mr-2" alt="Discord">Se connecter avec Discord
+            </a>
+          </li>
+
+          <li class="marker col-span-2">
+            <a href="index.html" class="justify-center bg-gray-700 text-white border-gray-700 hover:bg-gray-800" style="filter: grayscale(0); opacity: 1;">
+              &larr; Retourner à Teyvat
+            </a>
+          </li>
+
+          <li class="title">Exploration</li>
+
+          <li class="marker">
+            <a href="#!" data-type="teleporter">
+              <img src="assets/img/teleporter.png" alt="Téléporteurs"> <span>Téléporteurs</span>
+            </a>
+          </li>
+          <li class="marker">
+            <a href="#!" data-type="challenge">
+              <img src="assets/img/challenge.png" alt="Défis"> <span>Défis</span>
+            </a>
+          </li>
+          <li class="marker">
+            <a href="#!" data-type="seelie">
+              <img src="assets/img/seelie.png" alt="Fées"> <span>Fées</span>
+            </a>
+          </li>
+          <li class="marker">
+            <a href="#!" data-type="electroseelie">
+              <img src="assets/img/electroseelie.png" alt="Fées ardentes"> <span>Fées Électro</span>
+            </a>
+          </li>
+<!--          <li class="marker col-span-2">-->
+<!--            <a href="#!" data-type="sentoutrial">-->
+<!--              <img src="assets/img/sentoutrial.png" alt="Épreuves des mille lumières"> <span>Épreuves des mille lumières</span>-->
+<!--            </a>-->
+<!--          </li>-->
+<!--          <li class="marker col-span-2">-->
+<!--            <a href="#!" data-type="lightguidingceremony">-->
+<!--              <img src="assets/img/lightguidingceremony.png" alt="Cérémonies de guidage de la lumière"> <span>Cérémonies de guidage de la lumière</span>-->
+<!--            </a>-->
+<!--          </li>-->
+<!--          <li class="marker col-span-2">-->
+<!--            <a href="#!" data-type="statuevassals">-->
+<!--              <img src="assets/img/statuevassals.png" alt="Statue de vassal"> <span>Statue de vassal</span>-->
+<!--            </a>-->
+<!--          </li>-->
+
+          <li class="text-xs col-span-2 pt-4 text-center uppercase font-semibold leading-5">·&nbsp;·&nbsp;·<br /><span id="total-visits">0</span>&nbsp;visites<br /><span id="total">0</span>&nbsp;marqueurs<br /><span id="total-users">0</span>&nbsp;utilisateurs</li>
+
+        </ul>
+      </div>
+    </div>
+    <div class="" id="map-wrap">
+      <div id='map'></div>
+    </div>
+
+  </div>
+
+  <pre id="export" class="absolute top-0 left-0 w-full h-full bg-white hidden" style="z-index:9999"></pre>
+
+  <div id="info" class="lity-hide bg-white rounded p-4 m-4 max-w-lg">
+    <h4 class="text-xl font-bold">Genshin Impact &bull; Carte Interactive</h4>
+    <p>Cette carte interactive a été réalisée et est mise à jour par Thoanny pour <a href="https://gaming.lebusmagique.fr" target="_blank" class="text-red-500 font-semibold underline">Le Bus Magique</a>.</p>
+    <h4 class="text-xl font-bold mt-4">Suivi des marqueurs</h4>
+    <p>Par défaut, notre carte interactive utilise la fonction "localStorage" pour enregistrer le suivi de vos marqueurs. Ces informations sont donc stockées directement dans votre navigateur.</p>
+    <h4 class="text-xl font-bold mt-4">Se connecter avec Discord</h4>
+    <p>En vous identifiant avec Discord, nous enregistrons le suivi de vos marqueurs ainsi que l'état de votre menu (éléments actifs/inactifs) en base de données, pour vous offrir une expérience continue entre vos différentes sessions.</p>
+    <h4 class="text-xl font-bold mt-4">Remerciements</h4>
+    <p><a href="https://genshin.tmkfrench.fr/" target="_blank" class="text-red-500 font-semibold underline">TMK&nbsp;French</a></p>
+  </div>
+
+  <script src="assets/js/trois-royaumes.min.js?v=1.0.0" charset="utf-8"></script>
+
+  </body>
+</html>
