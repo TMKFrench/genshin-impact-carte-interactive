@@ -204,10 +204,13 @@ function onMapClick(e) {
   var blankIcon = L.icon({ iconUrl: 'assets/img/blank.png', iconSize: [2,2], iconAnchor: [1,1], popupAnchor: [1, 1] });
   var questIcon = L.icon({ iconUrl: 'assets/img/quest.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0,-32] });
   var challengeIcon = L.icon({ iconUrl: 'assets/img/challenge.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0,-32] });
-  var waveriderIcon = L.icon({ iconUrl: 'assets/img/waverider.png?v2', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0,-32] });
   var fishinghookIcon = L.icon({ iconUrl: 'assets/img/fishinghook.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0,-32] });
   var lumensparIcon = L.icon({ iconUrl: 'assets/img/lumenspar.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0,-32] });
   var bossRuinSerpentIcon = L.icon({ iconUrl: 'assets/img/bossruinserpent.png', iconSize: [40,40], iconAnchor: [20,20], popupAnchor: [0,-20] });
+  var orbofdepthIcon = L.icon({ iconUrl: 'assets/img/orbofdepth.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0,-32] });
+  var fossilIcon = L.icon({ iconUrl: 'assets/img/fossil.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0,-32] });
+  var rockpileIcon = L.icon({ iconUrl: 'assets/img/rockpile.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0,-32] });
+  var secretmessageIcon = L.icon({ iconUrl: 'assets/img/secretmessage.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0,-32] });
 
 
 // Initialisation de la carte
@@ -221,8 +224,8 @@ function onMapClick(e) {
 
   // Générer les layers
   var groups = [
-    'teleporter', 'panorama', 'seelie', 'dungeon', 'region', 'quest',
-    'challenge', 'boss', 'waverider', 'fishing', 'lumenspar',
+    'teleporter', 'panorama', 'challenge', 'seelie', 'quest', 'region',
+    'boss', 'lumenspar', 'fishing', 'orbofdepth', 'fossil', 'rockpile', 'secretmessage'
   ];
   groups.forEach(function(e) {
     window[e+'Group'] = L.layerGroup();

@@ -269,6 +269,7 @@ function onMapClick(e) {
   var radiantspincrystalIcon = L.icon({ iconUrl: 'assets/img/radiantspincrystal.png', iconSize: [32,32], iconAnchor: [16,16], popupAnchor: [0,-16] });
   var archaicstoneIcon = L.icon({ iconUrl: 'assets/img/archaicstone.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0,-32] });
   var rockpileIcon = L.icon({ iconUrl: 'assets/img/rockpile.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0,-32] });
+  var lostofferingsIcon = L.icon({ iconUrl: 'assets/img/lostofferings.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0,-32] });
 
 
   // Initialisation de la carte
@@ -286,7 +287,7 @@ function onMapClick(e) {
     'jueyunchili', 'valberry', 'itswarm', 'overlookingview', 'dungeon', 'region', 'quest', 'crimsonagate', 'tsurumighosts',
     'priestprincessscribe', 'challenge', 'unusualhilichurl', 'glacialsteel', 'futileendeavor', 'prodigalsonreturn', 'radiantspincrystal',
     'lostinthesnow', 'treasureguili', 'boss', 'iron', 'tinplate', 'electrocristal', 'remarkablechest', 'electroseelie', 'rockpile',
-    'fir', 'fragrantcedar', 'bamboo', 'sandbearer', 'pine', 'cuihua', 'birch', 'waverider', 'tokialleytales', 'fishing', 'archaicstone'
+    'fir', 'fragrantcedar', 'bamboo', 'sandbearer', 'pine', 'cuihua', 'birch', 'waverider', 'tokialleytales', 'fishing', 'archaicstone', 'lostofferings'
   ];
   groups.forEach(function(e) {
     window[e+'Group'] = L.layerGroup();
