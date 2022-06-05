@@ -1,10 +1,11 @@
 <?php require 'includes/_fn.php';
 
 $_map = $_GET['map'];
-if(isset($_map) && !empty($_map)) {
+if(isset($_map) && !empty($_map) && ($_map == "teyvat" || $_map == "enkanomiya" || $_map == "chasm")) {
     $_map = "-{$_map}";
 } else {
-    $_map = "";
+    echo "Nom de map absent ou éronné";
+    die();
 }
 
 $db = new SQLite3Database("markers$_map.db");
@@ -23,11 +24,11 @@ foreach($groups as $g => $group) {
     ];
 
     if($group->title) {
-        $map[$group->uid]['title'] = htmlentities(addslashes($group->title));
+        $map[$group->uid]['title'] = addslashes($group->title);
     }
 
     if($group->text) {
-        $map[$group->uid]['text'] = htmlentities(addslashes($group->text));
+        $map[$group->uid]['text'] = addslashes($group->text);
     }
 
     if($group->guide) {
@@ -51,11 +52,11 @@ foreach($markers as $m => $marker) {
     ];
 
     if($marker->title) {
-        $map[$marker->mgroup]['markers'][$m]['title'] = htmlentities(addslashes($marker->title));
+        $map[$marker->mgroup]['markers'][$m]['title'] = addslashes($marker->title);
     }
 
     if($marker->text) {
-        $map[$marker->mgroup]['markers'][$m]['text'] = htmlentities(addslashes($marker->text));
+        $map[$marker->mgroup]['markers'][$m]['text'] = addslashes($marker->text);
     }
 
     if($marker->format) {
@@ -76,8 +77,11 @@ foreach($markers as $m => $marker) {
 }
 
 $js = "var markers = [\n";
+$listmark = "// Liste des marqueurs {$_map}\n";
+$layers = "// Layers {$_map}\nvar groups = [";
 
 foreach($map as $group) {
+    $layers .= "'{$group['id']}',";
     $js .= "\t{\n";
     $js .= "\t\tid:'{$group['id']}',\n";
     $js .= "\t\tgroup:{$group['group']},\n";
@@ -128,8 +132,19 @@ foreach($map as $group) {
     $js .= "\t},\n";
 }
 
+$layers .= "];";
 $js .= "];";
 
-//dd($map);
-//dd($js);
-dd(str_replace(array("\r", "\n", "\t", "\v"), '', $js) . "\n\n");
+// dd($listmark . str_replace(array("\r", "\n", "\t", "\v"), '', $js) . "\n\n" . $layers);
+
+$fnbk = "assets/js/mkbk/markers{$_map} - ".date('Y-m-d H:i:s').".js";
+$lnbk = "assets/js/mkbk/layers{$_map} - ".date('Y-m-d H:i:s').".js";
+$fn = "assets/js/markers{$_map}.js";
+$ln = "assets/js/layers{$_map}.js";
+file_put_contents($fnbk, $listmark . str_replace(array("\r", "\n", "\t", "\v"), '', $js));
+file_put_contents($fn, $listmark . str_replace(array("\r", "\n", "\t", "\v"), '', $js));
+file_put_contents($lnbk, $layers);
+file_put_contents($ln, $layers);
+dd("Fichiers de backup $fnbk et $lnbk créés et $fn et $ln remplacés sur le serveur");
+
+?>

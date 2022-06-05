@@ -271,6 +271,15 @@
     <p><a href="https://genshin.tmkfrench.fr/" target="_blank" class="text-red-500 font-semibold underline">TMKFrench</a></p>
   </div>
 
+  <script type="text/javascript" src="assets/js/icon.js"></script>
+  <script type="text/javascript" src="assets/js/layers-teyvat.js"></script>
+  <script>
+      // Générer les layers
+      groups.forEach(function(e) {
+    window[e+'Group'] = L.layerGroup();
+  });
+  </script>
+	<script type="text/javascript" src="assets/js/markers-teyvat.js"></script>
   <script src="assets/js/script.min.js?v=3.0.22" charset="utf-8"></script>
 
   </body>

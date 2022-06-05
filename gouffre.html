@@ -148,6 +148,15 @@
     <p><a href="https://genshin.tmkfrench.fr/" target="_blank" class="text-red-500 font-semibold underline">TMK&nbsp;French</a></p>
   </div>
 
+  <script type="text/javascript" src="assets/js/icon.js"></script>
+  <script type="text/javascript" src="assets/js/layers-chasm.js"></script>
+  <script>
+      // Générer les layers
+      groups.forEach(function(e) {
+    window[e+'Group'] = L.layerGroup();
+  });
+  </script>
+	<script type="text/javascript" src="assets/js/markers-chasm.js"></script>
   <script src="assets/js/gouffre.min.js?v=1.0.10" charset="utf-8"></script>
 
   </body>
