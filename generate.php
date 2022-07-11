@@ -1,7 +1,7 @@
 <?php require 'includes/_fn.php';
 
 $_map = $_GET['map'];
-if(isset($_map) && !empty($_map) && ($_map == "teyvat" || $_map == "enkanomiya" || $_map == "chasm")) {
+if(isset($_map) && !empty($_map) && ($_map == "teyvat" || $_map == "enkanomiya" || $_map == "chasm" || $_map == "summer22")) {
     $_map = "-{$_map}";
 } else {
     echo "Nom de map absent ou éronné";
@@ -137,14 +137,10 @@ $js .= "];";
 
 // dd($listmark . str_replace(array("\r", "\n", "\t", "\v"), '', $js) . "\n\n" . $layers);
 
-$fnbk = "assets/js/mkbk/markers{$_map} - ".date('Y-m-d H:i:s').".js";
-$lnbk = "assets/js/mkbk/layers{$_map} - ".date('Y-m-d H:i:s').".js";
 $fn = "assets/js/markers{$_map}.js";
 $ln = "assets/js/layers{$_map}.js";
-file_put_contents($fnbk, $listmark . str_replace(array("\r", "\n", "\t", "\v"), '', $js));
 file_put_contents($fn, $listmark . str_replace(array("\r", "\n", "\t", "\v"), '', $js));
-file_put_contents($lnbk, $layers);
 file_put_contents($ln, $layers);
-dd("Fichiers de backup $fnbk et $lnbk créés et $fn et $ln remplacés sur le serveur");
+dd("Fichiers $fn et $ln remplacés sur le serveur");
 
 ?>

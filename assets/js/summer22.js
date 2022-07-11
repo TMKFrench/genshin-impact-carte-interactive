@@ -194,15 +194,15 @@ function onMapClick(e) {
 
   // Initialisation de la carte
   var map = new L.Map('map', {
-      center: [0,0],
+      center: [5,-15],
       zoom: 3,
       zoomControl: false
   });
 
   // Création de la carte
-  L.tileLayer('assets/img/map-2.6/{z}/{x}/{y}.jpg', {
+  L.tileLayer('assets/img/tiles-summer22/{z}/{x}/{y}.jpg', {
       attribution: '<a href="https://gaming.lebusmagique.fr">Le Bus Magique Gaming</a>',
-      maxZoom: 6,
+      maxZoom: 4,
       minZoom: 2,
       continuousWorld: true,
       maxBoundsViscosity: 0.8,
@@ -256,26 +256,13 @@ function onMapClick(e) {
     L.easyButton( '<img src="assets/img/info.png">',  function(control, map){var lightbox = lity('#info');}),
   ]);
 
-  var toolbarRegions = L.easyBar([
-    L.easyButton( '<img src="assets/img/mondstadt.png" alt="Mondstadt" title="Mondstadt">',  function(control, map){
-        map.flyTo(unproject([6974, 4378]), 6);
-    }),
-    L.easyButton( '<img src="assets/img/liyue.png" alt="Liyue" title="Liyue">',  function(control, map){
-        map.flyTo(unproject([5854, 7260]), 6);
-    }),
-    L.easyButton( '<img src="assets/img/inazuma.png" alt="Inazuma" title="Inazuma">',  function(control, map){
-        map.flyTo(unproject([10647, 9901]), 6);
-    })
-], {
-    id: 'teyvat-compass'
-});
-
   toolbarZoom.addTo(map);
   toolbarMenu.addTo(map);
   toolbarRegion.addTo(map);
   toolbarResetMarkers.addTo(map);
   toolbarInfo.addTo(map);
-  toolbarRegions.addTo(map);
+
+
 
   // Génération des marqueurs
   function initMarkers() {
@@ -286,7 +273,7 @@ function onMapClick(e) {
             color = '#3388ff', region;
 
         if ((typeof m.checkbox !== 'undefined' && m.checkbox) || (typeof g.checkbox !== 'undefined' && g.checkbox))
-          checkbox = '<label><input type="checkbox" id="user-marker" data-id="' + g.id + m.id + '" /><span>Terminé</span></label>';
+          checkbox = '<label><input type="checkbox" id="user-marker" data-id="summer22' + g.id + m.id + '" /><span>Terminé</span></label>';
 
         if (typeof g.text !== 'undefined')
           text = '<p>' + g.text + '</p>';
@@ -339,17 +326,15 @@ function onMapClick(e) {
         else if(format === 'video')
           marker.bindPopup(title+'<a class="video" href="//www.youtube.com/watch?v='+m.video+'" data-lity><img src="https://i.ytimg.com/vi/'+m.video+'/hqdefault.jpg" /></a>'+text+guide+checkbox);
         else if(format === 'image')
-          marker.bindPopup(title+'<a href="assets/img/medias/'+g.id+m.id+'.jpg" class="image" data-lity><img src="thumb/'+g.id+m.id+'" /></a>'+text+guide+checkbox);
+          marker.bindPopup(title+'<a href="assets/img/medias/summer22'+g.id+m.id+'.jpg" class="image" data-lity><img src="thumb/summer22'+g.id+m.id+'" /></a>'+text+guide+checkbox);
         else if(format === 'banner')
-          marker.bindPopup(title+'<img src="assets/img/medias/'+g.id+m.id+'.jpg" onerror="this.src=\'assets/img/medias/default.jpg\'" />'+text+guide+checkbox);
+          marker.bindPopup(title+'<img src="assets/img/medias/summer22'+g.id+m.id+'.jpg" onerror="this.src=\'assets/img/medias/default.jpg\'" />'+text+guide+checkbox);
         else if(format === 'region')
           marker.bindTooltip(m.title, {permanent: true, className: 'region', offset: [0, 13], direction: 'top'}).openTooltip();
         else if(format === 'todo')
-          marker.bindPopup('<h4>' + g.id+m.id  + '</h4>'+'<p><em>Information pour ce marqueur prochainement disponible...</em></p>'+checkbox);
+          marker.bindPopup('<h4>summer22' + g.id+m.id  + '</h4>'+'<p><em>Information pour ce marqueur prochainement disponible...</em></p>'+checkbox);
         else if(format === 'gif')
-          marker.bindPopup(title+'<a href="assets/img/medias/'+g.id+m.id+'.gif" class="image" data-lity><img src="assets/img/medias/'+g.id+m.id+'.gif" /></a>'+text+guide+checkbox);
-
-
+          marker.bindPopup(title+'<a href="assets/img/medias/summer22'+g.id+m.id+'.gif" class="image" data-lity><img src="assets/img/medias/summer22'+g.id+m.id+'.gif" /></a>'+text+guide+checkbox);
 
 
         if(typeof(timer) !== 'undefined') {
@@ -404,7 +389,7 @@ function onMapClick(e) {
         marker.addTo(g.group);
         total++;
 
-        if(userMarkers.indexOf(g.id+m.id) >= 0 && !finished)
+        if(userMarkers.indexOf('summer22'+g.id+m.id) >= 0 && !finished)
           marker.setOpacity(.5);
 
         if(params['debug'] && g.id !== 'region')
@@ -424,7 +409,7 @@ function onMapClick(e) {
 
 
   // Limites de la carte
-  map.setMaxBounds(new L.LatLngBounds(unproject([3584,3072]), unproject([12032, 14080])));
+  map.setMaxBounds(new L.LatLngBounds(unproject([0,0]), unproject([4096, 4096])));
 
 
 
@@ -519,7 +504,7 @@ function onMapClick(e) {
       map.invalidateSize();
     }
 
-    var zoom = (params.z && ['2', '3', '4', '5', '6'].indexOf(params.z) >= 0) ? params.z : 4;
+    var zoom = (params.z && ['2', '3', '4'].indexOf(params.z) >= 0) ? params.z : 4;
 
     if(params.x && params.y) {
       map.setView(unproject([params.x, params.y]), zoom);

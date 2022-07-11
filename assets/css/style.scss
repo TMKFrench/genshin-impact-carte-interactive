@@ -25,6 +25,14 @@ html, body, #map {
   outline: 0;
 }
 
+#map #teyvat-compass.leaflet-bar {
+  border-color: transparent;
+}
+#map #teyvat-compass.leaflet-bar button {
+  background: none;
+  border: none;
+}
+
 #menu {
   height: 100%;
   overflow: auto;
@@ -62,6 +70,14 @@ html, body, #map {
     line-height: 1.5rem;
     font-family: 'Genshin', serif;
     color: #3d4555;
+  }
+
+  li.title2 {
+    grid-column: span 2/span 2;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    font-family: 'Genshin', serif;
+    color: #4f535c;
   }
 
   a {
@@ -217,6 +233,33 @@ html, body, #map {
 
       + label {
         margin-top: 5px;
+      }
+    }
+
+    span#fishingspot1 {
+      margin: 0px 90px;
+
+      img {
+        display: unset;
+        margin: 2px;
+      }
+    }
+
+    span#fishingspot2 {
+      margin: 0px 51px;
+
+      img {
+        display: unset;
+        margin: 2px;
+      }
+    }
+
+    span#fishingspot3 {
+      margin: 0px 12px;
+
+      img {
+        display: unset;
+        margin: 2px;
       }
     }
 
