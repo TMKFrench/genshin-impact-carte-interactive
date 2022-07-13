@@ -491,8 +491,10 @@ function onMapClick(e) {
 
         if(res.menu) {
           $(res.menu).each(function(key, type) {
-            $('#menu a[data-type="'+type+'"]').addClass('active');
-            map.addLayer(window[type+'Group']);
+            if(typeof window[type+'Group'] !== 'undefined') {
+              $('#menu a[data-type="'+type+'"]').addClass('active');
+              map.addLayer(window[type+'Group']);
+            }
           });
         }
       }

@@ -1,7 +1,7 @@
 <?php require_once 'includes/_fn.php';
 
-$config = parse_ini_file("config.ini", true);
-$db = new SQLite3Database('gici.db');
+$config = parse_ini_file("../gici-config.ini", true);
+$db = new SQLite3Database('../gici-data.db');
 
 @session_start();
 

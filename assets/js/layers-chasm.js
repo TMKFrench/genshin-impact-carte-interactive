@@ -1,5 +1,2 @@
-  // Layers
-  var groups = [
-    'teleporter', 'panorama', 'challenge', 'seelie', 'quest', 'region',
-    'boss', 'lumenspar', 'fishing', 'orbofdepth', 'fossil', 'rockpile', 'secretmessage'
-  ];
+// Layers -chasm
+var groups = ['teleporter','panorama','seelie','region','quest','challenge','boss','fishing','lumenspar','orbofdepth','fossil','rockpile','secretmessage',];
