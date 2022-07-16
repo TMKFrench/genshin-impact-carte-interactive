@@ -93,3 +93,4 @@
   var fossilIcon = L.icon({ iconUrl: 'assets/img/fossil.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0,-32] });
   var rockpileIcon = L.icon({ iconUrl: 'assets/img/rockpile.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0,-32] });
   var secretmessageIcon = L.icon({ iconUrl: 'assets/img/secretmessage.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0,-32] });
+  var echoshellIcon = L.icon({ iconUrl: 'assets/img/echoshell.png?v2', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0,-32] });

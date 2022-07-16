@@ -200,9 +200,9 @@ function onMapClick(e) {
   });
 
   // Création de la carte
-  L.tileLayer('assets/img/tiles-summer22/{z}/{x}/{y}.jpg', {
+  L.tileLayer('assets/img/tiles-summer22/{z}/{x}/{y}.png', {
       attribution: '<a href="https://gaming.lebusmagique.fr">Le Bus Magique Gaming</a>',
-      maxZoom: 4,
+      maxZoom: 5,
       minZoom: 2,
       continuousWorld: true,
       maxBoundsViscosity: 0.8,
@@ -326,15 +326,15 @@ function onMapClick(e) {
         else if(format === 'video')
           marker.bindPopup(title+'<a class="video" href="//www.youtube.com/watch?v='+m.video+'" data-lity><img src="https://i.ytimg.com/vi/'+m.video+'/hqdefault.jpg" /></a>'+text+guide+checkbox);
         else if(format === 'image')
-          marker.bindPopup(title+'<a href="assets/img/medias/summer22'+g.id+m.id+'.jpg" class="image" data-lity><img src="thumb/summer22'+g.id+m.id+'" /></a>'+text+guide+checkbox);
+          marker.bindPopup(title+'<a href="assets/img/medias/sum22'+g.id+m.id+'.jpg" class="image" data-lity><img src="thumb/sum22'+g.id+m.id+'" /></a>'+text+guide+checkbox);
         else if(format === 'banner')
-          marker.bindPopup(title+'<img src="assets/img/medias/summer22'+g.id+m.id+'.jpg" onerror="this.src=\'assets/img/medias/default.jpg\'" />'+text+guide+checkbox);
+          marker.bindPopup(title+'<img src="assets/img/medias/sum22'+g.id+m.id+'.jpg" onerror="this.src=\'assets/img/medias/default.jpg\'" />'+text+guide+checkbox);
         else if(format === 'region')
           marker.bindTooltip(m.title, {permanent: true, className: 'region', offset: [0, 13], direction: 'top'}).openTooltip();
         else if(format === 'todo')
-          marker.bindPopup('<h4>summer22' + g.id+m.id  + '</h4>'+'<p><em>Information pour ce marqueur prochainement disponible...</em></p>'+checkbox);
+          marker.bindPopup('<h4>sum22' + g.id+m.id  + '</h4>'+'<p><em>Information pour ce marqueur prochainement disponible...</em></p>'+checkbox);
         else if(format === 'gif')
-          marker.bindPopup(title+'<a href="assets/img/medias/summer22'+g.id+m.id+'.gif" class="image" data-lity><img src="assets/img/medias/summer22'+g.id+m.id+'.gif" /></a>'+text+guide+checkbox);
+          marker.bindPopup(title+'<a href="assets/img/medias/sum22'+g.id+m.id+'.gif" class="image" data-lity><img src="assets/img/medias/sum22'+g.id+m.id+'.gif" /></a>'+text+guide+checkbox);
 
 
         if(typeof(timer) !== 'undefined') {
@@ -409,7 +409,7 @@ function onMapClick(e) {
 
 
   // Limites de la carte
-  map.setMaxBounds(new L.LatLngBounds(unproject([0,0]), unproject([4096, 4096])));
+  map.setMaxBounds(new L.LatLngBounds(unproject([0,0]), unproject([8192, 8192])));
 
 
 
