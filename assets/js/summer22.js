@@ -181,6 +181,11 @@ function onMapClick(e) {
     }
   }
 
+  function popUpOpen2(e) {
+    var content = e.popup.getContent();
+    island = $(content).find('input.item-ile').first().data('id');
+    $('input[data-id="'+island+'"][data-ver="'+window['old'+island]+'"]').prop('checked', 'checked');
+  }
 
 
   var currentMarker;
@@ -191,6 +196,7 @@ function onMapClick(e) {
   var debugMarkers = [];
   var userLocal = true;
   var allMarkers = [];
+  var oldile1 = 1, oldile3 = 1;
 
   // Initialisation de la carte
   var map = new L.Map('map', {
@@ -209,6 +215,19 @@ function onMapClick(e) {
       noWrap: true
   }).addTo(map);
 
+  var latLngBoundsile1 = L.latLngBounds([unproject([4953,4493])], [unproject([5774, 5181])]);
+  var latLngBoundsile3 = L.latLngBounds([unproject([2840,3113])], [unproject([4114, 4054])]);
+  for (let i = 1; i < 10; i++) {
+    window['imageOverlayile1'+i] = L.imageOverlay('assets/img/tiles-summer22/ile1-'+i+'.png', latLngBoundsile1);   
+  };
+
+  for (let i = 1; i < 3; i++) {
+    window['imageOverlayile3'+i] = L.imageOverlay('assets/img/tiles-summer22/ile3-'+i+'.png', latLngBoundsile3);   
+  };
+  
+  imageOverlayile11.addTo(map);
+  imageOverlayile31.addTo(map);
+  
   var toolbarZoom = L.easyBar([
     L.easyButton( '<img src="assets/img/plus.png" alt="Zoom+" title="Zoomer sur la carte">',  function(control, map){map.setZoom(map.getZoom()+1);}),
     L.easyButton( '<img src="assets/img/minus.png" alt="Zoom-" title="Dézoomer sur la carte">',  function(control, map){map.setZoom(map.getZoom()-1);}),
@@ -322,19 +341,19 @@ function onMapClick(e) {
         var marker = L.marker(unproject([(m.coords[0]), (m.coords[1])]), {icon: icon, riseOnHover: true});
 
         if(format === 'popup')
-          marker.bindPopup(title+text+guide+checkbox);
+          marker.bindPopup(title+text+guide+checkbox, {className : 'normpop'});
         else if(format === 'video')
-          marker.bindPopup(title+'<a class="video" href="//www.youtube.com/watch?v='+m.video+'" data-lity><img src="https://i.ytimg.com/vi/'+m.video+'/hqdefault.jpg" /></a>'+text+guide+checkbox);
+          marker.bindPopup(title+'<a class="video" href="//www.youtube.com/watch?v='+m.video+'" data-lity><img src="https://i.ytimg.com/vi/'+m.video+'/hqdefault.jpg" /></a>'+text+guide+checkbox, {className : 'normpop'});
         else if(format === 'image')
-          marker.bindPopup(title+'<a href="assets/img/medias/sum22'+g.id+m.id+'.jpg" class="image" data-lity><img src="thumb/sum22'+g.id+m.id+'" /></a>'+text+guide+checkbox);
+          marker.bindPopup(title+'<a href="assets/img/medias/sum22'+g.id+m.id+'.jpg" class="image" data-lity><img src="thumb/sum22'+g.id+m.id+'" /></a>'+text+guide+checkbox, {className : 'normpop'});
         else if(format === 'banner')
-          marker.bindPopup(title+'<img src="assets/img/medias/sum22'+g.id+m.id+'.jpg" onerror="this.src=\'assets/img/medias/default.jpg\'" />'+text+guide+checkbox);
+          marker.bindPopup(title+'<img src="assets/img/medias/sum22'+g.id+m.id+'.jpg" onerror="this.src=\'assets/img/medias/default.jpg\'" />'+text+guide+checkbox, {className : 'normpop'});
         else if(format === 'region')
           marker.bindTooltip(m.title, {permanent: true, className: 'region', offset: [0, 13], direction: 'top'}).openTooltip();
         else if(format === 'todo')
-          marker.bindPopup('<h4>sum22' + g.id+m.id  + '</h4>'+'<p><em>Information pour ce marqueur prochainement disponible...</em></p>'+checkbox);
+          marker.bindPopup('<h4>sum22' + g.id+m.id  + '</h4>'+'<p><em>Information pour ce marqueur prochainement disponible...</em></p>'+checkbox, {className : 'normpop'});
         else if(format === 'gif')
-          marker.bindPopup(title+'<a href="assets/img/medias/sum22'+g.id+m.id+'.gif" class="image" data-lity><img src="assets/img/medias/sum22'+g.id+m.id+'.gif" /></a>'+text+guide+checkbox);
+          marker.bindPopup(title+'<a href="assets/img/medias/sum22'+g.id+m.id+'.gif" class="image" data-lity><img src="assets/img/medias/sum22'+g.id+m.id+'.gif" /></a>'+text+guide+checkbox, {className : 'normpop'});
 
 
         if(typeof(timer) !== 'undefined') {
@@ -405,8 +424,8 @@ function onMapClick(e) {
 
   }
 
-
-
+  L.marker(unproject([5404, 4550]), {icon: layersIcon, riseOnHover: true}).on('click', updateCurrentMarker).bindTooltip("Changer la configuration de l'île", {offset : [20,0], direction : 'right'}).bindPopup('<form><input type="radio" class="item-ile radioile" id="ile11" name="configile1" data-id="ile1" data-ver="1"><label for="ile11"><span><img src="assets/img/config11.png" /> Rocaille sereine + Rocaille sereine</span></label><br><input type="radio" class="radioile" id="ile12" name="configile1" data-id="ile1" data-ver="2"><label for="ile12"><span><img src="assets/img/config12.png" /> Rocaille sereine + Rocaille lumineuse</span></label><br><input type="radio" class="radioile" id="ile13" name="configile1" data-id="ile1" data-ver="3"><label for="ile13"><span><img src="assets/img/config13.png" /> Rocaille sereine + Rocaille inflexible</span></label><br><input type="radio" class="radioile" id="ile14" name="configile1" data-id="ile1" data-ver="4"><label for="ile14"><span><img src="assets/img/config14.png" /> Rocaille lumineuse + Rocaille sereine</span></label><br><input type="radio" class="radioile" id="ile15" name="configile1" data-id="ile1" data-ver="5"><label for="ile15"><span><img src="assets/img/config15.png" /> Rocaille lumineuse + Rocaille lumineuse</span></label><br><input type="radio" class="radioile" id="ile16" name="configile1" data-id="ile1" data-ver="6"><label for="ile16"><span><img src="assets/img/config16.png" /> Rocaille lumineuse + Rocaille inflexible</span></label><br><input type="radio" class="radioile" id="ile17" name="configile1" data-id="ile1" data-ver="7"><label for="ile17"><span><img src="assets/img/config17.png" /> Rocaille inflexible + Rocaille sereine</span></label><br><input type="radio" class="radioile" id="ile18" name="configile1" data-id="ile1" data-ver="8"><label for="ile18"><span><img src="assets/img/config18.png" /> Rocaille inflexible + Rocaille lumineuse</span></label><br><input type="radio" class="radioile" id="ile19" name="configile1" data-id="ile1" data-ver="9"><label for="ile19"><span><img src="assets/img/config19.png" /> Rocaille inflexible + Rocaille inflexible</span></label></form>', {maxHeight : 350, minWidth : 350, className : 'radiopop'}).on('popupopen', popUpOpen2).addTo(map);
+  L.marker(unproject([3688, 3812]), {icon: layersIcon, riseOnHover: true}).on('click', updateCurrentMarker).bindTooltip("Changer la configuration de l'île", {offset : [20,0], direction : 'right'}).bindPopup('<form><input type="radio" class="item-ile radioile" id="ile31" name="configile3" data-id="ile3" data-ver="1"><label for="ile31"><span><img src="assets/img/config31.png" /> Îles brisées - Montagnes hautes</span></label><br><input type="radio" class="radioile" id="ile32" name="configile3" data-id="ile3" data-ver="2"><label for="ile32"><span><img src="assets/img/config32.png" /> Îles brisées - Montagnes basses</span></label></form>', {maxHeight : 350, minWidth : 350, className : 'radiopop'}).on('popupopen', popUpOpen2).addTo(map);
 
   // Limites de la carte
   map.setMaxBounds(new L.LatLngBounds(unproject([0,0]), unproject([8192, 8192])));
@@ -536,6 +555,16 @@ function onMapClick(e) {
         saveUserMarker($(this).data('id'), $(this).is(':checked'));
       }
 
+    });
+
+    $(document).on('change', 'input[type="radio"]', function() {
+      var ileId = $(this).data('id');
+      var ilever = $(this).data('ver');
+      old=window['old'+ileId];
+      window['imageOverlay'+ileId+old].removeFrom(map);
+      window['imageOverlay'+ileId+ilever].addTo(map);
+      window['old'+ileId]=ilever;
+      currentMarker.closePopup();
     });
 
     $('#menu a[data-type]').on('click', function(e){

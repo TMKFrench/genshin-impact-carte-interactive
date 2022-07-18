@@ -98,7 +98,7 @@ html, body, #map {
   }
 }
 
-.leaflet-popup {
+.leaflet-popup.normpop {
   min-width: 300px;
 
   .leaflet-popup-content-wrapper {
@@ -267,6 +267,72 @@ html, body, #map {
       display: unset;
       width: 24px;
       height: 24px;
+    }
+  }
+}
+
+.leaflet-popup.radiopop {
+  min-width: 350px;
+
+  .leaflet-popup-content-wrapper {
+    border-radius: 4px;
+  }
+
+  .leaflet-popup-content {
+    margin: 20px;
+    width: 350px !important;
+    overflow-y: auto;
+
+
+    input[type="radio"].radioile {
+      display: none;
+      + {
+        label {
+          width: 100%;
+          height: 60px;
+          margin: 2px 0px;
+          padding: 5px 3px;
+          font-size: 1.25em;
+          vertical-align: middle;
+          line-height: 1.5;
+          border-radius: 0.3rem;
+          color: rgb(75,85,99);
+          background-color: #e8e2d7;
+          border: 1px solid rgb(156,163,175);
+          transition: all 0.5s ease-in-out;
+          display: inline-block;
+
+          img {
+            width: 48px;
+            margin : 0px 2px;
+          }
+
+          span {
+            display: flex;
+            align-items: center;
+          }
+        }
+      }
+    }
+
+    input[type="radio"].radioile {
+      &:hover {
+        + {
+          label {
+            background-color: rgb(156,163,175);
+            border-color: rgb(47, 49, 53);
+          }
+        }
+      }
+      &:checked {
+        + {
+          label {
+            background-color: rgb(156,163,175);
+            border-color: rgb(53, 54, 56);
+            color:#000;
+          }
+        }
+      }    
     }
   }
 }

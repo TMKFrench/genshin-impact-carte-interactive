@@ -335,19 +335,19 @@ function onMapClick(e) {
         var marker = L.marker(unproject([(m.coords[0]), (m.coords[1])]), {icon: icon, riseOnHover: true});
 
         if(format === 'popup')
-          marker.bindPopup(title+text+guide+checkbox);
+          marker.bindPopup(title+text+guide+checkbox, {className : 'normpop'});
         else if(format === 'video')
-          marker.bindPopup(title+'<a class="video" href="//www.youtube.com/watch?v='+m.video+'" data-lity><img src="https://i.ytimg.com/vi/'+m.video+'/hqdefault.jpg" /></a>'+text+guide+checkbox);
+          marker.bindPopup(title+'<a class="video" href="//www.youtube.com/watch?v='+m.video+'" data-lity><img src="https://i.ytimg.com/vi/'+m.video+'/hqdefault.jpg" /></a>'+text+guide+checkbox, {className : 'normpop'});
         else if(format === 'image')
-          marker.bindPopup(title+'<a href="assets/img/medias/'+g.id+m.id+'.jpg" class="image" data-lity><img src="thumb/'+g.id+m.id+'" /></a>'+text+guide+checkbox);
+          marker.bindPopup(title+'<a href="assets/img/medias/'+g.id+m.id+'.jpg" class="image" data-lity><img src="thumb/'+g.id+m.id+'" /></a>'+text+guide+checkbox, {className : 'normpop'});
         else if(format === 'banner')
-          marker.bindPopup(title+'<img src="assets/img/medias/'+g.id+m.id+'.jpg" onerror="this.src=\'assets/img/medias/default.jpg\'" />'+text+guide+checkbox);
+          marker.bindPopup(title+'<img src="assets/img/medias/'+g.id+m.id+'.jpg" onerror="this.src=\'assets/img/medias/default.jpg\'" />'+text+guide+checkbox, {className : 'normpop'});
         else if(format === 'region')
           marker.bindTooltip(m.title, {permanent: true, className: 'region', offset: [0, 13], direction: 'top'}).openTooltip();
         else if(format === 'todo')
-          marker.bindPopup('<h4>' + g.id+m.id  + '</h4>'+'<p><em>Information pour ce marqueur prochainement disponible...</em></p>'+checkbox);
+          marker.bindPopup('<h4>' + g.id+m.id  + '</h4>'+'<p><em>Information pour ce marqueur prochainement disponible...</em></p>'+checkbox, {className : 'normpop'});
         else if(format === 'gif')
-          marker.bindPopup(title+'<a href="assets/img/medias/'+g.id+m.id+'.gif" class="image" data-lity><img src="assets/img/medias/'+g.id+m.id+'.gif" /></a>'+text+guide+checkbox);
+          marker.bindPopup(title+'<a href="assets/img/medias/'+g.id+m.id+'.gif" class="image" data-lity><img src="assets/img/medias/'+g.id+m.id+'.gif" /></a>'+text+guide+checkbox, {className : 'normpop'});
 
 
 
