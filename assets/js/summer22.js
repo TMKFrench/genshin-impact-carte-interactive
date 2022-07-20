@@ -133,6 +133,42 @@ function onMapClick(e) {
     userMarkers = JSON.stringify(markers);
   }
 
+  function updateislandmarkers (ileId, ilever, old) {
+    hidelayer = window['l'+ileId+old];
+    hidelayer.forEach(function(e) {
+      map.removeLayer(window[ileId+old+e+'Group']);
+    });
+    showlayer = window['l'+ileId+ilever];
+    window['menuActive'].forEach(function(e) {
+      if (showlayer.indexOf(e) >=0) {
+        map.addLayer(window[ileId+ilever+e+'Group']);
+      }
+    });
+  }
+
+  function updateislandmarkersmenu (type, add) {
+    for (let i =1; i < 4; i++) {
+      currentver = window['oldile'+i];
+      if (window['lile'+i+currentver].indexOf(type) >=0) {
+        if (add) {
+          map.addLayer(window['ile'+i+currentver+type+'Group'])
+        } else {
+          map.removeLayer(window['ile'+i+currentver+type+'Group']);
+        }
+      };
+    }
+  }
+
+  function updateislandmarkersinit () {
+    for (let i =1; i < 4; i++) {
+      window['menuActive'].forEach(function(e) {
+        if (window['lile'+i+'1'].indexOf(e) >=0) {
+          map.addLayer(window['ile'+i+'1'+e+'Group'])
+        }
+      });
+    }
+  }
+
   function getUserCountdowns() {
     var countdowns = localStorage.getItem('userCountdowns');
 
@@ -178,7 +214,8 @@ function onMapClick(e) {
       if(userMarkers.indexOf( $(content).find('input#user-marker').first().data('id') ) >= 0) {
         $('input#user-marker[data-id="'+$(content).find('input#user-marker').first().data('id')+'"]').prop('checked', 'checked');
       }
-    }
+    };
+
   }
 
   function popUpOpen2(e) {
@@ -196,7 +233,11 @@ function onMapClick(e) {
   var debugMarkers = [];
   var userLocal = true;
   var allMarkers = [];
-  var oldile1 = 1, oldile3 = 1;
+  var oldile1 = 1, oldile2 = 1, oldile3 = 1;
+  var menuActive = [];
+  var lile11 = ['challenge'], lile12 = ['challenge','animauxtranslucide'], lile13 = ['challenge','animauxtranslucide'], lile14 = ['challenge','animauxtranslucide'], lile15 = ['challenge'], lile16 = ['challenge','animauxtranslucide'], lile17 = ['challenge','animauxtranslucide'], lile18 = ['challenge'], lile19 = ['challenge','animauxtranslucide'];
+  var lile21 = ['challenge','animauxtranslucide'], lile22 = ['challenge','animauxtranslucide'];
+  var lile31 = ['challenge','animauxtranslucide'], lile32 = ['challenge','animauxtranslucide'];
 
   // Initialisation de la carte
   var map = new L.Map('map', {
@@ -214,11 +255,18 @@ function onMapClick(e) {
       maxBoundsViscosity: 0.8,
       noWrap: true
   }).addTo(map);
-
+ 
+  // var latLngBounds = L.latLngBounds([unproject([0,0])], [unproject([8192, 8192])]);
   var latLngBoundsile1 = L.latLngBounds([unproject([4953,4493])], [unproject([5774, 5181])]);
+  var latLngBoundsile2 = L.latLngBounds([unproject([3186,5113])], [unproject([4706, 6054])]);
   var latLngBoundsile3 = L.latLngBounds([unproject([2840,3113])], [unproject([4114, 4054])]);
+
   for (let i = 1; i < 10; i++) {
     window['imageOverlayile1'+i] = L.imageOverlay('assets/img/tiles-summer22/ile1-'+i+'.png', latLngBoundsile1);   
+  };
+
+  for (let i = 1; i < 3; i++) {
+    window['imageOverlayile2'+i] = L.imageOverlay('assets/img/tiles-summer22/ile2-'+i+'.png', latLngBoundsile2);   
   };
 
   for (let i = 1; i < 3; i++) {
@@ -226,6 +274,7 @@ function onMapClick(e) {
   };
   
   imageOverlayile11.addTo(map);
+  imageOverlayile21.addTo(map);
   imageOverlayile31.addTo(map);
   
   var toolbarZoom = L.easyBar([
@@ -425,23 +474,19 @@ function onMapClick(e) {
   }
 
   L.marker(unproject([5404, 4550]), {icon: layersIcon, riseOnHover: true}).on('click', updateCurrentMarker).bindTooltip("Changer la configuration de l'île", {offset : [20,0], direction : 'right'}).bindPopup('<form><input type="radio" class="item-ile radioile" id="ile11" name="configile1" data-id="ile1" data-ver="1"><label for="ile11"><span><img src="assets/img/config11.png" /> Rocaille sereine + Rocaille sereine</span></label><br><input type="radio" class="radioile" id="ile12" name="configile1" data-id="ile1" data-ver="2"><label for="ile12"><span><img src="assets/img/config12.png" /> Rocaille sereine + Rocaille lumineuse</span></label><br><input type="radio" class="radioile" id="ile13" name="configile1" data-id="ile1" data-ver="3"><label for="ile13"><span><img src="assets/img/config13.png" /> Rocaille sereine + Rocaille inflexible</span></label><br><input type="radio" class="radioile" id="ile14" name="configile1" data-id="ile1" data-ver="4"><label for="ile14"><span><img src="assets/img/config14.png" /> Rocaille lumineuse + Rocaille sereine</span></label><br><input type="radio" class="radioile" id="ile15" name="configile1" data-id="ile1" data-ver="5"><label for="ile15"><span><img src="assets/img/config15.png" /> Rocaille lumineuse + Rocaille lumineuse</span></label><br><input type="radio" class="radioile" id="ile16" name="configile1" data-id="ile1" data-ver="6"><label for="ile16"><span><img src="assets/img/config16.png" /> Rocaille lumineuse + Rocaille inflexible</span></label><br><input type="radio" class="radioile" id="ile17" name="configile1" data-id="ile1" data-ver="7"><label for="ile17"><span><img src="assets/img/config17.png" /> Rocaille inflexible + Rocaille sereine</span></label><br><input type="radio" class="radioile" id="ile18" name="configile1" data-id="ile1" data-ver="8"><label for="ile18"><span><img src="assets/img/config18.png" /> Rocaille inflexible + Rocaille lumineuse</span></label><br><input type="radio" class="radioile" id="ile19" name="configile1" data-id="ile1" data-ver="9"><label for="ile19"><span><img src="assets/img/config19.png" /> Rocaille inflexible + Rocaille inflexible</span></label></form>', {maxHeight : 350, minWidth : 350, className : 'radiopop'}).on('popupopen', popUpOpen2).addTo(map);
+  L.marker(unproject([4206, 5318]), {icon: layersIcon, riseOnHover: true}).on('click', updateCurrentMarker).bindTooltip("Changer la configuration de l'île", {offset : [20,0], direction : 'right'}).bindPopup('<form><input type="radio" class="item-ile radioile" id="ile21" name="configile2" data-id="ile2" data-ver="1"><label for="ile21"><span><img src="assets/img/config21.png" /> Îles funestes - Configuration 1</span></label><br><input type="radio" class="radioile" id="ile22" name="configile2" data-id="ile2" data-ver="2"><label for="ile22"><span><img src="assets/img/config22.png" /> Îles funestes - Configuration 2</span></label></form>', {maxHeight : 350, minWidth : 350, className : 'radiopop'}).on('popupopen', popUpOpen2).addTo(map);
   L.marker(unproject([3688, 3812]), {icon: layersIcon, riseOnHover: true}).on('click', updateCurrentMarker).bindTooltip("Changer la configuration de l'île", {offset : [20,0], direction : 'right'}).bindPopup('<form><input type="radio" class="item-ile radioile" id="ile31" name="configile3" data-id="ile3" data-ver="1"><label for="ile31"><span><img src="assets/img/config31.png" /> Îles brisées - Montagnes hautes</span></label><br><input type="radio" class="radioile" id="ile32" name="configile3" data-id="ile3" data-ver="2"><label for="ile32"><span><img src="assets/img/config32.png" /> Îles brisées - Montagnes basses</span></label></form>', {maxHeight : 350, minWidth : 350, className : 'radiopop'}).on('popupopen', popUpOpen2).addTo(map);
 
   // Limites de la carte
   map.setMaxBounds(new L.LatLngBounds(unproject([0,0]), unproject([8192, 8192])));
 
-
-
   // Afficher les coordonnées du clic
   map.on('click', onMapClick);
-
-
 
   // Masquer tous les layers
   groups.forEach(function(e) {
     map.removeLayer(window[e+'Group']);
   });
-
 
   // Debug
   if(params['debug']) {
@@ -479,11 +524,11 @@ function onMapClick(e) {
 
   $(document).ready(function() {
 
-    // var updateDiscord = localStorage.getItem('update-discord');
-    // if(!updateDiscord) {
-    //   var lightbox = lity('#update-discord');
-    //   localStorage.setItem('update-discord', '1');
-    // }
+    var updateDiscord = localStorage.getItem('update-discord');
+    if(!updateDiscord) {
+      var lightbox = lity('#update-discord');
+      localStorage.setItem('update-discord', '1');
+    }
 
 
     $.get('api/user', function(res) {
@@ -513,8 +558,10 @@ function onMapClick(e) {
             if(typeof window[type+'Group'] !== 'undefined') {
               $('#menu a[data-type="'+type+'"]').addClass('active');
               map.addLayer(window[type+'Group']);
+              menuActive.push(type);
             }
           });
+          updateislandmarkersinit();
         }
       }
     });
@@ -535,12 +582,18 @@ function onMapClick(e) {
 
     if(params.markers) {
       var pmarkers = params.markers.split(',');
+      window['menuActive'] = [];
+      groups.forEach(function(e) {
+        map.removeLayer(window[e+'Group']);
+      });    
       pmarkers.forEach(function(e) {
         if(typeof window[e+'Group'] !== 'undefined') {
           $('#menu a[data-type="'+e+'"]').addClass('active');
           map.addLayer(window[e+'Group']);
+          window['menuActive'].push(e);
         }
       });
+      updateislandmarkersinit();
     }
 
     if(params['hide-menu']) {
@@ -563,6 +616,7 @@ function onMapClick(e) {
       old=window['old'+ileId];
       window['imageOverlay'+ileId+old].removeFrom(map);
       window['imageOverlay'+ileId+ilever].addTo(map);
+      updateislandmarkers (ileId, ilever, old);
       window['old'+ileId]=ilever;
       currentMarker.closePopup();
     });
@@ -574,10 +628,14 @@ function onMapClick(e) {
 
       if($(this).hasClass('active')) {
         map.removeLayer(window[type+'Group']);
+        window['menuActive'].splice(window['menuActive'].indexOf(type), 1);
+        updateislandmarkersmenu (type, false);
         if(!userLocal)
           $.post('api/removemenu/'+type);
       } else {
         map.addLayer(window[type+'Group']);
+        window['menuActive'].push(type);
+        updateislandmarkersmenu (type, true);
         if(!userLocal)
           $.post('api/addmenu/'+type);
       }
