@@ -97,3 +97,5 @@
   var layersIcon = L.icon({ iconUrl: 'assets/img/layers.png?v2', iconSize: [40,40], iconAnchor: [20,20], popupAnchor: [0,-20] });
   var marchenimbusIcon = L.icon({ iconUrl: 'assets/img/marchenimbus.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0,-32] });
   var animauxtranslucideIcon = L.icon({ iconUrl: 'assets/img/animauxtranslucide.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0,-32] });
+  var forumcorbeauIcon = L.icon({ iconUrl: 'assets/img/forumcorbeau.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0,-32] });
+  var dendroculusIcon = L.icon({ iconUrl: 'assets/img/dendroculus.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0,-32] });

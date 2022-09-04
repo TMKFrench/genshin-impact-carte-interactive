@@ -235,8 +235,8 @@ function onMapClick(e) {
   var allMarkers = [];
   var oldile1 = 1, oldile2 = 1, oldile3 = 1;
   var menuActive = [];
-  var lile11 = ['challenge'], lile12 = ['challenge','animauxtranslucide'], lile13 = ['challenge','animauxtranslucide'], lile14 = ['challenge','animauxtranslucide'], lile15 = ['challenge'], lile16 = ['challenge','animauxtranslucide'], lile17 = ['challenge','animauxtranslucide'], lile18 = ['challenge'], lile19 = ['challenge','animauxtranslucide'];
-  var lile21 = ['challenge','animauxtranslucide'], lile22 = ['challenge','animauxtranslucide'];
+  var lile11 = ['challenge','seelie'], lile12 = ['challenge','animauxtranslucide','seelie'], lile13 = ['challenge','animauxtranslucide'], lile14 = ['challenge','animauxtranslucide'], lile15 = ['challenge','quest'], lile16 = ['challenge','animauxtranslucide'], lile17 = ['challenge','animauxtranslucide','seelie'], lile18 = ['challenge'], lile19 = ['challenge','animauxtranslucide'];
+  var lile21 = ['challenge','quest','nucleus'], lile22 = ['challenge','animauxtranslucide','nucleus'];
   var lile31 = ['challenge','animauxtranslucide'], lile32 = ['challenge','animauxtranslucide'];
 
   // Initialisation de la carte
@@ -266,13 +266,10 @@ function onMapClick(e) {
   };
 
   for (let i = 1; i < 3; i++) {
-    window['imageOverlayile2'+i] = L.imageOverlay('assets/img/tiles-summer22/ile2-'+i+'.png', latLngBoundsile2);   
+    window['imageOverlayile2'+i] = L.imageOverlay('assets/img/tiles-summer22/ile2-'+i+'.png', latLngBoundsile2);
+    window['imageOverlayile3'+i] = L.imageOverlay('assets/img/tiles-summer22/ile3-'+i+'.png', latLngBoundsile3);
   };
-
-  for (let i = 1; i < 3; i++) {
-    window['imageOverlayile3'+i] = L.imageOverlay('assets/img/tiles-summer22/ile3-'+i+'.png', latLngBoundsile3);   
-  };
-  
+ 
   imageOverlayile11.addTo(map);
   imageOverlayile21.addTo(map);
   imageOverlayile31.addTo(map);
@@ -474,7 +471,7 @@ function onMapClick(e) {
   }
 
   L.marker(unproject([5404, 4550]), {icon: layersIcon, riseOnHover: true}).on('click', updateCurrentMarker).bindTooltip("Changer la configuration de l'île", {offset : [20,0], direction : 'right'}).bindPopup('<form><input type="radio" class="item-ile radioile" id="ile11" name="configile1" data-id="ile1" data-ver="1"><label for="ile11"><span><img src="assets/img/config11.png" /> Rocaille sereine + Rocaille sereine</span></label><br><input type="radio" class="radioile" id="ile12" name="configile1" data-id="ile1" data-ver="2"><label for="ile12"><span><img src="assets/img/config12.png" /> Rocaille sereine + Rocaille lumineuse</span></label><br><input type="radio" class="radioile" id="ile13" name="configile1" data-id="ile1" data-ver="3"><label for="ile13"><span><img src="assets/img/config13.png" /> Rocaille sereine + Rocaille inflexible</span></label><br><input type="radio" class="radioile" id="ile14" name="configile1" data-id="ile1" data-ver="4"><label for="ile14"><span><img src="assets/img/config14.png" /> Rocaille lumineuse + Rocaille sereine</span></label><br><input type="radio" class="radioile" id="ile15" name="configile1" data-id="ile1" data-ver="5"><label for="ile15"><span><img src="assets/img/config15.png" /> Rocaille lumineuse + Rocaille lumineuse</span></label><br><input type="radio" class="radioile" id="ile16" name="configile1" data-id="ile1" data-ver="6"><label for="ile16"><span><img src="assets/img/config16.png" /> Rocaille lumineuse + Rocaille inflexible</span></label><br><input type="radio" class="radioile" id="ile17" name="configile1" data-id="ile1" data-ver="7"><label for="ile17"><span><img src="assets/img/config17.png" /> Rocaille inflexible + Rocaille sereine</span></label><br><input type="radio" class="radioile" id="ile18" name="configile1" data-id="ile1" data-ver="8"><label for="ile18"><span><img src="assets/img/config18.png" /> Rocaille inflexible + Rocaille lumineuse</span></label><br><input type="radio" class="radioile" id="ile19" name="configile1" data-id="ile1" data-ver="9"><label for="ile19"><span><img src="assets/img/config19.png" /> Rocaille inflexible + Rocaille inflexible</span></label></form>', {maxHeight : 350, minWidth : 350, className : 'radiopop'}).on('popupopen', popUpOpen2).addTo(map);
-  L.marker(unproject([4206, 5318]), {icon: layersIcon, riseOnHover: true}).on('click', updateCurrentMarker).bindTooltip("Changer la configuration de l'île", {offset : [20,0], direction : 'right'}).bindPopup('<form><input type="radio" class="item-ile radioile" id="ile21" name="configile2" data-id="ile2" data-ver="1"><label for="ile21"><span><img src="assets/img/config21.png" /> Îles funestes - Configuration 1</span></label><br><input type="radio" class="radioile" id="ile22" name="configile2" data-id="ile2" data-ver="2"><label for="ile22"><span><img src="assets/img/config22.png" /> Îles funestes - Configuration 2</span></label></form>', {maxHeight : 350, minWidth : 350, className : 'radiopop'}).on('popupopen', popUpOpen2).addTo(map);
+  L.marker(unproject([4206, 5318]), {icon: layersIcon, riseOnHover: true}).on('click', updateCurrentMarker).bindTooltip("Changer la configuration de l'île", {offset : [20,0], direction : 'right'}).bindPopup('<form><input type="radio" class="item-ile radioile" id="ile21" name="configile2" data-id="ile2" data-ver="1"><label for="ile21"><span><img src="assets/img/config21.png" /> Îles funestes - Temps Présent</span></label><br><input type="radio" class="radioile" id="ile22" name="configile2" data-id="ile2" data-ver="2"><label for="ile22"><span><img src="assets/img/config22.png" /> Îles funestes - Temps Passé</span></label></form>', {maxHeight : 350, minWidth : 350, className : 'radiopop'}).on('popupopen', popUpOpen2).addTo(map);
   L.marker(unproject([3688, 3812]), {icon: layersIcon, riseOnHover: true}).on('click', updateCurrentMarker).bindTooltip("Changer la configuration de l'île", {offset : [20,0], direction : 'right'}).bindPopup('<form><input type="radio" class="item-ile radioile" id="ile31" name="configile3" data-id="ile3" data-ver="1"><label for="ile31"><span><img src="assets/img/config31.png" /> Îles brisées - Montagnes hautes</span></label><br><input type="radio" class="radioile" id="ile32" name="configile3" data-id="ile3" data-ver="2"><label for="ile32"><span><img src="assets/img/config32.png" /> Îles brisées - Montagnes basses</span></label></form>', {maxHeight : 350, minWidth : 350, className : 'radiopop'}).on('popupopen', popUpOpen2).addTo(map);
 
   // Limites de la carte
@@ -524,11 +521,11 @@ function onMapClick(e) {
 
   $(document).ready(function() {
 
-    var updateDiscord = localStorage.getItem('update-discord');
-    if(!updateDiscord) {
-      var lightbox = lity('#update-discord');
-      localStorage.setItem('update-discord', '1');
-    }
+    // var updateDiscord = localStorage.getItem('update-discord');
+    // if(!updateDiscord) {
+    //   var lightbox = lity('#update-discord');
+    //   localStorage.setItem('update-discord', '1');
+    // }
 
 
     $.get('api/user', function(res) {

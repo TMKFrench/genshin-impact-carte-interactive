@@ -141,6 +141,6 @@ $fn = "assets/js/markers{$_map}.js";
 $ln = "assets/js/layers{$_map}.js";
 file_put_contents($fn, $listmark . str_replace(array("\r", "\n", "\t", "\v"), '', $js));
 file_put_contents($ln, $layers);
-dd("Fichiers $fn et $ln remplacés sur le serveur");
+dd("Fichiers $fn et $ln remplacés sur le serveur le ".date('Y-m-d H:i:s'));
 
 ?>
