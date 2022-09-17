@@ -8,6 +8,7 @@
   var mondstadtshrineIcon = L.icon({ iconUrl: 'assets/img/mondstadt-shrine.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0, -32] });
   var liyueshrineIcon = L.icon({ iconUrl: 'assets/img/liyue-shrine.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0, -32] });
   var inazumashrineIcon = L.icon({ iconUrl: 'assets/img/inazuma-shrine.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0, -32] });
+  var sumerushrineIcon = L.icon({ iconUrl: 'assets/img/sumeru-shrine.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0, -32] });
   var seelieIcon = L.icon({ iconUrl: 'assets/img/seelie.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0, -32] });
   var fireseelieIcon = L.icon({ iconUrl: 'assets/img/fireseelie.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0, -32] });
   var debugIcon = L.icon({ iconUrl: 'assets/img/debug.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0, -32] });
@@ -99,3 +100,4 @@
   var animauxtranslucideIcon = L.icon({ iconUrl: 'assets/img/animauxtranslucide.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0,-32] });
   var forumcorbeauIcon = L.icon({ iconUrl: 'assets/img/forumcorbeau.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0,-32] });
   var dendroculusIcon = L.icon({ iconUrl: 'assets/img/dendroculus.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0,-32] });
+  var caveaccesIcon = L.icon({ iconUrl: 'assets/img/caveacces.png', iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0,-32] });

@@ -258,13 +258,13 @@ function onMapClick(e) {
 
   var toolbarJumps = L.easyBar([
     L.easyButton( '<img src="assets/img/mondstadt.png" alt="Mondstadt" title="Mondstadt">',  function(control, map){
-        map.flyTo(unproject([6974, 4378]), 6);
+        map.flyTo(unproject([8510, 4378]), 6);
     }),
     L.easyButton( '<img src="assets/img/liyue.png" alt="Liyue" title="Liyue">',  function(control, map){
-        map.flyTo(unproject([5854, 7260]), 6);
+        map.flyTo(unproject([7390, 7260]), 6);
     }),
     L.easyButton( '<img src="assets/img/inazuma.png" alt="Inazuma" title="Inazuma">',  function(control, map){
-        map.flyTo(unproject([10647, 9901]), 6);
+        map.flyTo(unproject([12183, 9901]), 6);
     }),
     L.easyButton( '<img src="assets/img/sumeru.png" alt="Sumeru" title="Sumeru">',  function(control, map){
         map.flyTo(unproject([4892, 7059]), 6);
