@@ -200,7 +200,7 @@ function onMapClick(e) {
   });
 
   // Création de la carte
-  L.tileLayer('assets/img/tiles-map-v3.0/{z}/{x}/{y}.png', {
+  L.tileLayer('assets/img/tiles-map-v3.1/{z}/{x}/{y}.png', {
       attribution: '<a href="https://gaming.lebusmagique.fr">Le Bus Magique Gaming</a>',
       maxZoom: 6,
       minZoom: 2,
@@ -258,16 +258,16 @@ function onMapClick(e) {
 
   var toolbarJumps = L.easyBar([
     L.easyButton( '<img src="assets/img/mondstadt.png" alt="Mondstadt" title="Mondstadt">',  function(control, map){
-        map.flyTo(unproject([8510, 4378]), 6);
+        map.flyTo(unproject([9022, 4378]), 6);
     }),
     L.easyButton( '<img src="assets/img/liyue.png" alt="Liyue" title="Liyue">',  function(control, map){
-        map.flyTo(unproject([7390, 7260]), 6);
+        map.flyTo(unproject([7902, 7260]), 6);
     }),
     L.easyButton( '<img src="assets/img/inazuma.png" alt="Inazuma" title="Inazuma">',  function(control, map){
-        map.flyTo(unproject([12183, 9901]), 6);
+        map.flyTo(unproject([12695, 9901]), 6);
     }),
     L.easyButton( '<img src="assets/img/sumeru.png" alt="Sumeru" title="Sumeru">',  function(control, map){
-        map.flyTo(unproject([4892, 7059]), 6);
+        map.flyTo(unproject([5404, 7059]), 6);
     })
 ], {
     id: 'teyvat-compass'
@@ -427,7 +427,7 @@ function onMapClick(e) {
 
 
   // Limites de la carte
-  map.setMaxBounds(new L.LatLngBounds(unproject([2560,3072]), unproject([14848, 14080])));
+  map.setMaxBounds(new L.LatLngBounds(unproject([1024,2048]), unproject([14848, 14080])));
 
 
 
