@@ -1,6 +1,9 @@
 function onMapClick(e) {
-    console.log("Position @ " + map.project([e.latlng.lat, e.latlng.lng], map.getMaxZoom()));
-    console.log("Point @ [" + e.latlng.lat + ", " + e.latlng.lng + "]");
+    var position = map.project([e.latlng.lat, e.latlng.lng], map.getMaxZoom());
+    var x = Math.floor(position.x);
+    var y = Math.floor(position.y);
+    console.log("Position @ [" + x + "," + y + "]");
+    // console.log("Point @ [" + e.latlng.lat + ", " + e.latlng.lng + "]");
   }
 
   function unproject(coord) {
@@ -200,7 +203,7 @@ function onMapClick(e) {
   });
 
   // Création de la carte
-  L.tileLayer('assets/img/tiles-map-v3.1/{z}/{x}/{y}.png', {
+  L.tileLayer('assets/img/tiles-map-v3.4/{z}/{x}/{y}.png', {
       attribution: '<a href="https://gaming.lebusmagique.fr">Le Bus Magique Gaming</a>',
       maxZoom: 6,
       minZoom: 2,

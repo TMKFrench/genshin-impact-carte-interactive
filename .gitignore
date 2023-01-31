@@ -6,5 +6,7 @@ config.ini
 gici.db
 hits.txt
 assets/img/tiles-map-v3.1/*
+assets/img/tiles-map-v3.4/*
 assets/img/tiles-chasm/*
 assets/img/tiles-enkanomiya/*
+assets/img/medias/*

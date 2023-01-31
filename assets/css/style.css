@@ -57,7 +57,7 @@ html, body, #map {
   height: 1.5rem;
 }
 
-#menu li.title {
+#menu li.title, #menu li.titlee {
   grid-column: span 2/span 2;
   font-size: 1rem;
   line-height: 1.5rem;
@@ -65,12 +65,16 @@ html, body, #map {
   color: #3d4555;
 }
 
-#menu li.title2 {
+#menu li.title2, #menu li.titlee2 {
   grid-column: span 2/span 2;
   font-size: 0.75rem;
   line-height: 1rem;
   font-family: 'Genshin', serif;
   color: #4f535c;
+}
+
+#menu li.titlee, #menu li.titlee2 {
+  color: #e42c2c;
 }
 
 #menu a {

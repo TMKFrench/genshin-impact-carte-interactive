@@ -64,7 +64,7 @@ html, body, #map {
     }
   }
 
-  li.title {
+  li.title, li.titlee {
     grid-column: span 2/span 2;
     font-size: 1rem;
     line-height: 1.5rem;
@@ -72,12 +72,16 @@ html, body, #map {
     color: #3d4555;
   }
 
-  li.title2 {
+  li.title2, li.titlee2 {
     grid-column: span 2/span 2;
     font-size: 0.75rem;
     line-height: 1rem;
     font-family: 'Genshin', serif;
     color: #4f535c;
+  }
+
+  li.titlee, li.titlee2 {
+    color: #e42c2c;
   }
 
   a {
